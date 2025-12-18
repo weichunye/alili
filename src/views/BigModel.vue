@@ -24,214 +24,377 @@
     </el-header>
 
     <!-- 英雄区域 -->
-    <section class="bigmodel-hero">
+    <section class="hero-section">
+      <div class="hero-gradient"></div>
       <div class="hero-content">
-        <h1>阿里云大模型平台</h1>
-        <p>一站式大模型服务，助力企业智能化升级</p>
+        <h1>极速部署 DeepSeek-OCR</h1>
+        <p class="hero-subtitle">阿里云内置 DeepSeek-OCR 模型服务，高性能图像识别助力快速管理文档</p>
         <div class="hero-actions">
-          <el-button type="primary" size="large" class="primary-btn">立即体验</el-button>
+          <el-button type="primary" size="large" class="primary-btn">立即部署</el-button>
           <el-button type="default" size="large" class="secondary-btn">了解更多</el-button>
         </div>
-      </div>
-      <div class="hero-image">
-        <div class="image-placeholder"></div>
+        <div class="hero-cards">
+          <el-card class="hero-card">
+            <div class="card-title">智能文档处理</div>
+            <p class="card-desc">高效处理各类文档，自动提取关键信息</p>
+          </el-card>
+          <el-card class="hero-card">
+            <div class="card-title">通用文本2.0全场景识别</div>
+            <p class="card-desc">支持多场景、多语言文本识别，准确率高</p>
+          </el-card>
+          <el-card class="hero-card">
+            <div class="card-title">OCR云市场 · 一切皆可识别</div>
+            <p class="card-desc">500+款OCR服务，满足不同场景需求</p>
+          </el-card>
+          <el-card class="hero-card">
+            <div class="card-title">超过160项API免费试用</div>
+            <p class="card-desc">免费体验12个月，快速集成测试</p>
+          </el-card>
+        </div>
       </div>
     </section>
 
-    <!-- 核心能力区域 -->
-    <section class="core-capabilities">
+    <!-- 精选AI应用区域 -->
+    <section class="featured-ai-section">
       <div class="section-header">
-        <h2>核心能力</h2>
-        <p>领先的大模型技术，为企业提供全方位AI服务</p>
+        <h2>精选云上 AI 应用，助力业务创新</h2>
       </div>
-      <div class="capabilities-grid">
-        <el-card class="capability-card">
-          <div class="card-icon gradient-1"></div>
-          <h3>多模态理解</h3>
-          <p>支持文本、图像、语音等多种模态数据的理解和处理</p>
+      <div class="ai-showcase">
+        <el-card class="ai-card main-ai-card">
+          <div class="ai-card-header">
+            <h3>阿里云 AI 体验馆</h3>
+            <p>一站式体验阿里云AI能力，快速验证应用场景和效果</p>
+            <el-button type="primary" class="ai-card-btn">立即体验</el-button>
+          </div>
+          <div class="ai-card-image">
+            <div class="image-placeholder gradient-1"></div>
+          </div>
         </el-card>
-        <el-card class="capability-card">
-          <div class="card-icon gradient-2"></div>
-          <h3>精准生成</h3>
-          <p>高质量文本、代码、图像生成，满足多样化业务需求</p>
-        </el-card>
-        <el-card class="capability-card">
-          <div class="card-icon gradient-3"></div>
-          <h3>智能对话</h3>
-          <p>自然流畅的人机交互，支持多轮对话和复杂任务处理</p>
-        </el-card>
-        <el-card class="capability-card">
-          <div class="card-icon gradient-4"></div>
-          <h3>知识推理</h3>
-          <p>基于海量知识的深度推理，提供专业级解决方案</p>
-        </el-card>
+        <div class="ai-cards-grid">
+          <el-card class="ai-card small-ai-card">
+            <div class="ai-card-header small-header">
+              <h4>智能总结</h4>
+              <p>快速提取文本关键信息，生成简洁摘要</p>
+            </div>
+            <div class="ai-card-image small-image">
+              <div class="image-placeholder gradient-2"></div>
+            </div>
+          </el-card>
+          <el-card class="ai-card small-ai-card">
+            <div class="ai-card-header small-header">
+              <h4>实时对话</h4>
+              <p>自然语言交互，智能问答，高效沟通</p>
+            </div>
+            <div class="ai-card-image small-image">
+              <div class="image-placeholder gradient-3"></div>
+            </div>
+          </el-card>
+          <el-card class="ai-card small-ai-card">
+            <div class="ai-card-header small-header">
+              <h4>分析解读</h4>
+              <p>深度分析数据，提供专业解读和建议</p>
+            </div>
+            <div class="ai-card-image small-image">
+              <div class="image-placeholder gradient-4"></div>
+            </div>
+          </el-card>
+          <el-card class="ai-card small-ai-card">
+            <div class="ai-card-header small-header">
+              <h4>大规模模型</h4>
+              <p>调用大模型能力，处理复杂任务</p>
+            </div>
+            <div class="ai-card-image small-image">
+              <div class="image-placeholder gradient-5"></div>
+            </div>
+          </el-card>
+          <el-card class="ai-card small-ai-card">
+            <div class="ai-card-header small-header">
+              <h4>视频翻译</h4>
+              <p>视频内容识别，实时翻译多语言字幕</p>
+            </div>
+            <div class="ai-card-image small-image">
+              <div class="image-placeholder gradient-6"></div>
+            </div>
+          </el-card>
+        </div>
       </div>
     </section>
 
-    <!-- 产品体系 -->
-    <section class="product-system">
+    <!-- 通义大模型区域 -->
+    <section class="tongyi-model-section">
       <div class="section-header">
-        <h2>产品体系</h2>
-        <p>覆盖全场景的大模型产品矩阵</p>
+        <h2>通义大模型，企业拥抱 AI 时代首选</h2>
       </div>
-      <div class="product-tabs">
-        <el-tabs v-model="activeTab">
-          <el-tab-pane label="基础大模型" name="base">
-            <div class="product-grid">
-              <el-card class="product-card">
-                <div class="product-image">
-                  <div class="image-placeholder gradient-5"></div>
-                </div>
-                <div class="product-info">
-                  <h3>通义千问</h3>
-                  <p>新一代基础大模型，具备强大的通用能力</p>
-                  <el-button type="primary" class="product-btn">了解详情</el-button>
-                </div>
-              </el-card>
-              <el-card class="product-card">
-                <div class="product-image">
-                  <div class="image-placeholder gradient-6"></div>
-                </div>
-                <div class="product-info">
-                  <h3>CodeLlama</h3>
-                  <p>专业代码大模型，提升开发效率</p>
-                  <el-button type="primary" class="product-btn">了解详情</el-button>
-                </div>
-              </el-card>
-            </div>
-          </el-tab-pane>
-          <el-tab-pane label="行业大模型" name="industry">
-            <div class="product-grid">
-              <el-card class="product-card">
-                <div class="product-image">
-                  <div class="image-placeholder gradient-7"></div>
-                </div>
-                <div class="product-info">
-                  <h3>医疗大模型</h3>
-                  <p>助力医疗行业智能化升级</p>
-                  <el-button type="primary" class="product-btn">了解详情</el-button>
-                </div>
-              </el-card>
-              <el-card class="product-card">
-                <div class="product-image">
-                  <div class="image-placeholder gradient-8"></div>
-                </div>
-                <div class="product-info">
-                  <h3>金融大模型</h3>
-                  <p>金融领域专业大模型解决方案</p>
-                  <el-button type="primary" class="product-btn">了解详情</el-button>
-                </div>
-              </el-card>
-            </div>
-          </el-tab-pane>
-          <el-tab-pane label="应用大模型" name="application">
-            <div class="product-grid">
-              <el-card class="product-card">
-                <div class="product-image">
-                  <div class="image-placeholder gradient-9"></div>
-                </div>
-                <div class="product-info">
-                  <h3>智能客服</h3>
-                  <p>提升客户服务质量和效率</p>
-                  <el-button type="primary" class="product-btn">了解详情</el-button>
-                </div>
-              </el-card>
-              <el-card class="product-card">
-                <div class="product-image">
-                  <div class="image-placeholder gradient-10"></div>
-                </div>
-                <div class="product-info">
-                  <h3>内容创作</h3>
-                  <p>AI辅助内容创作平台</p>
-                  <el-button type="primary" class="product-btn">了解详情</el-button>
-                </div>
-              </el-card>
-            </div>
-          </el-tab-pane>
-        </el-tabs>
+      <div class="models-grid">
+        <el-card class="model-card featured-model">
+          <div class="model-header">
+            <h3>通义大模型</h3>
+            <ul class="model-features">
+              <li><i class="el-icon-check"></i> 全面的大模型服务，满足各类场景需求</li>
+              <li><i class="el-icon-check"></i> 持续迭代优化，保持技术领先</li>
+              <li><i class="el-icon-check"></i> 完善的大模型配套服务和生态建设</li>
+            </ul>
+            <el-button type="primary" class="model-btn">立即使用</el-button>
+          </div>
+          <div class="model-image">
+            <div class="image-placeholder gradient-7"></div>
+          </div>
+        </el-card>
+        
+        <div class="small-models-grid">
+          <el-card class="model-card small-model-card">
+            <h4>通义千问 · 文本生成大模型</h4>
+            <p class="model-desc">强大的文本生成能力，支持多种格式内容创作</p>
+          </el-card>
+          <el-card class="model-card small-model-card">
+            <h4>通义千问 · 视觉理解大模型</h4>
+            <p class="model-desc">深度理解图像内容，实现跨模态交互和分析</p>
+            <span class="new-badge">NEW</span>
+          </el-card>
+          <el-card class="model-card small-model-card">
+            <h4>通义千问 · 图片生成大模型</h4>
+            <p class="model-desc">根据文本描述生成高质量图像，创意无限</p>
+          </el-card>
+          <el-card class="model-card small-model-card">
+            <h4>通义万相 · 图像生成大模型</h4>
+            <p class="model-desc">专业级图像生成，满足设计和创意需求</p>
+          </el-card>
+          <el-card class="model-card small-model-card">
+            <h4>通义千问 · 金融大模型</h4>
+            <p class="model-desc">专注金融领域，提供专业分析和决策支持</p>
+          </el-card>
+          <el-card class="model-card small-model-card">
+            <h4>通义音脉 · 语音识别模型</h4>
+            <p class="model-desc">高精度语音识别，支持多场景语音交互</p>
+            <span class="new-badge">NEW</span>
+          </el-card>
+        </div>
       </div>
     </section>
 
-    <!-- 技术架构 -->
-    <section class="tech-architecture">
+    <!-- AI与云计算协同区域 -->
+    <section class="ai-cloud-section">
       <div class="section-header">
-        <h2>技术架构</h2>
-        <p>先进的技术架构，保障大模型服务稳定高效</p>
+        <h2>依托大模型与云计算协同发展，让 AI 触手可及</h2>
       </div>
-      <div class="architecture-diagram">
-        <div class="diagram-placeholder"></div>
+      <div class="ai-cloud-content">
+        <div class="ai-cloud-text">
+          <h3>分析 Agent</h3>
+          <h4>实现一键 AI 数据洞察</h4>
+          <p class="section-desc">通过自然语言交互，快速分析数据，生成可视化报告和洞察结论，无需专业技能</p>
+          <el-button type="primary" class="section-btn">了解详情</el-button>
+          <el-button type="text" class="more-btn">查看更多</el-button>
+          
+          <ul class="feature-list">
+            <li>
+              <i class="el-icon-chat-round"></i>
+              <span>与 AI 智能体进行实时数据对话</span>
+            </li>
+            <li>
+              <i class="el-icon-clock"></i>
+              <span>10 分钟在云天系统中创建一个 AI 助手</span>
+            </li>
+            <li>
+              <i class="el-icon-office-building"></i>
+              <span>AI 打造专属企业情报院</span>
+            </li>
+          </ul>
+        </div>
+        <div class="ai-cloud-image">
+          <div class="image-placeholder gradient-8"></div>
+        </div>
       </div>
     </section>
 
-    <!-- 客户案例 -->
-    <section class="customer-cases">
+    <!-- AI解决方案区域 -->
+    <section class="solutions-section">
+      <div class="section-header">
+        <h2>AI 解决方案</h2>
+        <p>为不同行业提供定制化 AI 解决方案</p>
+      </div>
+      <div class="solutions-grid">
+        <el-card class="solution-card">
+          <div class="solution-image">
+            <div class="image-placeholder gradient-9"></div>
+          </div>
+          <h3>智能制造</h3>
+          <p>通过 AI 技术提升生产效率，降低成本，实现智能化生产</p>
+          <el-button type="text" class="solution-btn">查看详情 <i class="el-icon-right"></i></el-button>
+        </el-card>
+        <el-card class="solution-card">
+          <div class="solution-image">
+            <div class="image-placeholder gradient-10"></div>
+          </div>
+          <h3>智能金融</h3>
+          <p>AI 驱动的金融解决方案，提升风控能力，优化客户体验</p>
+          <el-button type="text" class="solution-btn">查看详情 <i class="el-icon-right"></i></el-button>
+        </el-card>
+        <el-card class="solution-card">
+          <div class="solution-image">
+            <div class="image-placeholder gradient-11"></div>
+          </div>
+          <h3>智能医疗</h3>
+          <p>AI 辅助诊断、药物研发，提升医疗服务质量和效率</p>
+          <el-button type="text" class="solution-btn">查看详情 <i class="el-icon-right"></i></el-button>
+        </el-card>
+        <el-card class="solution-card">
+          <div class="solution-image">
+            <div class="image-placeholder gradient-12"></div>
+          </div>
+          <h3>智能零售</h3>
+          <p>个性化推荐、智能库存管理，提升零售企业竞争力</p>
+          <el-button type="text" class="solution-btn">查看详情 <i class="el-icon-right"></i></el-button>
+        </el-card>
+      </div>
+    </section>
+
+    <!-- 智能数据平台区域 -->
+    <section class="data-platform-section">
+      <div class="section-header">
+        <h2>智能数据平台</h2>
+        <p>一站式数据管理与分析平台，释放数据价值</p>
+      </div>
+      <div class="platform-content">
+        <div class="platform-image">
+          <div class="image-placeholder gradient-13"></div>
+        </div>
+        <div class="platform-features">
+          <div class="platform-feature">
+            <div class="feature-icon gradient-1"></div>
+            <h3>数据集成</h3>
+            <p>支持多种数据源的快速集成和同步</p>
+          </div>
+          <div class="platform-feature">
+            <div class="feature-icon gradient-2"></div>
+            <h3>数据治理</h3>
+            <p>全面的数据质量管理和元数据管理</p>
+          </div>
+          <div class="platform-feature">
+            <div class="feature-icon gradient-3"></div>
+            <h3>数据分析</h3>
+            <p>强大的数据分析和可视化能力</p>
+          </div>
+          <div class="platform-feature">
+            <div class="feature-icon gradient-4"></div>
+            <h3>数据服务</h3>
+            <p>便捷的数据服务化和 API 发布</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 客户案例区域 -->
+    <section class="customer-cases-section">
       <div class="section-header">
         <h2>客户案例</h2>
-        <p>助力企业实现智能化转型</p>
+        <p>与行业领先企业共同成长</p>
       </div>
       <div class="cases-grid">
         <el-card class="case-card">
+          <div class="case-image">
+            <div class="image-placeholder gradient-14"></div>
+          </div>
           <div class="case-content">
-            <h3>制造行业</h3>
-            <p>通过大模型优化生产流程，提升生产效率30%</p>
+            <h3>制造企业</h3>
+            <p>通过 AI 优化生产流程，提升生产效率 30%</p>
           </div>
         </el-card>
         <el-card class="case-card">
+          <div class="case-image">
+            <div class="image-placeholder gradient-15"></div>
+          </div>
           <div class="case-content">
-            <h3>金融行业</h3>
-            <p>智能风控系统，降低风险识别成本50%</p>
+            <h3>金融机构</h3>
+            <p>AI 风控系统，降低风险损失 40%</p>
           </div>
         </el-card>
         <el-card class="case-card">
+          <div class="case-image">
+            <div class="image-placeholder gradient-16"></div>
+          </div>
           <div class="case-content">
-            <h3>教育行业</h3>
-            <p>个性化学习方案，提升学生学习效果</p>
+            <h3>医疗机构</h3>
+            <p>AI 辅助诊断系统，提高诊断准确率 25%</p>
+          </div>
+        </el-card>
+        <el-card class="case-card">
+          <div class="case-image">
+            <div class="image-placeholder gradient-17"></div>
+          </div>
+          <div class="case-content">
+            <h3>零售企业</h3>
+            <p>个性化推荐系统，提升销售额 20%</p>
           </div>
         </el-card>
       </div>
     </section>
 
-    <!-- 服务支持 -->
-    <section class="service-support">
+    <!-- 全球基础设施区域 -->
+    <section class="infrastructure-section">
       <div class="section-header">
-        <h2>服务支持</h2>
-        <p>全方位服务保障，让您使用无忧</p>
+        <h2>全球基础设施</h2>
+        <p>覆盖全球的云基础设施，保障服务稳定可靠</p>
       </div>
-      <div class="support-grid">
-        <div class="support-item">
-          <div class="support-icon gradient-1"></div>
-          <h3>专业咨询</h3>
-          <p>一对一专家咨询，定制解决方案</p>
+      <div class="infrastructure-stats">
+        <div class="stat-item">
+          <div class="stat-number">28</div>
+          <div class="stat-label">全球地域</div>
         </div>
-        <div class="support-item">
-          <div class="support-icon gradient-2"></div>
-          <h3>技术支持</h3>
-          <p>7×24小时技术支持，保障业务稳定</p>
+        <div class="stat-item">
+          <div class="stat-number">85</div>
+          <div class="stat-label">可用区</div>
         </div>
-        <div class="support-item">
-          <div class="support-icon gradient-3"></div>
-          <h3>培训服务</h3>
-          <p>专业培训课程，提升团队能力</p>
+        <div class="stat-item">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">国家和地区</div>
         </div>
-        <div class="support-item">
-          <div class="support-icon gradient-4"></div>
-          <h3>生态合作</h3>
-          <p>丰富的生态资源，助力业务发展</p>
+        <div class="stat-item">
+          <div class="stat-number">300+</div>
+          <div class="stat-label">CDN 节点</div>
         </div>
       </div>
     </section>
 
-    <!-- 底部区域 -->
+    <!-- 合作伙伴区域 -->
+    <section class="partners-section">
+      <div class="section-header">
+        <h2>合作伙伴</h2>
+        <p>与全球领先企业携手共进</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-logo">
+          <div class="image-placeholder gradient-18"></div>
+        </div>
+        <div class="partner-logo">
+          <div class="image-placeholder gradient-19"></div>
+        </div>
+        <div class="partner-logo">
+          <div class="image-placeholder gradient-20"></div>
+        </div>
+        <div class="partner-logo">
+          <div class="image-placeholder gradient-21"></div>
+        </div>
+        <div class="partner-logo">
+          <div class="image-placeholder gradient-22"></div>
+        </div>
+        <div class="partner-logo">
+          <div class="image-placeholder gradient-23"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚区域 -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-links">
           <div class="link-group">
             <h4>产品与服务</h4>
             <ul>
-              <li>通义千问</li>
-              <li>CodeLlama</li>
-              <li>医疗大模型</li>
-              <li>金融大模型</li>
+              <li>云服务器</li>
+              <li>数据库</li>
+              <li>人工智能</li>
+              <li>大数据</li>
+              <li>云存储</li>
             </ul>
           </div>
           <div class="link-group">
@@ -239,17 +402,19 @@
             <ul>
               <li>智能制造</li>
               <li>智能金融</li>
-              <li>智能教育</li>
-              <li>智能客服</li>
+              <li>智能医疗</li>
+              <li>智能零售</li>
+              <li>智慧城市</li>
             </ul>
           </div>
           <div class="link-group">
             <h4>开发者中心</h4>
             <ul>
-              <li>API文档</li>
-              <li>SDK下载</li>
-              <li>开发指南</li>
-              <li>社区论坛</li>
+              <li>文档中心</li>
+              <li>API 文档</li>
+              <li>SDK 下载</li>
+              <li>开发者社区</li>
+              <li>技术博客</li>
             </ul>
           </div>
           <div class="link-group">
@@ -259,6 +424,17 @@
               <li>新闻动态</li>
               <li>招贤纳士</li>
               <li>联系我们</li>
+              <li>合作伙伴</li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>服务与支持</h4>
+            <ul>
+              <li>帮助中心</li>
+              <li>技术支持</li>
+              <li>在线客服</li>
+              <li>工单系统</li>
+              <li>服务状态</li>
             </ul>
           </div>
         </div>
@@ -268,6 +444,7 @@
             <span>隐私政策</span>
             <span>服务条款</span>
             <span>法律声明</span>
+            <span>网站地图</span>
           </div>
         </div>
       </div>
@@ -277,11 +454,10 @@
 
 <script>
 export default {
-  name: 'BigModel',
+  name: 'AIPlatform',
   data() {
     return {
-      activeIndex: '1',
-      activeTab: 'base'
+      activeIndex: '1'
     };
   },
   methods: {
@@ -293,308 +469,663 @@ export default {
 </script>
 
 <style scoped>
-/* 大模型页面特有样式 */
-.bigmodel-hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 0;
-  background-color: #f0f2f5;
+/* 全局样式 */
+.aliyun-ai-platform {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: #f9fafb;
 }
 
-.bigmodel-hero .hero-content {
-  flex: 1;
-  max-width: 500px;
-}
-
-.bigmodel-hero .hero-content h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
-.bigmodel-hero .hero-content p {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-.bigmodel-hero .hero-image {
-  flex: 1;
-  max-width: 600px;
-}
-
-.bigmodel-hero .image-placeholder {
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 8px;
-}
-
-/* 核心能力 */
-.core-capabilities {
-  padding: 80px 0;
-}
-
-.core-capabilities .section-header {
+.section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  padding-top: 60px;
 }
 
-.core-capabilities .section-header h2 {
-  font-size: 32px;
+.section-header h2 {
+  font-size: 28px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   color: #1a1a1a;
 }
 
-.core-capabilities .section-header p {
+.section-header p {
   font-size: 16px;
   color: #666;
 }
 
-.capabilities-grid {
+/* 头部导航 */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0;
+}
+
+.header-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  font-size: 24px;
+  color: #1890ff;
+  margin-right: 8px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.el-menu-demo {
+  border-bottom: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 240px;
+  margin-right: 16px;
+}
+
+/* 英雄区域 */
+.hero-section {
+  background-color: #e6f7ff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0.05;
+}
+
+.hero-content {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.hero-actions {
+  margin-bottom: 60px;
+}
+
+.hero-actions .primary-btn {
+  margin-right: 16px;
+  padding: 0 40px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.hero-actions .secondary-btn {
+  padding: 0 40px;
+  height: 48px;
+  font-size: 18px;
+}
+
+.hero-cards {
+  display: flex;
+  gap: 24px;
+}
+
+.hero-card {
+  flex: 1;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 精选AI应用区域 */
+.featured-ai-section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.ai-showcase {
+  display: flex;
+  gap: 24px;
+}
+
+.main-ai-card {
+  flex: 2;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ai-card-header {
+  padding: 32px;
+  background-color: #fff;
+}
+
+.ai-card-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.ai-card-header p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.ai-card-btn {
+  padding: 8px 24px;
+}
+
+.ai-card-image {
+  height: 200px;
+}
+
+.ai-cards-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.small-ai-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.small-header {
+  padding: 20px;
+}
+
+.small-header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.small-header p {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.small-image {
+  height: 100px;
+}
+
+/* 通义大模型区域 */
+.tongyi-model-section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.models-grid {
+  display: flex;
+  gap: 24px;
+}
+
+.featured-model {
+  flex: 2;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.model-header {
+  padding: 32px;
+  background-color: #fff;
+}
+
+.model-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.model-features {
+  list-style: none;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.model-features li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.model-features i {
+  color: #52c41a;
+  margin-right: 8px;
+}
+
+.model-btn {
+  padding: 8px 24px;
+}
+
+.model-image {
+  height: 200px;
+}
+
+.small-models-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.small-model-card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.small-model-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.model-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.new-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ff4d4f;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* AI与云计算协同区域 */
+.ai-cloud-section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.ai-cloud-content {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.ai-cloud-text {
+  flex: 1;
+}
+
+.ai-cloud-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.ai-cloud-text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.section-btn {
+  margin-right: 16px;
+  padding: 8px 24px;
+}
+
+.more-btn {
+  color: #1890ff;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.feature-list li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list i {
+  color: #1890ff;
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.ai-cloud-image {
+  flex: 1;
+  height: 300px;
+}
+
+/* AI解决方案区域 */
+.solutions-section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.solutions-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.capability-card {
-  padding: 30px;
-  text-align: center;
+.solution-card {
+  padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.capability-card .card-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
+.solution-image {
+  height: 120px;
+  margin-bottom: 16px;
 }
 
-.capability-card h3 {
-  font-size: 18px;
+.solution-card h3 {
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #1a1a1a;
 }
 
-.capability-card p {
+.solution-card p {
   font-size: 14px;
   color: #666;
+  margin-bottom: 16px;
   line-height: 1.6;
 }
 
-/* 产品体系 */
-.product-system {
-  padding: 80px 0;
-  background-color: #fafafa;
+.solution-btn {
+  font-size: 14px;
+  color: #1890ff;
 }
 
-.product-system .section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.product-system .section-header h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-.product-system .section-header p {
-  font-size: 16px;
-  color: #666;
-}
-
-.product-tabs {
-  max-width: 1200px;
+/* 智能数据平台区域 */
+.data-platform-section {
+  width: 1200px;
   margin: 0 auto;
+  padding: 80px 0;
 }
 
-.product-grid {
+.platform-content {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+.platform-image {
+  flex: 1;
+  height: 400px;
+}
+
+.platform-features {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-top: 30px;
 }
 
-.product-card {
-  display: flex;
+.platform-feature {
+  padding: 24px;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.product-card .product-image {
-  flex: 1;
-  max-width: 200px;
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
 }
 
-.product-card .image-placeholder {
-  width: 100%;
-  height: 100%;
-}
-
-.product-card .product-info {
-  flex: 2;
-  padding: 30px;
-}
-
-.product-card h3 {
-  font-size: 20px;
+.platform-feature h3 {
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #1a1a1a;
 }
 
-.product-card p {
+.platform-feature p {
   font-size: 14px;
   color: #666;
-  margin-bottom: 20px;
   line-height: 1.6;
 }
 
-.product-card .product-btn {
-  font-size: 14px;
-}
-
-/* 技术架构 */
-.tech-architecture {
-  padding: 80px 0;
-}
-
-.tech-architecture .section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.tech-architecture .section-header h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-.tech-architecture .section-header p {
-  font-size: 16px;
-  color: #666;
-}
-
-.architecture-diagram {
-  max-width: 1200px;
+/* 客户案例区域 */
+.customer-cases-section {
+  width: 1200px;
   margin: 0 auto;
-}
-
-.diagram-placeholder {
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 8px;
-}
-
-/* 客户案例 */
-.customer-cases {
   padding: 80px 0;
-  background-color: #fafafa;
-}
-
-.customer-cases .section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.customer-cases .section-header h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-.customer-cases .section-header p {
-  font-size: 16px;
-  color: #666;
 }
 
 .cases-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.case-card {
-  padding: 40px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-}
-
-.case-card h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-.case-card p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-}
-
-/* 服务支持 */
-.service-support {
-  padding: 80px 0;
-}
-
-.service-support .section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.service-support .section-header h2 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #1a1a1a;
-}
-
-.service-support .section-header p {
-  font-size: 16px;
-  color: #666;
-}
-
-.support-grid {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.support-item {
-  text-align: center;
+.case-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.support-item .support-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
+.case-image {
+  height: 160px;
 }
 
-.support-item h3 {
-  font-size: 18px;
+.case-content {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.case-content h3 {
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #1a1a1a;
 }
 
-.support-item p {
+.case-content p {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
+}
+
+/* 全球基础设施区域 */
+.infrastructure-section {
+  background-color: #f0f2f5;
+  padding: 80px 0;
+}
+
+.infrastructure-stats {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1890ff;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #666;
+}
+
+/* 合作伙伴区域 */
+.partners-section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 48px;
+}
+
+.partner-logo {
+  height: 80px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 页脚区域 */
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.link-group h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.link-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.link-group li {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #999;
+}
+
+.legal-links {
+  display: flex;
+  gap: 24px;
+}
+
+.legal-links span {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 图片占位符 */
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 /* 渐变背景 */
@@ -608,37 +1139,70 @@ export default {
 .gradient-8 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
 .gradient-9 { background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); }
 .gradient-10 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.gradient-11 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+.gradient-12 { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+.gradient-13 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.gradient-14 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.gradient-15 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.gradient-16 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.gradient-17 { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+.gradient-18 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.gradient-19 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+.gradient-20 { background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); }
+.gradient-21 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.gradient-22 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+.gradient-23 { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .bigmodel-hero {
+  .header-container,
+  .hero-content,
+  .featured-ai-section,
+  .tongyi-model-section,
+  .ai-cloud-section,
+  .solutions-section,
+  .data-platform-section,
+  .customer-cases-section,
+  .infrastructure-stats,
+  .partners-section,
+  .footer-content {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .hero-cards {
+    flex-direction: column;
+  }
+  
+  .ai-showcase,
+  .models-grid,
+  .ai-cloud-content,
+  .platform-content {
+    flex-direction: column;
+  }
+  
+  .ai-cards-grid,
+  .small-models-grid,
+  .solutions-grid,
+  .platform-features,
+  .cases-grid,
+  .partners-grid,
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
   
-  .bigmodel-hero .hero-content {
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-  
-  .bigmodel-hero .hero-content h1 {
-    font-size: 32px;
-  }
-  
-  .capabilities-grid,
-  .product-grid,
-  .cases-grid,
-  .support-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .product-card {
-    flex-direction: column;
-  }
-  
-  .product-card .product-image {
-    max-width: 100%;
-    height: 200px;
+  .legal-links {
+    margin-top: 16px;
   }
 }
 </style>
