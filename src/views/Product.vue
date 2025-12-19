@@ -426,56 +426,19 @@
     </div>
 
     <!-- 页脚 -->
-    <el-footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>阿里云AI</h3>
-            <p>让AI触手可及</p>
-          </div>
-          <div class="footer-column">
-            <h4>产品</h4>
-            <ul>
-              <li>AI大模型</li>
-              <li>视觉智能</li>
-              <li>语音智能</li>
-              <li>自然语言处理</li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>解决方案</h4>
-            <ul>
-              <li>智能制造</li>
-              <li>智能金融</li>
-              <li>智能医疗</li>
-              <li>智能零售</li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>支持与服务</h4>
-            <ul>
-              <li>文档中心</li>
-              <li>开发者社区</li>
-              <li>技术支持</li>
-              <li>联系我们</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2024 阿里云 版权所有</p>
-        </div>
-      </div>
-    </el-footer>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Product',
   components: {
-    Header
+    Header,
+    Footer
   },
   data() {
     return {
@@ -1060,52 +1023,7 @@ export default {
   }
 }
 
-/* 页脚样式 */
-.footer {
-  background-color: #001529;
-  color: white;
-  padding: 60px 0 30px;
-  margin-top: 60px;
-}
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-column h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.footer-column h4 {
-  margin-bottom: 15px;
-  color: #ccc;
-}
-
-.footer-column ul {
-  list-style: none;
-}
-
-.footer-column li {
-  margin-bottom: 10px;
-  color: #999;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.footer-column li:hover {
-  color: #1890ff;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 30px;
-  border-top: 1px solid #333;
-  color: #666;
-}
 
 /* 产品可用区样式 */
 .product-availability {
