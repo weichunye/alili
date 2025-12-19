@@ -46,7 +46,7 @@
 				</div>
 			</div>
     <div class="vsimg">
-      <img style="width: 100%" src="./priceimg/price1.avif">
+      <img style="width: 100%" src="../../static/priceimg/price1.avif">
     </div>
 		</section>
 
@@ -62,7 +62,7 @@
 					<el-button type="text" class="module-btn">了解产品定价策略</el-button>
         </el-col>
 				<el-col class="module-right" :span="12">
-					<img src="./priceimg/price2.avif" alt="计费方式示意图" class="module-img">
+					<img src="../../static/priceimg/price2.avif" alt="计费方式示意图" class="module-img">
 				</el-col>
 			</el-row >
 		</section>
@@ -79,7 +79,7 @@
           <el-button type="text" class="module-btn">使用价格计算器</el-button>
         </el-col>
         <el-col class="module-right" :span="12">
-          <img src="./priceimg/price3.avif" alt="计费方式示意图" class="module-img">
+          <img src="../../static/priceimg/price3.avif" alt="计费方式示意图" class="module-img">
         </el-col>
       </el-row >
 		</section>
@@ -99,7 +99,7 @@
            <el-button type="primary" link >查看我的成本数据</el-button></div>
         </el-col>
         <el-col class="module-right" :span="12">
-          <img src="./priceimg/price4.avif" alt="计费方式示意图" class="module-img">
+          <img src="../../static/priceimg/price4.avif" alt="计费方式示意图" class="module-img">
         </el-col>
       </el-row >
 		</section>
@@ -115,7 +115,7 @@
           <el-button type="text" class="module-btn">新建迁移中心</el-button>
         </el-col>
         <el-col class="module-right" :span="12">
-          <img src="./priceimg/price5.avif" alt="计费方式示意图" class="module-img">
+          <img src="../../static/priceimg/price5.avif" alt="计费方式示意图" class="module-img">
         </el-col>
       </el-row >
 		</section>
@@ -170,7 +170,7 @@
 		background-color: #fff;
 		padding: 16px 0;
 		border-bottom: 1px solid #eee;
-		background: url(./priceimg/pricebanner.jpg) center center / cover no-repeat;
+		background: url(../../static/priceimg/pricebanner.jpg) center center / cover no-repeat;
 	.title-text{
 		    color: #181818;
 		    font-weight: 600;
@@ -385,7 +385,7 @@
 
 	/* 底部体验区 */
 	.experience-section {
-    background-image: url(./priceimg/pricefooter.jpg);
+    background-image: url(../../static/priceimg/pricefooter.jpg);
     background-color: rgb(240, 240, 242);
     background-position: 50%;
     background-repeat: no-repeat;
