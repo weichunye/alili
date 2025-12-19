@@ -1,0 +1,96 @@
+<template>
+  <el-header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <i class="el-icon-cloud"></i>
+        <span>阿里云AI</span>
+      </div>
+      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item index="1">首页</el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">产品</template>
+          <el-menu-item index="2-1">所有产品</el-menu-item>
+          <el-menu-item index="2-2">AI大模型</el-menu-item>
+          <el-menu-item index="2-3">视觉智能</el-menu-item>
+          <el-menu-item index="2-4">语音智能</el-menu-item>
+          <el-menu-item index="2-5">自然语言处理</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3">解决方案</el-menu-item>
+        <el-menu-item index="4">文档中心</el-menu-item>
+        <el-menu-item index="5">开发者社区</el-menu-item>
+        <el-menu-item index="6">关于我们</el-menu-item>
+      </el-menu>
+      <div class="header-actions">
+        <el-input placeholder="搜索AI产品和服务" prefix-icon="el-icon-search" class="search-input"></el-input>
+        <el-button type="text" class="login-btn">登录</el-button>
+        <el-button type="primary" class="register-btn">免费试用</el-button>
+      </div>
+    </div>
+  </el-header>
+</template>
+
+<script>
+export default {
+  name: 'Header',
+  props: {
+    activeIndex: {
+      type: String,
+      default: '2'
+    }
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+      // 触发事件，让父组件处理路由跳转
+      this.$emit('menu-select', { key, keyPath });
+    }
+  }
+}
+</script>
+
+<style scoped>
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0;
+}
+
+.header-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  font-size: 24px;
+  color: #1890ff;
+  margin-right: 8px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.el-menu-demo {
+  border-bottom: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 240px;
+  margin-right: 16px;
+}
+</style>
