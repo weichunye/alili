@@ -155,7 +155,7 @@
 	// 无需额外逻辑，仅展示页面结构
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 	/* 全局样式重置 */
 	.aliyun-pricing-page {
 		font-family: "Microsoft Yahei", sans-serif;
@@ -166,42 +166,45 @@
 
 	/* 顶部导航 */
 	.header {
-    height: 240px;
+		height: 240px;
 		background-color: #fff;
 		padding: 16px 0;
 		border-bottom: 1px solid #eee;
 		background: url(../../static/priceimg/pricebanner.jpg) center center / cover no-repeat;
-	.title-text{
-		    color: #181818;
-		    font-weight: 600;
-			    font-size: 44px;
-			    line-height: 30px;
-			    height: 40px;
-			    margin-bottom: 10px;
 	}
-	.desc-text{
+
+	.header .title-text {
+		color: #181818;
+		font-weight: 600;
+		font-size: 44px;
+		line-height: 30px;
+		height: 40px;
+		margin-bottom: 10px;
+	}
+
+	.header .desc-text {
 		color: #181818;
 		font-weight: 400;
-		    line-height: 25px;
-		    height: 25px;
-		    display: inline-block;
-		    width: 658px;
-	}
+		line-height: 25px;
+		height: 25px;
+		display: inline-block;
+		width: 658px;
 	}
 
 	.header-container {
-	padding-left: 36px;
+		padding-left: 36px;
 		margin: 0 auto;
 		display: flex;
-    gap: 10px;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    .priceBtn{
-      display: flex;
-      align-items: center;
-      gap:10px;
-    }
+		gap: 10px;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	.header-container .priceBtn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 	}
 
 	.active-btn {
@@ -242,10 +245,11 @@
 		background-color: #fff;
 		padding: 32px 0;
 		border-top: 1px solid #eee;
-    .vsimg{
-      margin: 29px 0 36px;
-      padding: 0 24px;
-    }
+	}
+
+	.advantage-section .vsimg {
+		margin: 29px 0 36px;
+		padding: 0 24px;
 	}
 
 	.advantage-container {
@@ -253,11 +257,12 @@
 		display: flex;
 		justify-content: space-between;
 	}
-.section{
-  width: 100%;
-  padding: 0 10%;
-  box-sizing: border-box;
-}
+	
+	.section {
+		width: 100%;
+		padding: 0 10%;
+		box-sizing: border-box;
+	}
 	.advantage-item {
 		width: 33.3%;
     padding:0 24px;
@@ -287,29 +292,31 @@
 	.module-container {
 		margin: 0 auto;
 	}
-  .reverse{
-    background: #fff;
-  }
-  .reverse .module-container {
+	
+	.reverse {
+		background: #fff;
+	}
+	
+	.reverse .module-container {
 		flex-direction: row-reverse;
 	}
 
 	.module-left {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    .btnBox{
-      display: flex;
-      align-items: center;
-    }
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: center;
+	}
 
+	.module-left .btnBox {
+		display: flex;
+		align-items: center;
 	}
 
 	.module-right {
 		display: flex;
-    align-items: center;
-    justify-content: center;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.module-title {
