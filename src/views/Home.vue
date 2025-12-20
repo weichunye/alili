@@ -1,27 +1,7 @@
 <template>
   <div class="aliyun-ai-platform">
     <!-- 顶部导航栏 -->
-    <el-header class="header">
-      <div class="header-container">
-        <div class="logo">
-          <i class="el-icon-cloud"></i>
-          <span>阿里云</span>
-        </div>
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-          <el-menu-item index="1">首页</el-menu-item>
-          <el-menu-item index="2">产品</el-menu-item>
-          <el-menu-item index="3">解决方案</el-menu-item>
-          <el-menu-item index="4">文档中心</el-menu-item>
-          <el-menu-item index="5">开发者社区</el-menu-item>
-          <el-menu-item index="6">关于我们</el-menu-item>
-        </el-menu>
-        <div class="header-actions">
-          <el-input placeholder="搜索产品和服务" prefix-icon="el-icon-search" class="search-input"></el-input>
-          <el-button type="text" class="login-btn">登录</el-button>
-          <el-button type="primary" class="register-btn">注册</el-button>
-        </div>
-      </div>
-    </el-header>
+    <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
 
     <!-- 英雄区域 -->
     <section class="hero-section">
@@ -613,95 +593,27 @@
     </section>
 
     <!-- 页脚区域 -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-links">
-          <div class="link-group">
-            <h4>为云计算者言</h4>
-            <ul>
-              <li><a href="#">云栖社区</a></li>
-              <li><a href="#">开发者大会</a></li>
-              <li><a href="#">云栖公开课</a></li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>产品服务</h4>
-            <ul>
-              <li><a href="#">弹性计算</a></li>
-              <li><a href="#">数据库</a></li>
-              <li><a href="#">人工智能</a></li>
-              <li><a href="#">云安全</a></li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>解决方案</h4>
-            <ul>
-              <li><a href="#">互联网</a></li>
-              <li><a href="#">金融</a></li>
-              <li><a href="#">政务</a></li>
-              <li><a href="#">制造业</a></li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>文档社区</h4>
-            <ul>
-              <li><a href="#">帮助文档</a></li>
-              <li><a href="#">API参考</a></li>
-              <li><a href="#">最佳实践</a></li>
-              <li><a href="#">开发者社区</a></li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>支持中心</h4>
-            <ul>
-              <li><a href="#">自助服务</a></li>
-              <li><a href="#">工单系统</a></li>
-              <li><a href="#">联系我们</a></li>
-              <li><a href="#">售后服务</a></li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>关于阿里云</h4>
-            <ul>
-              <li><a href="#">公司介绍</a></li>
-              <li><a href="#">新闻动态</a></li>
-              <li><a href="#">加入我们</a></li>
-              <li><a href="#">合作伙伴</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="footer-contact">
-          <div class="contact-info">
-            <p>服务热线：95187-1</p>
-            <p>工作时间：周一至周日 8:00-20:00</p>
-          </div>
-          <div class="qr-code">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f5f5f5'/%3E%3C/svg%3E" alt="阿里云APP" />
-            <p>阿里云APP</p>
-          </div>
-        </div>
-        
-        <div class="footer-bottom">
-          <p>© 2009-2023 阿里巴巴云计算有限公司 版权所有</p>
-          <p>ICP备案号：浙ICP备11041366号-5 经营性ICP许可证：浙B2-20080101</p>
-          <p>阿里巴巴集团 隐私政策 服务条款 网站地图</p>
-        </div>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
+
 export default {
   name: 'AliyunAiPlatform',
+  components: {
+    Header,
+    Footer
+  },
   data() {
     return {
       activeIndex: '1'
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
+    handleMenuSelect({ key, keyPath }) {
       console.log(key, keyPath);
     }
   }
@@ -729,53 +641,7 @@ export default {
   color: #1a1a1a;
 }
 
-/* 头部导航 */
-.header {
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 0;
-}
 
-.header-container {
-  width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  font-weight: 600;
-  color: #1890ff;
-}
-
-.logo i {
-  font-size: 24px;
-  margin-right: 8px;
-}
-
-.el-menu-demo {
-  flex: 1;
-  margin: 0 20px;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-}
-
-.search-input {
-  width: 200px;
-  margin-right: 16px;
-}
-
-.login-btn {
-  margin-right: 8px;
-}
 
 /* 英雄区域 */
 .hero-section {
@@ -1601,100 +1467,6 @@ export default {
   font-size: 16px;
 }
 
-/* 页脚区域 */
-.footer {
-  background-color: #1a1a1a;
-  color: #888;
-  padding: 60px 0 30px;
-}
-
-.footer-content {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.link-group {
-  margin-bottom: 24px;
-}
-
-.link-group h4 {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.link-group ul {
-  padding: 0;
-  margin: 0;
-}
-
-.link-group li {
-  list-style: none;
-  margin-bottom: 12px;
-}
-
-.link-group a {
-  color: #888;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-
-.link-group a:hover {
-  color: #1890ff;
-}
-
-.footer-contact {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 24px;
-  border-top: 1px solid #262626;
-  margin-bottom: 40px;
-}
-
-.contact-info p {
-  margin: 0 0 8px 0;
-  font-size: 14px;
-}
-
-.qr-code {
-  text-align: center;
-}
-
-.qr-code img {
-  width: 80px;
-  height: 80px;
-  background-color: #fff;
-  padding: 8px;
-  border-radius: 4px;
-  margin-bottom: 8px;
-}
-
-.qr-code p {
-  margin: 0;
-  font-size: 14px;
-  color: #fff;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 24px;
-  border-top: 1px solid #262626;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.footer-bottom p {
-  margin: 0 0 8px 0;
-}
 
 /* 响应式设计 */
 @media (max-width: 1200px) {
@@ -1761,9 +1533,7 @@ export default {
     margin-bottom: 16px;
   }
   
-  .footer-links {
-    flex-direction: column;
-  }
+
   
   .compliance-logos,
   .logo-row {
