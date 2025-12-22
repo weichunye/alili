@@ -734,7 +734,153 @@
 
 
     </section>
+    <!-- 安全合规区域 -->
+    <section style="width: 100%; padding: 60px 10%; background-color: #fff;">
+      <div style="width:100%; margin: 0 auto;">
+        <!-- 标题 -->
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h2 style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 20px;">安全合规</h2>
+          <p style="font-size: 16px; color: #666; line-height: 1.6;">
+            我们不仅是大模型技术的推动者，更是行业内的守护者，致力于创造更安全、可靠、可信、可用的智能未来。
+            <span style="color: #1890ff; cursor: pointer;">了解更多，查看全新发布安全白皮书2.0 ></span>
+          </p>
+        </div>
 
+        <!-- 安全合规卡片网格 -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+          <!-- 卡片1：大模型预训练模型测试 -->
+          <div style="background-color: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 30px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); transition: all 0.3s ease;">
+            <div style="height: 150px; margin-bottom: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="font-size: 32px; color: #667eea;">✓</div>
+              </div>
+            </div>
+            <h3 style="font-size: 16px; font-weight: bold; color: #333; margin-bottom: 12px;">首批通过国内"大模型预训练模型测试"</h3>
+            <p style="font-size: 14px; color: #666; line-height: 1.6;">
+              阿里云通义千问大模型首批通过国内"大模型标准符合性评测"，在通用性、智能性、安全性等维度均达到国家相关标准要求。
+            </p>
+          </div>
+
+          <!-- 卡片2：网信办大模型备案 -->
+          <div style="background-color: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 30px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); transition: all 0.3s ease;">
+            <div style="height: 150px; margin-bottom: 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="font-size: 32px; color: #f5576c;">📋</div>
+              </div>
+            </div>
+            <h3 style="font-size: 16px; font-weight: bold; color: #333; margin-bottom: 12px;">国内首批通过网信办大模型备案</h3>
+            <p style="font-size: 14px; color: #666; line-height: 1.6;">
+              阿里云通义大模型业以服务技术支持的角色完成了相关部门备案审核，同时完成了生成式人工智能服务备案。
+            </p>
+          </div>
+
+          <!-- 卡片3：ISO/IEC 42001认证 -->
+          <div style="background-color: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 30px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); transition: all 0.3s ease;">
+            <div style="height: 150px; margin-bottom: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="font-size: 32px; color: #00f2fe;">🏆</div>
+              </div>
+            </div>
+            <h3 style="font-size: 16px; font-weight: bold; color: #333; margin-bottom: 12px;">IQNet国际发人工智能管理体系标准ISO/IEC 42001认证</h3>
+            <p style="font-size: 14px; color: #666; line-height: 1.6;">
+              阿里云通义通过ISO42001人工智能管理体系认证，树立AI管理国际标杆，确保技术安全可控，引领云计算与AI服务高标准发展。
+            </p>
+          </div>
+
+          <!-- 卡片4：安全防护体系 -->
+          <div style="background-color: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 30px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); transition: all 0.3s ease;">
+            <div style="height: 150px; margin-bottom: 20px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 80px; height: 80px; background-color: rgba(255, 255, 255, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <div style="font-size: 32px; color: #43e97b;">🛡️</div>
+              </div>
+            </div>
+            <h3 style="font-size: 16px; font-weight: bold; color: #333; margin-bottom: 12px;">全方位、多层次的安全防护体系</h3>
+            <p style="font-size: 14px; color: #666; line-height: 1.6;">
+              通义大模型基于阿里云百炼模型平台提供服务，通过平台完善的数据安全、基础保障机制，确保用户安全、稳定使用大模型。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 客户案例区域 -->
+    <section style="width: 100%; padding: 80px 10%; background-color: #fff;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <!-- 标题 -->
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h2 style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 16px;">客户案例</h2>
+          <p style="font-size: 16px; color: #666; line-height: 1.6;">
+            通义大模型在企业提效工具、文案创作、智能问答、智能推荐等场景都有成熟落地的最佳实践案例，合作咨询
+          </p>
+        </div>
+        
+        <!-- 切换按钮组 -->
+        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 50px;">
+          <button 
+            v-for="caseItem in customerCases" 
+            :key="caseItem.id"
+            @click="switchCaseTab(caseItem.id)"
+            :style="{
+              padding: '10px 24px',
+              borderRadius: '20px',
+              border: '1px solid #d9d9d9',
+              backgroundColor: activeCaseTab === caseItem.id ? '#1890ff' : '#fff',
+              color: activeCaseTab === caseItem.id ? '#fff' : '#333',
+              cursor: 'pointer',
+              fontSize: '14px',
+              fontWeight: activeCaseTab === caseItem.id ? '500' : '400',
+              transition: 'all 0.3s ease'
+            }"
+            @mouseover="{ backgroundColor: activeCaseTab === caseItem.id ? '#40a9ff' : '#f5f5f5' }"
+            @mouseout="{ backgroundColor: activeCaseTab === caseItem.id ? '#1890ff' : '#fff' }"
+          >
+            {{ caseItem.name }}
+          </button>
+        </div>
+        
+        <!-- 案例内容 -->
+        <div v-for="caseItem in customerCases" :key="caseItem.id" v-if="activeCaseTab === caseItem.id" 
+             style="display: flex; gap: 40px; align-items: center; background-color: #fafafa; padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);">
+          <!-- 左侧文字内容 -->
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <div style="font-size: 24px; color: #1890ff; font-weight: bold;">{{ caseItem.logo }}</div>
+            </div>
+            <p style="font-size: 16px; color: #666; line-height: 1.8; margin-bottom: 24px;">
+              {{ caseItem.description }}
+            </p>
+            <button style="
+              padding: 10px 20px;
+              border: 1px solid #1890ff;
+              borderRadius: 4px;
+              backgroundColor: #fff;
+              color: #1890ff;
+              cursor: pointer;
+              fontSize: 14px;
+              transition: all 0.3s ease;
+            " @mouseover="{ backgroundColor: '#e6f7ff' }" @mouseout="{ backgroundColor: '#fff' }">
+              查看详情
+            </button>
+          </div>
+          
+          <!-- 右侧图片 -->
+          <div style="flex: 1; min-height: 300px; background-color: #e8e8e8; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <div style="
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              font-size: 20px;
+              font-weight: bold;
+            ">
+              {{ caseItem.name }} 案例图片
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- 客户案例区域 -->
     <section class="customer-cases-section">
       <div class="section-header">
@@ -918,6 +1064,37 @@ export default {
       activeTab: 'closed', // 'closed'表示闭源模型，'open'表示开源模型
       currentScenarioTab: 0, // 当前激活的场景标签页索引
       activeResourceTab: 'resource', // 'resource'表示资源包，'plan'表示节省计划
+      activeCaseTab: 'haluo', // 当前激活的客户案例标签
+      customerCases: [
+        {
+          id: 'haluo',
+          name: '哈啰出行',
+          logo: '哈啰',
+          description: '哈啰基于通义千问的 qwen-plus, qwen-turbo, qwen2-7B-instruct 等模型组合，构建了用户意图识别、多轮对话、流量管控、智能问答等能力，实现了交易机器人的全链路闭环升级，同时引入 RAG, COT, TOOL 等技术构建 Agent，以 Agent 直接赋能业务，提升 GMV，实现全流程覆盖。',
+          image: '/src/static/img/case-haluo.png'
+        },
+        {
+          id: 'lingpao',
+          name: '零跑汽车',
+          logo: '零跑汽车',
+          description: '零跑汽车通过集成通义千问系列模型，构建了智能座舱交互系统，实现了语音控制、自然语言对话、个性化推荐等功能，提升了用户驾驶体验和座舱智能化水平。',
+          image: '/src/static/img/case-lingpao.png'
+        },
+        {
+          id: 'haizhi',
+          name: '海智招聘',
+          logo: '海智招聘',
+          description: '海智招聘利用通义千问大模型，开发了智能招聘助手，能够自动筛选简历、生成面试问题、分析候选人匹配度，大幅提高了招聘效率和准确性。',
+          image: '/src/static/img/case-haizhi.png'
+        },
+        {
+          id: 'fenzhong',
+          name: '分众传媒',
+          logo: '分众传媒',
+          description: '分众传媒基于通义千问大模型，构建了智能广告投放系统，能够根据用户画像和行为数据，精准推送广告内容，提升广告投放效果和转化率。',
+          image: '/src/static/img/case-fenzhong.png'
+        }
+      ],
       scenarioData: [
         {
           title: '系统问答助手',
@@ -1080,6 +1257,10 @@ export default {
     // 切换资源包标签页
     switchResourceTab(tabType) {
       this.activeResourceTab = tabType;
+    },
+    // 切换客户案例标签
+    switchCaseTab(tabType) {
+      this.activeCaseTab = tabType;
     }
   },
   computed: {
