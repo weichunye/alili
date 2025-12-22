@@ -4,6 +4,7 @@ import BigModel from './views/BigModel.vue'
 import Price from './views/price/price.vue'
 import Ljaly from './views/ljaliy/ljaliy.vue'
 import Product from './views/Product.vue'
+import Service from './views/service/service.vue'
 
 const routes = [
   {
@@ -20,6 +21,11 @@ const routes = [
     path: '/price',
     name: 'Price',
     component: Price
+  },
+  {
+    path: '/service',
+    name: 'Service',
+    component: Service
   },
   {
     path: '/ljaly',
