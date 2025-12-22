@@ -6,7 +6,7 @@
         <span>阿里云AI</span>
       </div>
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">首页</el-menu-item>
+        <el-menu-item index="1">大模型</el-menu-item>
         <el-submenu index="2">
           <template slot="title">产品</template>
           <el-menu-item index="2-1">所有产品</el-menu-item>
@@ -16,9 +16,13 @@
           <el-menu-item index="2-5">自然语言处理</el-menu-item>
         </el-submenu>
         <el-menu-item index="3">解决方案</el-menu-item>
-        <el-menu-item index="4">文档中心</el-menu-item>
-        <el-menu-item index="5">开发者社区</el-menu-item>
-        <el-menu-item index="6">关于我们</el-menu-item>
+        <el-menu-item index="4">文档与社区</el-menu-item>
+        <el-menu-item index="5">权益中心</el-menu-item>
+        <el-menu-item index="6">定价</el-menu-item>
+        <el-menu-item index="7">云市场</el-menu-item>
+        <el-menu-item index="8">合作伙伴</el-menu-item>
+        <el-menu-item index="9">支持与服务</el-menu-item>
+        <el-menu-item index="10">了解阿里云</el-menu-item>
       </el-menu>
       <div class="header-actions">
         <el-input placeholder="搜索AI产品和服务" prefix-icon="el-icon-search" class="search-input"></el-input>

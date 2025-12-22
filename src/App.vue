@@ -24,4 +24,9 @@ body {
 .app-container {
   min-height: 100vh;
 }
+.section {
+  width: 100%;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
 </style>
