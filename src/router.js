@@ -1,10 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import BigModel from './views/BigModel.vue'
 import Price from './views/price/price.vue'
 import Ljaly from './views/ljaliy/ljaliy.vue'
 import Product from './views/Product.vue'
 import Service from './views/service/service.vue'
+
+Vue.use(VueRouter)
 
 const routes = [
   {
@@ -39,8 +42,8 @@ const routes = [
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory(),
+const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

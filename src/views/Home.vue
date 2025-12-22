@@ -69,7 +69,7 @@
               </div>
               <div class="ai-card-image" :class="card.size === 'small' ? 'small-image' : ''">
                 <div class="image-placeholder" :class="card.gradientClass">
-                 
+
                 </div>
               </div>
             </el-card>
@@ -161,8 +161,8 @@
           <el-card class="products-card categories-card">
             <h3>核心产品</h3>
             <ul class="product-categories">
-              <li 
-                v-for="(category, index) in products.categories" 
+              <li
+                v-for="(category, index) in products.categories"
                 :key="index"
                 :class="{ active: selectedCategory === category.id }"
                 @click="selectCategory(category.id)"
@@ -171,11 +171,11 @@
               </li>
             </ul>
           </el-card>
-          
+
           <div class="product-groups">
-            <el-card 
-              v-for="(product, index) in selectedProducts" 
-              :key="index" 
+            <el-card
+              v-for="(product, index) in selectedProducts"
+              :key="index"
               class="products-card group-card"
             >
               <div class="product-header">
@@ -183,11 +183,11 @@
                 <p class="product-desc">{{ product.desc }}</p>
               </div>
               <div class="product-actions">
-                <el-button 
-                  v-for="(action, actionIndex) in product.actions" 
-                  :key="actionIndex" 
-                  :type="action.type" 
-                  size="small" 
+                <el-button
+                  v-for="(action, actionIndex) in product.actions"
+                  :key="actionIndex"
+                  :type="action.type"
+                  size="small"
                   :disabled="action.disabled"
                 >
                   {{ action.text }}
@@ -249,17 +249,17 @@
           <el-card >
             <div v-for="(customer, index) in customers" :key="index" class="customer-card">
             <div class="customer-logo">
-              <img v-if="index==0" src="/src/static/img/pic_3.png" alt="{{ customer.name }}">
-                  <img v-if="index==1" src="/src/static/img/pic_4.png" alt="{{ customer.name }}">
-                      <img v-if="index==2" src="/src/static/img/pic_5.png" alt="{{ customer.name }}">
-             
+              <img v-if="index==0" src="/src/static/img/pic_3.png" :alt="customer.name">
+<img v-if="index==1" src="/src/static/img/pic_4.png" :alt="customer.name">
+<img v-if="index==2" src="/src/static/img/pic_5.png" :alt="customer.name">
+
             </div>
              <span style="font-size: 20px;line-height: 40px;">{{ customer.name }}</span>
             <p class="customer-desc">{{ customer.desc }}</p>
             </div>
           </el-card>
         </div>
-        
+
         <div class="customer-logos">
           <div v-for="(row, rowIndex) in customerLogos" :key="rowIndex" class="logo-row">
             <div v-for="(logo, logoIndex) in row" :key="logoIndex" class="logo-item">{{ logo }}</div>
@@ -296,7 +296,7 @@
         <div class="economy-features">
           <el-card class="economy-card">
             <div  style="padding: 20px 1%; width: 23%;float: left; line-height: 50px;" v-for="(feature, index) in economyFeatures" :key="index" >
-        
+
             <h3 style="font-size: 24px;line-height: 60px; color: #1890ff; border-bottom: 1px solid #dedede;">{{ feature.title }}</h3>
             <p class="economy-desc">{{ feature.desc }}</p>
             </div>
@@ -362,7 +362,7 @@
         </div>
         <div class="banner-bg"></div>
     </div>
-    
+
     </div>
       <Footer />
   </div>
@@ -882,11 +882,11 @@ export default {
       btn.addEventListener('click', function() {
         // 获取当前点击按钮的索引
         const currentIndex = this.getAttribute('data-index');
-        
+
         // 重置所有按钮和内容
         toggleBtns.forEach(b => b.classList.remove('active'));
         featureContents.forEach(c => c.classList.remove('show'));
-        
+
         // 激活当前按钮和内容
         this.classList.add('active');
         featureContents[this.getAttribute('data-index') - 1].classList.add('show');
@@ -895,7 +895,30 @@ export default {
   },
   methods: {
     handleMenuSelect({ key, keyPath }) {
-      console.log(key, keyPath);
+      // 根据选择的菜单项进行路由跳转
+      if (key === '1') {
+        this.$router.push('/bigmodel')
+      } else if (key === '2') {
+        // 产品菜单已改为下拉菜单
+      } else if (key === '2-1') {
+        this.$router.push('/product')
+      } else if (key === '2-2') {
+        // AI大模型页面路由
+      } else if (key === '2-3') {
+        // 视觉智能页面路由
+      } else if (key === '2-4') {
+        // 语音智能页面路由
+      } else if (key === '2-5') {
+        // 自然语言处理页面路由
+      } else if (key === '3') {
+        // 解决方案页面路由
+      } else if (key === '4') {
+        // 文档中心页面路由
+      } else if (key === '5') {
+        // 开发者社区页面路由
+      } else if (key === '6') {
+        // 关于我们页面路由
+      }
     },
     selectCategory(categoryId) {
       this.selectedCategory = categoryId;
@@ -1886,40 +1909,40 @@ export default {
   .hero-content h1 {
     font-size: 32px;
   }
-  
+
   .hero-cards {
     flex-direction: column;
   }
-  
+
   .ai-showcase {
     flex-direction: column;
   }
-  
+
   .ai-cloud-content {
     flex-direction: column;
   }
-  
+
   .products-grid {
     flex-direction: column;
   }
-  
+
   .infrastructure-content {
     flex-direction: column;
   }
-  
+
   .benefits-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .customer-cases {
     grid-template-columns: 1fr;
   }
-  
+
   .logo-row {
     flex-wrap: wrap;
     gap: 12px;
   }
-  
+
 }
 
 /* 深度选择器，让样式穿透到 v-html 内容 */
@@ -2064,7 +2087,7 @@ export default {
         .banner-content {
             position: relative;
             z-index: 2;
-           
+
         }
 
         /* 标题样式 */

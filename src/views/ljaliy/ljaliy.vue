@@ -293,9 +293,8 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .aliyun-page {
-
   margin: 0 auto;
   font-family: "Microsoft Yahei", sans-serif;
   color: #333;
@@ -624,94 +623,100 @@ export default {
   background-position: 100%;
   background-repeat: no-repeat;
   background-image: url("../../static/ljaly/bg.png");
+}
 
-  .grid-style-1 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
+.card-head-pc .grid-style-1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
 
-  .h-tip {
-    padding: 0 6px;
-    font-weight: 400;
-    font-size: 12px;
-    color: #8c8c8c;
-    line-height: 24px;
-    border: 1px solid #e9e9e9;
-  }
+.card-head-pc .h-tip {
+  padding: 0 6px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #8c8c8c;
+  line-height: 24px;
+  border: 1px solid #e9e9e9;
+}
 
-  .h-name {
-    margin-top: 18px;
-    font-weight: 500;
-    font-size: 14px;
-    color: #181818;
-    letter-spacing: .12px;
-    line-height: 24px;
-  }
+.card-head-pc .h-name {
+  margin-top: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #181818;
+  letter-spacing: .12px;
+  line-height: 24px;
+}
 
-  .h-desc {
-    margin-top: 8px;
-    font-weight: 400;
-    font-size: 14px;
-    color: #666;
-    letter-spacing: .4px;
-    text-align: justify;
-    line-height: 22px;
-  }
+.card-head-pc .h-desc {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: .4px;
+  text-align: justify;
+  line-height: 22px;
 }
 .banner-container {
   position: relative;
   width: 100%;
   height: 400px;
   overflow: hidden;
-  .banner-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10%;
-   .banner-btn {
-      position: relative;
-      height: 45px;
-      width: 45px;
-      color: #fff;
-      margin-top: 24px;
-      font-size: 45px;
-      margin-left: 24px;
-      cursor: pointer;
-    }
-    .banner-title {
-      position: relative;
-      width: 485px;
-      height: 140px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 34px;
-      line-height: 68px;
-      font-weight: 600;
-      color: #fff;
-      margin-left: 24px;
-    }
-  }
-  .banner-frame {
+}
+
+.banner-container .banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+}
+
+.banner-container .banner-content .banner-btn {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  color: #fff;
+  margin-top: 24px;
+  font-size: 45px;
+  margin-left: 24px;
+  cursor: pointer;
+}
+
+.banner-container .banner-content .banner-title {
+  position: relative;
+  width: 485px;
+  height: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 34px;
+  line-height: 68px;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 24px;
+}
+
+.banner-container .banner-frame {
   width: 100%;
-  }
- .right-mask {
-   position: absolute;
-   top: 0;
-   height: 100%;
-   width: 300px;
-   right: 0;
- }
- .left-mask {
-   position: absolute;
-   top: 0;
-   height: 100%;
-   width: 300px;
-    left: 0;
-   right: auto;
-  }
+}
+
+.banner-container .right-mask {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  right: 0;
+}
+
+.banner-container .left-mask {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  left: 0;
+  right: auto;
 }
 </style>

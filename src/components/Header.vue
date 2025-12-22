@@ -1,10 +1,10 @@
 <template>
   <el-header class="header">
     <div class="header-container">
-      <div class="logo">
+      <router-link to="/" class="logo">
         <i class="el-icon-cloud"></i>
         <span>阿里云AI</span>
-      </div>
+      </router-link>
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">大模型</el-menu-item>
         <el-submenu index="2">

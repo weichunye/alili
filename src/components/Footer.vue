@@ -22,7 +22,7 @@
             <a href="#" class="social-icon el-icon-linkedin"></a>
           </div>
         </div>
-        
+
         <div class="footer-column">
           <h4 class="footer-title">产品与服务</h4>
           <ul class="footer-links">
@@ -34,7 +34,7 @@
             <li><a href="#">智能搜索</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-column">
           <h4 class="footer-title">解决方案</h4>
           <ul class="footer-links">
@@ -46,7 +46,7 @@
             <li><a href="#">智能政务</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-column">
           <h4 class="footer-title">开发者资源</h4>
           <ul class="footer-links">
@@ -58,7 +58,7 @@
             <li><a href="#">技术博客</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-column">
           <h4 class="footer-title">支持与帮助</h4>
           <ul class="footer-links">
@@ -70,7 +70,7 @@
             <li><a href="#">联系我们</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-column footer-subscribe">
           <h4 class="footer-title">订阅最新资讯</h4>
           <p class="subscribe-desc">获取AI技术动态和产品更新</p>
@@ -80,21 +80,21 @@
           </div>
         </div>
       </div>
-      
+
       <div class="footer-middle">
         <div class="footer-certifications">
           <a href="#" class="certification-item">
-            <img src="https://via.placeholder.com/80x40" alt="ISO认证" class="cert-img">
+            <img src="/src/static/ljaly/ljaly5.png" alt="ISO认证" class="cert-img">
           </a>
           <a href="#" class="certification-item">
-            <img src="https://via.placeholder.com/80x40" alt="安全认证" class="cert-img">
+            <img src="/src/static/ljaly/ljaly6.png" alt="安全认证" class="cert-img">
           </a>
           <a href="#" class="certification-item">
-            <img src="https://via.placeholder.com/80x40" alt="隐私认证" class="cert-img">
+            <img src="/src/static/img/pic_1.png" alt="隐私认证" class="cert-img">
           </a>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <div class="footer-legal">
           <a href="#" class="legal-link">隐私政策</a>
@@ -400,7 +400,7 @@ export default {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
   }
-  
+
   .footer-subscribe {
     grid-column: span 2;
   }
@@ -411,11 +411,11 @@ export default {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
-  
+
   .footer-info {
     grid-column: span 2;
   }
-  
+
   .footer-subscribe {
     grid-column: span 2;
   }
@@ -425,30 +425,30 @@ export default {
   .footer {
     padding: 60px 0 30px;
   }
-  
+
   .footer-top {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .footer-info {
     grid-column: span 1;
     padding-right: 0;
   }
-  
+
   .footer-subscribe {
     grid-column: span 1;
   }
-  
+
   .footer-legal {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .legal-separator {
     display: none;
   }
-  
+
   .footer-certifications {
     flex-wrap: wrap;
     gap: 20px;
