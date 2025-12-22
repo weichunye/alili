@@ -804,7 +804,7 @@
     </section>
     <!-- 客户案例区域 -->
     <section style="width: 100%; padding: 80px 10%; background-color: #fff;">
-      <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="width:100%; margin: 0 auto;">
         <!-- 标题 -->
         <div style="text-align: center; margin-bottom: 50px;">
           <h2 style="font-size: 32px; font-weight: bold; color: #333; margin-bottom: 16px;">客户案例</h2>
@@ -812,11 +812,11 @@
             通义大模型在企业提效工具、文案创作、智能问答、智能推荐等场景都有成熟落地的最佳实践案例，合作咨询
           </p>
         </div>
-        
+
         <!-- 切换按钮组 -->
         <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 50px;">
-          <button 
-            v-for="caseItem in customerCases" 
+          <button
+            v-for="caseItem in customerCases"
             :key="caseItem.id"
             @click="switchCaseTab(caseItem.id)"
             :style="{
@@ -836,9 +836,9 @@
             {{ caseItem.name }}
           </button>
         </div>
-        
+
         <!-- 案例内容 -->
-        <div v-for="caseItem in customerCases" :key="caseItem.id" v-if="activeCaseTab === caseItem.id" 
+        <div v-for="caseItem in customerCases" :key="caseItem.id" v-if="activeCaseTab === caseItem.id"
              style="display: flex; gap: 40px; align-items: center; background-color: #fafafa; padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);">
           <!-- 左侧文字内容 -->
           <div style="flex: 1;">
@@ -861,7 +861,7 @@
               查看详情
             </button>
           </div>
-          
+
           <!-- 右侧图片 -->
           <div style="flex: 1; min-height: 300px; background-color: #e8e8e8; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <div style="
@@ -875,7 +875,7 @@
               font-size: 20px;
               font-weight: bold;
             ">
-              {{ caseItem.name }} 案例图片
+              <img :src="caseItem.image" alt=""/>
             </div>
           </div>
         </div>
@@ -1071,28 +1071,28 @@ export default {
           name: '哈啰出行',
           logo: '哈啰',
           description: '哈啰基于通义千问的 qwen-plus, qwen-turbo, qwen2-7B-instruct 等模型组合，构建了用户意图识别、多轮对话、流量管控、智能问答等能力，实现了交易机器人的全链路闭环升级，同时引入 RAG, COT, TOOL 等技术构建 Agent，以 Agent 直接赋能业务，提升 GMV，实现全流程覆盖。',
-          image: '/src/static/img/case-haluo.png'
+          image: '/src/static/img/pic_7.png'
         },
         {
           id: 'lingpao',
           name: '零跑汽车',
           logo: '零跑汽车',
           description: '零跑汽车通过集成通义千问系列模型，构建了智能座舱交互系统，实现了语音控制、自然语言对话、个性化推荐等功能，提升了用户驾驶体验和座舱智能化水平。',
-          image: '/src/static/img/case-lingpao.png'
+          image: '/src/static/img/pic_8.jpg'
         },
         {
           id: 'haizhi',
           name: '海智招聘',
           logo: '海智招聘',
           description: '海智招聘利用通义千问大模型，开发了智能招聘助手，能够自动筛选简历、生成面试问题、分析候选人匹配度，大幅提高了招聘效率和准确性。',
-          image: '/src/static/img/case-haizhi.png'
+          image: '/src/static/img/pic_9.jpg'
         },
         {
           id: 'fenzhong',
           name: '分众传媒',
           logo: '分众传媒',
           description: '分众传媒基于通义千问大模型，构建了智能广告投放系统，能够根据用户画像和行为数据，精准推送广告内容，提升广告投放效果和转化率。',
-          image: '/src/static/img/case-fenzhong.png'
+          image: '/src/static/img/pic_10.jpg'
         }
       ],
       scenarioData: [
