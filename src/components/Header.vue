@@ -58,6 +58,9 @@ export default {
         case '6':
           this.$router.push('/price');
           break;
+        case '10':
+          this.$router.push('/ljaly');
+          break;
         // 可以添加其他菜单项的路由跳转逻辑
       }
       // 触发事件，让父组件处理其他逻辑
@@ -114,5 +117,6 @@ export default {
   margin-right: 16px;
 }
 </style>
+
 
 
