@@ -10,6 +10,8 @@ import Documentation from './views/Documentation.vue'
 import Solutions from './views/Solutions.vue'
 import Benefits from './views/Benefits.vue'
 import CloudMarket from './views/CloudMarket.vue'
+// 导入合作伙伴页面组件
+import Partner from './views/Partner.vue'
 
 Vue.use(VueRouter)
 
@@ -63,6 +65,12 @@ const routes = [
     path: '/cloudmarket',
     name: 'CloudMarket',
     component: CloudMarket
+  },
+  // 添加合作伙伴页面路由
+  {
+    path: '/partner',
+    name: 'Partner',
+    component: Partner
   }
 ]
 
@@ -72,6 +80,7 @@ const router = new VueRouter({
 })
 
 export default router
+
 
 
 

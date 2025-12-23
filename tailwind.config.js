@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#0066CC', // 导航栏主色
+        lightBlue: '#e8f3ff', // 卡片背景浅蓝
         orange: {
             primary: '#FF6600', // 主橙色
             light: '#FF8A33',   // 浅橙色

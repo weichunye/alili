@@ -64,6 +64,10 @@ export default {
         case '/cloudmarket':
           this.activeIndex = '7';
           break;
+        // 添加合作伙伴页面的activeIndex映射
+        case '/partner':
+          this.activeIndex = '8';
+          break;
         case '/ljaly':
           this.activeIndex = '10';
           break;
@@ -92,6 +96,10 @@ export default {
           break;
         case '7':
           this.$router.push('/cloudmarket');
+          break;
+        // 添加合作伙伴页面的路由跳转
+        case '8':
+          this.$router.push('/partner');
           break;
         case '10':
           this.$router.push('/ljaly');
@@ -152,6 +160,8 @@ export default {
   margin-right: 16px;
 }
 </style>
+
+
 
 
 
