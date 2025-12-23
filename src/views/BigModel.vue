@@ -2153,23 +2153,23 @@ export default {
                 grid-template-columns: 1fr;
             }
         }
-          @layer utilities {
-            .bg-gradient-purple {
-                background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
-            }
-            .bg-gradient-blue {
-                background: linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%);
-            }
-            .text-shadow-sm {
-                text-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            }
-            .tag-m {
-                @apply px-2 py-1 rounded-full text-xs font-medium text-white bg-primary/90;
-            }
-            .card-hover {
-                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-            }
-        }
+        /*  @layer utilities {*/
+        /*    .bg-gradient-purple {*/
+        /*        background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);*/
+        /*    }*/
+        /*    .bg-gradient-blue {*/
+        /*        background: linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%);*/
+        /*    }*/
+        /*    .text-shadow-sm {*/
+        /*        text-shadow: 0 1px 2px rgba(0,0,0,0.05);*/
+        /*    }*/
+        /*    .tag-m {*/
+        /*        @apply px-2 py-1 rounded-full text-xs font-medium text-white bg-primary/90;*/
+        /*    }*/
+        /*    .card-hover {*/
+        /*        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;*/
+        /*    }*/
+        /*}*/
 .bg_1 {
   /* 主背景渐变：左上到右下的浅蓝→淡蓝紫渐变 */
   background: linear-gradient(135deg,

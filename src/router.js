@@ -8,6 +8,7 @@ import Product from './views/Product.vue'
 import Service from './views/service/service.vue'
 import Documentation from './views/Documentation.vue'
 import Solutions from './views/Solutions.vue'
+import Benefits from './views/Benefits.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/solutions',
     name: 'Solutions',
     component: Solutions
+  },
+  {
+    path: '/benefits',
+    name: 'Benefits',
+    component: Benefits
   }
 ]
 
@@ -60,4 +66,5 @@ const router = new VueRouter({
 })
 
 export default router
+
 

@@ -55,6 +55,9 @@ export default {
         case '4':
           this.$router.push('/documentation');
           break;
+        case '5':
+          this.$router.push('/benefits');
+          break;
         case '6':
           this.$router.push('/price');
           break;
@@ -117,6 +120,7 @@ export default {
   margin-right: 16px;
 }
 </style>
+
 
 
 
