@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .content-auto {
+        content-visibility: auto;
+    }
+    .text-orange-price {
+        color: #FF6700;
+    }
+    .bg-blue-primary {
+        background-color: #1677FF;
+    }
+    .border-gray-light {
+        border-color: #E5E7EB;
+    }
+}

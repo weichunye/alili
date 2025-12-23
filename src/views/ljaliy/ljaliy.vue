@@ -1,5 +1,6 @@
 <template>
   <div class="aliyun-page">
+    <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
     <div class="banner-container">
       <div class="banner-frames ">
 
@@ -132,7 +133,7 @@
               <el-col :span="12">
                 <div class="sub-card">
                   <p class="card-tag">云栖品牌馆</p>
-                  <h4>关于云计算产业的趋势、研判和洞见</h4>
+                  <h4>关于云计算产业的技术趋势、研判和洞见</h4>
                 </div>
               </el-col>
               <el-col :span="12">
@@ -272,24 +273,39 @@
             <div class="csr-cardCont">
               <h4>零碳计划</h4>
               <p>
-                "零碳计划"计算气候变化，通过构建绿色中心，发挥自身在数据领域技术、计算力和可持续技术优势，输出行业减碳解决方案。</p>
+                "零碳计划"计算气候变化的，通过构建绿色中心，发挥自身在数据领域技术、计算力和可持续技术优势，输出行业减碳解决方案。</p>
               <el-button type="text" class="detail-btn">查看详情</el-button>
             </div>
           </div>
         </el-col>
       </el-row>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from '../../components/Header.vue'
+import Footer from '../../components/Footer.vue'
+
 export default {
   name: 'AliyunPage',
-  components: {},
-  data() {
-    return {}
+  components: {
+    Header,
+    Footer
   },
-  methods: {}
+  data() {
+    return {
+      activeIndex: '10'
+    }
+  },
+  methods: {
+    handleMenuSelect(menuInfo) {
+      // 根据Header组件传递的menuInfo进行处理
+      // 由于Header组件内部已经处理了路由跳转，这里可以添加其他需要的逻辑
+      console.log('菜单选择信息:', menuInfo)
+    }
+  }
 }
 </script>
 
@@ -720,3 +736,5 @@ export default {
   right: auto;
 }
 </style>
+
+

@@ -42,9 +42,71 @@ export default {
       default: '2'
     }
   },
+  watch: {
+    '$route': function(to) {
+      // 根据当前路由更新activeIndex
+      switch(to.path) {
+        case '/bigmodel':
+          this.activeIndex = '1';
+          break;
+        case '/solutions':
+          this.activeIndex = '3';
+          break;
+        case '/documentation':
+          this.activeIndex = '4';
+          break;
+        case '/benefits':
+          this.activeIndex = '5';
+          break;
+        case '/price':
+          this.activeIndex = '6';
+          break;
+        case '/cloudmarket':
+          this.activeIndex = '7';
+          break;
+        // 添加合作伙伴页面的activeIndex映射
+        case '/partner':
+          this.activeIndex = '8';
+          break;
+        case '/ljaly':
+          this.activeIndex = '10';
+          break;
+        // 可以添加其他路由的activeIndex映射
+      }
+    }
+  },
   methods: {
     handleSelect(key, keyPath) {
-      // 触发事件，让父组件处理路由跳转
+      // 根据选中的key进行路由跳转
+      switch(key) {
+        case '1':
+          this.$router.push('/bigmodel');
+          break;
+        case '3':
+          this.$router.push('/solutions');
+          break;
+        case '4':
+          this.$router.push('/documentation');
+          break;
+        case '5':
+          this.$router.push('/benefits');
+          break;
+        case '6':
+          this.$router.push('/price');
+          break;
+        case '7':
+          this.$router.push('/cloudmarket');
+          break;
+        // 添加合作伙伴页面的路由跳转
+        case '8':
+          this.$router.push('/partner');
+          break;
+        case '10':
+          this.$router.push('/ljaly');
+          break;
+        // 可以添加其他菜单项的路由跳转逻辑
+      }
+      // 触发事件，让父组件处理其他逻辑
       this.$emit('menu-select', { key, keyPath });
     }
   }
@@ -98,3 +160,11 @@ export default {
   margin-right: 16px;
 }
 </style>
+
+
+
+
+
+
+
+
