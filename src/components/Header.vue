@@ -26,8 +26,15 @@
       </el-menu>
       <div class="header-actions">
         <el-input placeholder="搜索AI产品和服务" prefix-icon="el-icon-search" class="search-input"></el-input>
-        <el-button type="text" class="login-btn">登录</el-button>
-        <el-button type="primary" class="register-btn">免费试用</el-button>
+        <!-- 控制台和用户信息区域 -->
+        <div class="user-area flex items-center gap-4">
+          <router-link to="/console" class="console-link text-gray-800 hover:text-blue-600">控制台</router-link>
+          <div class="user-info flex items-center gap-2 cursor-pointer">
+            <el-avatar class="user-avatar" :size="32" src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+            <span class="username text-gray-800">371246...</span>
+          </div>
+          <el-button type="primary" class="register-btn">免费试用</el-button>
+        </div>
       </div>
     </div>
   </el-header>
@@ -160,11 +167,3 @@ export default {
   margin-right: 16px;
 }
 </style>
-
-
-
-
-
-
-
-

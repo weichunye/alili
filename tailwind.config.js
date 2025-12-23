@@ -23,7 +23,13 @@ module.exports = {
           400: '#86909C',  // 次要文字
           700: '#4E5969',  // 主要文字
           900: '#1D2129',  // 标题文字
-        }
+        },
+        'ali-blue': '#1890ff',
+        'ali-gray-light': '#f5f5f5',
+        'ali-gray': '#e8e8e8',
+        'ali-gray-dark': '#8c8c8c',
+        'ali-text': '#333333',
+        'ali-text-light': '#666666',
       },
       fontFamily: {
         sans: ['PingFang SC', 'Microsoft YaHei', 'sans-serif'],

@@ -12,6 +12,8 @@ import Benefits from './views/Benefits.vue'
 // 导入合作伙伴页面组件
 import Partner from './views/Partner.vue'
 import CloudMarket from './views/cloudMarket/cloudMarket.vue'
+// 导入控制台页面组件
+import Console from './views/user/Console.vue'
 
 Vue.use(VueRouter)
 
@@ -65,12 +67,22 @@ const routes = [
     name: 'Benefits',
     component: Benefits
   },
-
+  {
+    path: '/cloudmarket',
+    name: 'CloudMarket',
+    component: CloudMarket
+  },
   // 添加合作伙伴页面路由
   {
     path: '/partner',
     name: 'Partner',
     component: Partner
+  },
+  // 添加控制台页面路由
+  {
+    path: '/console',
+    name: 'Console',
+    component: Console
   }
 ]
 
