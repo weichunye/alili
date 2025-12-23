@@ -6,6 +6,8 @@ import Price from './views/price/price.vue'
 import Ljaly from './views/ljaliy/ljaliy.vue'
 import Product from './views/Product.vue'
 import Service from './views/service/service.vue'
+import Documentation from './views/Documentation.vue'
+import Solutions from './views/Solutions.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes = [
     path: '/product',
     name: 'Product',
     component: Product
+  },
+  {
+    path: '/documentation',
+    name: 'Documentation',
+    component: Documentation
+  },
+  {
+    path: '/solutions',
+    name: 'Solutions',
+    component: Solutions
   }
 ]
 
@@ -48,3 +60,4 @@ const router = new VueRouter({
 })
 
 export default router
+

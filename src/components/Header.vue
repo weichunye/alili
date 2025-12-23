@@ -44,7 +44,23 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
-      // 触发事件，让父组件处理路由跳转
+      // 根据选中的key进行路由跳转
+      switch(key) {
+        case '1':
+          this.$router.push('/bigmodel');
+          break;
+        case '3':
+          this.$router.push('/solutions');
+          break;
+        case '4':
+          this.$router.push('/documentation');
+          break;
+        case '6':
+          this.$router.push('/price');
+          break;
+        // 可以添加其他菜单项的路由跳转逻辑
+      }
+      // 触发事件，让父组件处理其他逻辑
       this.$emit('menu-select', { key, keyPath });
     }
   }
@@ -98,3 +114,5 @@ export default {
   margin-right: 16px;
 }
 </style>
+
+

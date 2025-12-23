@@ -1,3 +1,4 @@
+<script src="../router.js"></script>
 <template>
   <div class="aliyun-ai-platform">
     <!-- 顶部导航栏 -->
