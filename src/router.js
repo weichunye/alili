@@ -6,6 +6,7 @@ import Price from './views/price/price.vue'
 import Ljaly from './views/ljaliy/ljaliy.vue'
 import Product from './views/Product.vue'
 import Service from './views/service/service.vue'
+import CloudMarket from './views/cloudMarket/cloudMarket.vue'
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,10 @@ const routes = [
     path: '/service',
     name: 'Service',
     component: Service
+  }, {
+    path: '/cloudMarket',
+    name: 'CloudMarket',
+    component: CloudMarket
   },
   {
     path: '/ljaly',
