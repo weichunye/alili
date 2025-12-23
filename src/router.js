@@ -9,7 +9,6 @@ import Service from './views/service/service.vue'
 import Documentation from './views/Documentation.vue'
 import Solutions from './views/Solutions.vue'
 import Benefits from './views/Benefits.vue'
-import CloudMarket from './views/CloudMarket.vue'
 // 导入合作伙伴页面组件
 import Partner from './views/Partner.vue'
 import CloudMarket from './views/cloudMarket/cloudMarket.vue'
@@ -66,11 +65,7 @@ const routes = [
     name: 'Benefits',
     component: Benefits
   },
-  {
-    path: '/cloudmarket',
-    name: 'CloudMarket',
-    component: CloudMarket
-  },
+
   // 添加合作伙伴页面路由
   {
     path: '/partner',
