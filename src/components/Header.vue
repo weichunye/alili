@@ -42,6 +42,35 @@ export default {
       default: '2'
     }
   },
+  watch: {
+    '$route': function(to) {
+      // 根据当前路由更新activeIndex
+      switch(to.path) {
+        case '/bigmodel':
+          this.activeIndex = '1';
+          break;
+        case '/solutions':
+          this.activeIndex = '3';
+          break;
+        case '/documentation':
+          this.activeIndex = '4';
+          break;
+        case '/benefits':
+          this.activeIndex = '5';
+          break;
+        case '/price':
+          this.activeIndex = '6';
+          break;
+        case '/cloudmarket':
+          this.activeIndex = '7';
+          break;
+        case '/ljaly':
+          this.activeIndex = '10';
+          break;
+        // 可以添加其他路由的activeIndex映射
+      }
+    }
+  },
   methods: {
     handleSelect(key, keyPath) {
       // 根据选中的key进行路由跳转
@@ -60,6 +89,9 @@ export default {
           break;
         case '6':
           this.$router.push('/price');
+          break;
+        case '7':
+          this.$router.push('/cloudmarket');
           break;
         case '10':
           this.$router.push('/ljaly');
@@ -120,6 +152,8 @@ export default {
   margin-right: 16px;
 }
 </style>
+
+
 
 
 

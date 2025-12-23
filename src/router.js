@@ -9,6 +9,7 @@ import Service from './views/service/service.vue'
 import Documentation from './views/Documentation.vue'
 import Solutions from './views/Solutions.vue'
 import Benefits from './views/Benefits.vue'
+import CloudMarket from './views/CloudMarket.vue'
 
 Vue.use(VueRouter)
 
@@ -57,6 +58,11 @@ const routes = [
     path: '/benefits',
     name: 'Benefits',
     component: Benefits
+  },
+  {
+    path: '/cloudmarket',
+    name: 'CloudMarket',
+    component: CloudMarket
   }
 ]
 
@@ -66,5 +72,6 @@ const router = new VueRouter({
 })
 
 export default router
+
 
 
