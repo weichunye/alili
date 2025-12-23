@@ -166,7 +166,7 @@
 </template>
 
 <script>
-import echarts from 'echarts'
+import * as echarts from 'echarts'
 import {
   ElButton, ElTooltip, ElIcon, ElDatePicker,
   ElSteps, ElStep, ElMessage
@@ -488,3 +488,4 @@ export default {
   }
 }
 </style>
+
