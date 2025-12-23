@@ -1,11 +1,12 @@
 <template>
 	<div class="aliyun-pricing-page">
 		<!-- 顶部导航区 -->
-		<header class="header">
-			<div class="header-container">
+    <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
+		<header class="header-m">
+			<div class="header-container-m">
 				<div class="title-text">阿里云定价</div>
 				<div class="desc-text" >了解阿里云定价策略，自助估算价格，持续管控和优化成本</div>
-				
+
 				<div class="priceBtn">
           <el-button type="primary" class="active-btn">报价咨询</el-button>
           <el-button type="text" class="header-btn">使用价格计算器</el-button>
@@ -148,24 +149,37 @@
 				<el-button type="primary" class="experience-btn">免费试用</el-button>
 			</div>
 		</section>
+    <Footer />
 	</div>
 </template>
 
 <script setup>
-	// 无需额外逻辑，仅展示页面结构
+import Header from '../../components/Header.vue'
+import Footer from '../../components/Footer.vue'
+import { ref } from 'vue'
+
+// 定义导航栏激活项，定价页面对应index="6"
+const activeIndex = ref('6')
+
+// 处理菜单选择事件
+const handleMenuSelect = ({ key, keyPath }) => {
+  console.log('Menu selected:', key, keyPath)
+  activeIndex.value = key
+}
 </script>
 
 <style scoped>
 	/* 全局样式重置 */
 	.aliyun-pricing-page {
-		font-family: "Microsoft Yahei", sans-serif;
-		color: #333;
-		background-color: #f7f7f7;
-		min-height: 100vh;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f9fafb;
+    width: 100%;
+    box-sizing: border-box;
 	}
 
 	/* 顶部导航 */
-	.header {
+	.header-m {
 		height: 240px;
 		background-color: #fff;
 		padding: 16px 0;
@@ -173,7 +187,7 @@
 		background: url(../../static/priceimg/pricebanner.jpg) center center / cover no-repeat;
 	}
 
-	.header .title-text {
+	.header-m  .title-text {
 		color: #181818;
 		font-weight: 600;
 		font-size: 44px;
@@ -182,7 +196,7 @@
 		margin-bottom: 10px;
 	}
 
-	.header .desc-text {
+	.header-m  .desc-text {
 		color: #181818;
 		font-weight: 400;
 		line-height: 25px;
@@ -191,7 +205,7 @@
 		width: 658px;
 	}
 
-	.header-container {
+	.header-container-m {
 		padding-left: 36px;
 		margin: 0 auto;
 		display: flex;
@@ -199,9 +213,10 @@
 		flex-direction: column;
 		justify-content: center;
 		height: 100%;
+    padding: 10px 10%;
 	}
 
-	.header-container .priceBtn {
+	.header-container-m .priceBtn {
 		display: flex;
 		align-items: center;
 		gap: 10px;
@@ -257,7 +272,7 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	
+
 	.section {
 		width: 100%;
 		padding: 0 10%;
@@ -292,11 +307,11 @@
 	.module-container {
 		margin: 0 auto;
 	}
-	
+
 	.reverse {
 		background: #fff;
 	}
-	
+
 	.reverse .module-container {
 		flex-direction: row-reverse;
 	}
@@ -389,7 +404,15 @@
 		color: #666;
 		margin: 0;
 	}
-
+  .footer {
+    background: linear-gradient(135deg, #001529 0%, #002244 100%);
+    color: white;
+    padding: 40px 0 40px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+  }
 	/* 底部体验区 */
 	.experience-section {
     background-image: url(../../static/priceimg/pricefooter.jpg);
@@ -462,3 +485,4 @@
 		}
 	}
 </style>
+
