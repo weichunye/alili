@@ -17,6 +17,9 @@ import Console from './views/user/Console.vue'
 // 导入pages目录下的组件
 import Page1 from './views/pages/page1.vue'
 import Page2 from './views/pages/page2.vue'
+import Moxing1 from './views/pages/moxing1.vue'
+import Moxing2 from './views/pages/moxing2.vue'
+import page3 from './views/pages/page3.vue'
 
 Vue.use(VueRouter)
 
@@ -97,6 +100,22 @@ const routes = [
     path: '/pages/page2',
     name: 'Page2',
     component: Page2
+  },
+  {
+    path: '/pages/moxing1',
+    name: 'moxing1',
+    component: Moxing1
+  }
+  ,
+  {
+    path: '/pages/moxing2',
+    name: 'moxing2',
+    component: Moxing2
+  } ,
+  {
+    path: '/pages/page3',
+    name: 'page3',
+    component: page3
   }
 ]
 

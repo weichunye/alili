@@ -10,16 +10,16 @@
         <h1>限时免费 超 7000万 AI 大模型 tokens</h1>
         <p class="hero-subtitle">支持 Qwen3 全系列模型一键部署，超值低价强大算力，即刻开启 AI 应用构建</p>
         <div class="hero-actions">
-          <el-button type="primary" size="large" @click="goToCloudServer(2)" class="primary-btn">立即查看</el-button>
+          <el-button type="primary" size="large" @click="goToCloudServer('page2')" class="primary-btn">立即查看</el-button>
           <el-button type="default" size="large" class="secondary-btn">了解更多</el-button>
         </div>
         <div class="hero-cards">
           <el-card class="hero-card">
-            <div class="card-title"  @click="goToCloudServer(1)">
+            <div class="card-title"  @click="goToCloudServer('page1')">
               <i class="el-icon-tickets"></i>
               超轻 99 元云服务器，新老同享
             </div>
-            <p class="card-desc"  @click="goToCloudServer(1)">持续创新的云服务，用云更简单，活动期间新老同价，开放必抢</p>
+            <p class="card-desc"  @click="goToCloudServer('page1')">持续创新的云服务，用云更简单，活动期间新老同价，开放必抢</p>
           </el-card>
           <el-card class="hero-card">
             <div class="card-title">
@@ -56,18 +56,18 @@
             <div class="ai-card-header " style="height: 100%;color: #fff;">
               <h3 style="color: #fff;">阿里云 AI 体验馆</h3>
               <p style="font-size: 20px; padding: 20px 0;color: #fff;">一站式体验阿里云AI能力，快速验证应用场景和效果</p>
-              <div class="btn">
+              <div class="btn" @click="goToCloudServer('moxing1')">
                 立即体验
               </div>
             </div>
           </el-card>
           <div class="ai-cards-grid">
             <el-card v-for="(card, index) in aiCards" :key="index" :class="['ai-card', 'small-ai-card', card.size === 'small' ? 'small-ai-card' : '',]">
-              <div class="ai-card-header" :class="card.size === 'small' ? 'small-header' : ''">
+              <div class="ai-card-header" :class="card.size === 'small' ? 'small-header' : ''" @click="goToCloudServer('moxing1')">
                 <h4>{{ card.title }}</h4>
                 <p>{{ card.desc }}</p>
               </div>
-              <div class="ai-card-image" :class="card.size === 'small' ? 'small-image' : ''">
+              <div class="ai-card-image" :class="card.size === 'small' ? 'small-image' : ''" @click="goToCloudServer('moxing1')">
                 <div class="image-placeholder" :class="card.gradientClass">
 
                 </div>
@@ -94,7 +94,7 @@
                 </ul>
               </div>
               <div>
-                <button  style="margin-bottom: 80px; margin-left: 30px " class="bg-[#165DFF] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-[#0E4BDB] transition-colors">
+                <button  style="margin-bottom: 80px; margin-left: 30px " class="bg-[#165DFF] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-[#0E4BDB] transition-colors"  @click="goToCloudServer('moxing2')">
                   模型广场 <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
@@ -102,7 +102,7 @@
 
             <!-- 中间区域 -->
             <div class="space-y-10">
-              <div v-for="(model, index) in tongyiModels.models.slice(0, 3)" :key="index" class="box_1">
+              <div v-for="(model, index) in tongyiModels.models.slice(0, 3)" :key="index" class="box_1" @click="goToCloudServer('moxing1')" style="cursor: pointer">
                 <div class="flex items-center gap-3 mb-3">
                   <i :class="['fa-solid', 'fa-' + model.icon, 'text-[#165DFF]', 'text-xl']"></i>
                   <h3 class="text-xl font-semibold">{{ model.title }}</h3>
@@ -611,8 +611,8 @@ export default {
               <span class="sub-title">智能商业分析 Quick BI</span>
               <p class="desc">提供五大核心能力：AI看板搭建、数据查询、数据解读、报告生成和数据推送，帮助用户从"被动看数"转向"主动用数"。</p>
               <div class="btn-group">
-                <a href="#" class="primary-btn">了解详情</a>
-                <a href="#" class="secondary-btn">联系 AI 专家</a>
+                <div href="#" class="primary-btn" @click="goToCloudServer('page3')" >了解详情</div>
+                <div href="#" class="primary-btn" @click="goToCloudServer('moxing1')" >联系 AI 专家</div>
               </div>
             </div>
           `
@@ -626,8 +626,8 @@ export default {
                <span class="sub-title">视频直播</span>
               <p class="desc">零代码接入AI视频助手，实时拟人对话+情绪识别，支持多模态场景理解，全球节点保障高清低延时通话。</p>
               <div class="btn-group">
-                <a href="#" class="primary-btn">了解详情</a>
-                <a href="#" class="secondary-btn">联系 AI 专家</a>
+                <div href="#" class="primary-btn" @click="goToCloudServer('page3')" >了解详情</div>
+               <div href="#" class="primary-btn" @click="goToCloudServer('moxing1')" >联系 AI 专家</div>
               </div>
             </div>
           `
@@ -641,8 +641,8 @@ export default {
               <span class="sub-title">函数计算 FC</span>
               <p class="desc">10分钟即可0代码构建AI助手，部署到网站、钉钉或微信公众号，通过RAG应用增强知识问答，全天候提升用户体验。</p>
               <div class="btn-group">
-                <a href="#" class="primary-btn">了解详情</a>
-                <a href="#" class="secondary-btn">联系 AI 专家</a>
+                <div href="#" class="primary-btn" @click="goToCloudServer('page3')" >了解详情</div>
+               <div href="#" class="primary-btn" @click="goToCloudServer('moxing1')" >联系 AI 专家</div>
               </div>
             </div>
           `
@@ -656,8 +656,8 @@ export default {
                <span class="sub-title">对象存储 OSS</span>
               <p class="desc">无需编程，一键生成企业专属Logo、海报等，节省时间成本，保证质量。支持定制化模型，按量付费经济高效。</p>
               <div class="btn-group">
-                <a href="#" class="primary-btn">了解详情</a>
-                <a href="#" class="secondary-btn">联系 AI 专家</a>
+                 <div href="#" class="primary-btn" @click="goToCloudServer('page3')" >了解详情</div>
+               <div href="#" class="primary-btn" @click="goToCloudServer('moxing1')" >联系 AI 专家</div>
               </div>
             </div>
           `
@@ -671,8 +671,8 @@ export default {
                 <span class="sub-title">函数计算 FC</span>
               <p class="desc">一键解析文本、图片、视频数据，精准抽取关键信息，批量处理成本大幅降低，开箱即用安全高效。</p>
               <div class="btn-group">
-                <a href="#" class="primary-btn">了解详情</a>
-                <a href="#" class="secondary-btn">联系 AI 专家</a>
+                <div href="#" class="primary-btn" @click="goToCloudServer('page3')" >了解详情</div>
+                 <div href="#" class="primary-btn" @click="goToCloudServer('moxing1')" >联系 AI 专家</div>
               </div>
             </div>
           `
@@ -1133,8 +1133,7 @@ export default {
   },
   methods: {
     goToCloudServer(name) {
-      console.log('00')
-      this.$router.push('/pages/page'+name);
+      this.$router.push('/pages/'+name);
     },
 
     selectCategory(categoryId) {
@@ -1302,6 +1301,7 @@ export default {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .ai-card:hover {
@@ -2355,6 +2355,15 @@ export default {
             background: url("/src/static/img/pic_6.png") no-repeat right center;
             background-size: contain;
             opacity: 0.9;
+        }
+        .btn{
+          width: 300px;
+          background: linear-gradient( #f9fafd 0%, #d8e2fb 100%);
+          color: #764ba2 ;
+          font-size: 18px;
+          line-height: 40px;
+          text-align: center;
+          cursor: pointer;
         }
 .bg-primary{
   color: #fff;
