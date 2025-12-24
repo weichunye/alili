@@ -10,11 +10,9 @@
               <h1 class="banner-title">上云优选 普惠权益</h1>
               <p class="banner-subtitle">上云无忧，创新加速。助力快速构建云上应用</p>
               <span class="banner-time">活动时间</span>
-              <el-button type="primary" class="banner-btn">立即领取</el-button>
+              <el-button type="primary" class="banner-btn" style="padding: 15px 50px; border-radius: 0">立即领取</el-button>
             </div>
-            <div class="banner-image">
-              <!-- 这里可以放置彩色几何图形 -->
-            </div>
+
           </div>
         </div>
       </section>
@@ -1074,12 +1072,12 @@ export default {
 
 /* 顶部横幅 */
 .banner-section {
-  background-color: #f5f7fa;
   padding: 60px 0;
+  background: url('/src/static/img/pic_20.png') no-repeat right center;
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1098,6 +1096,7 @@ export default {
   font-size: 36px;
   color: #1a1a1a;
   margin-bottom: 10px;
+  line-height: 70px;
   font-weight: 600;
 }
 
@@ -1180,9 +1179,9 @@ export default {
 /* 权益容器 */
 .benefits-container {
   display: flex;
-  width: 95%;
+  width: 100%;
   margin: 20px auto;
-  border: 1px solid #eee;
+  padding: 0 10%;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -1315,7 +1314,7 @@ export default {
 
 .product-desc {
   font-size: 12px;
-  color:  #666666;
+  color:  #0066ff;
   margin-bottom: 12px;
   line-height: 1.4;
 }
@@ -1463,7 +1462,7 @@ export default {
 
 .product-desc {
   font-size: 14px;
-  color: #e0efff;
+  color: #0066ff;
 }
 
 /* 购买规格区 */

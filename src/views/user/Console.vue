@@ -6,17 +6,10 @@
     <!-- 控制台页面内容区域 -->
     <main class="py-16 px-4">
       <div class="flex h-[calc(100vh-48px)]">
-        <!-- 左侧侧边栏 -->
-        <aside class="w-16 bg-ali-gray-light border-r border-ali-gray flex flex-col items-center py-4">
-          <i class="fa fa-th-large text-xl text-ali-blue mb-8"></i>
-          <i class="fa fa-line-chart text-xl text-ali-gray-dark mb-8"></i>
-          <i class="fa fa-shield text-xl text-ali-gray-dark mb-8"></i>
-          <i class="fa fa-yen text-xl text-ali-gray-dark mb-8"></i>
-          <i class="fa fa-user text-xl text-ali-gray-dark mb-8"></i>
-        </aside>
+
 
         <!-- 主内容区域 -->
-        <main class="flex-1 overflow-auto scrollbar-thin">
+        <main class="flex-1 overflow-auto scrollbar-thin" style="width: 100%; padding: 0 10%">
           <!-- 二级导航 -->
           <div class="border-b border-ali-gray px-6">
             <div class="flex items-center h-10">
@@ -272,7 +265,7 @@
            </div>
            <div v-if="activeTab === 'monitoring'" class="name2 p-6">
 
-             <div class="max-w-screen-xl mx-auto p-4 md:p-6">
+             <div class=" mx-auto ">
                <!-- 主容器 -->
                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                  <!-- 左侧列：云平台稳定性 + 云资源健康状态 + 云服务诊断 -->
@@ -569,7 +562,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="max-w-4xl mx-auto p-4 md:p-8">
+                <div class=" mx-auto p-4 md:p-8">
                   <!-- 标题 -->
                   <h2 class="text-xl font-semibold mb-4">防御体系与最佳实践</h2>
 
@@ -824,9 +817,289 @@
               <FinanceOverview />
            </div>
             <div v-if="activeTab === 'benefits'" class="name5 p-6">
-              <h2 class="text-xl font-medium mb-4">我的权益</h2>
-              <div class="border border-ali-gray rounded p-4">
-                <div class="text-sm text-ali-gray-dark">这里将展示我的权益相关内容</div>
+              <div class=" mx-auto px-4 py-6">
+                <!-- 顶部标签栏 -->
+                <div class="flex border-b border-gray-200 mb-6">
+                  <div class="px-4 py-2 text-gray-400 hover:text-primary cursor-pointer">
+                    个人用户权益 <span class="text-xs bg-gray-200 px-1 rounded">(140项+)</span>
+                  </div>
+                  <div class="px-4 py-2 text-primary border-b-2 border-primary font-medium">
+                    企业用户权益 <span class="text-xs bg-primary/10 text-primary px-1 rounded">(160项+)</span>
+                  </div>
+                  <div class="px-4 py-2 text-gray-400 hover:text-primary cursor-pointer">
+                    高校用户专属权益 <span class="text-xs bg-gray-200 px-1 rounded">(2项)</span>
+                  </div>
+                  <div class="ml-auto text-sm text-gray-400 flex items-center">
+                    <i class="fa-solid fa-info-circle mr-1"></i>
+                    150款+免费试用云产品, 最长可试用12个月
+                  </div>
+                </div>
+
+                <!-- 产品新用户免费权益 -->
+                <div class="mb-8">
+                  <div class="flex items-center mb-4">
+                    <h2 class="text-lg font-medium text-gray-500">产品新用户免费权益</h2>
+                    <a href="#" class="ml-2 text-primary text-sm hover:underline">使用规则</a>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- 云服务器ECS -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">云服务器ECS免费试用（企业版）</div>
+                      <div class="text-sm text-gray-400 mb-4">免费额度660元</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+
+                    <!-- 交互式建模PAI-DSW -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">交互式建模 PAI-DSW</div>
+                      <div class="text-sm text-gray-400 mb-4">每月250计算时 3个月</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+
+                    <!-- 轻量应用服务器2vCPU 4GIB -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">轻量应用服务器2vCPU 4GIB</div>
+                      <div class="text-sm text-gray-400 mb-4">适用于搭建Web应用/小程序</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+
+                    <!-- 轻量应用服务器2vCPU 4GIB -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">轻量应用服务器2vCPU 4GIB</div>
+                      <div class="text-sm text-gray-400 mb-4">适用于网站搭建</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+
+                    <!-- 函数计算FC -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">函数计算FC</div>
+                      <div class="text-sm text-gray-400 mb-4">每月15万CU 3个月</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+
+                    <!-- 无影云电脑企业版 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">无影云电脑企业版</div>
+                      <div class="text-sm text-gray-400 mb-4">8核16GB 120小时 1个月</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+
+                    <!-- 对象存储OSS -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">对象存储OSS</div>
+                      <div class="text-sm text-gray-400 mb-4">标准·同城冗余存储 20GB 3个月</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+
+                    <!-- 传统型负载均衡CLB -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">传统型负载均衡CLB</div>
+                      <div class="text-sm text-gray-400 mb-4">每月750个小时 15LCU</div>
+                      <div class="flex gap-2">
+                        <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                        <a href="#" class="text-primary text-sm hover:underline">试用必读</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 新老用户同享低价实例购买权益 -->
+                <div>
+                  <div class="flex items-center mb-4">
+                    <h2 class="text-lg font-medium text-gray-500">新老用户同享低价实例购买权益</h2>
+                    <a href="#" class="ml-2 text-primary text-sm hover:underline">使用规则</a>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- u实例 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">u实例 (5M固定带宽, 流量放心用)</div>
+                      <div class="text-sm text-gray-400 mb-2">臻藏同款, 适用于Web前端等计算密集场景</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>实例：2核4G</div>
+                        <div>购买时长：1年</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                        <span class="bg-primary/10 text-primary text-xs px-1 rounded">企业专享</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥199.00</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥3498.61/年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+
+                    <!-- e实例 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">e实例 (3M固定带宽, 流量放心用)</div>
+                      <div class="text-sm text-gray-400 mb-2">臻藏同款, 适用于建站, 小程序等应用场景</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>实例：2核4G</div>
+                        <div>购买时长：1年</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                        <span class="bg-primary/10 text-primary text-xs px-1 rounded">企业专享</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥99.00</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥1009.19/年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+
+                    <!-- OSS对象存储-本地冗余存储 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">OSS对象存储-本地冗余存储</div>
+                      <div class="text-sm text-gray-400 mb-2">海量、安全、低成本、高可靠的云存储服务</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>地域：中国内地通用</div>
+                        <div>标准-本地冗余存储规格：500GB</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥189.99</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥496.00/1年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+
+                    <!-- OSS对象存储 标准·同城冗余 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">OSS对象存储 标准·同城冗余</div>
+                      <div class="text-sm text-gray-400 mb-2">同城冗余存储能够提供极致容灾能力</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>地域：中国内地通用</div>
+                        <div>标准-同城冗余存储规格：500GB</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥179.99</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥612.00/1年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+
+                    <!-- 云数据库RDS MySQL版 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">云数据库 RDS MySQL 版</div>
+                      <div class="text-sm text-gray-400 mb-2">基础系列, 通用云盘, 0流量费用, 活动期内按量不涨价</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>实例规格：2核2GB (通用型)</div>
+                        <div>存储大小：50GB</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥99.00</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥740.00/1年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+
+                    <!-- 云数据库RDS MySQL版 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">云数据库 RDS MySQL 版</div>
+                      <div class="text-sm text-gray-400 mb-2">RDS MySQL 两版"99+计划"特价二选一, 存储数据高可靠, 数据价同...</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>实例规格：2核4GB (通用型)</div>
+                        <div>存储大小：100GB</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥227.99</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥1512.00/1年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+
+                    <!-- 无影云电脑企业版-4核8G -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">无影云电脑企业版-4核8G</div>
+                      <div class="text-sm text-gray-400 mb-2">本优惠价不支持叠加满减券, 高安全便捷, 满足远程办公、分支门店...</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>计算套餐：120小时/月</div>
+                        <div>购买时长：1年</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥199.00</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥848.00/1年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+
+                    <!-- NAS文件存储-通用型资源包 -->
+                    <div class="bg-white rounded-lg p-4 card-shadow">
+                      <div class="font-medium text-gray-500 mb-2">NAS文件存储-通用型资源包</div>
+                      <div class="text-sm text-gray-400 mb-2">支持同时抵扣通用型容量、通用型流量和通用型性能的多个文件系...</div>
+                      <div class="grid grid-cols-2 gap-2 text-sm mb-3">
+                        <div>地域：中国内地通用</div>
+                        <div>通用型资源容量：100GiB</div>
+                      </div>
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="bg-discount/10 text-discount text-xs px-1 rounded">99+计划</span>
+                        <span class="bg-gray-100 text-gray-400 text-xs px-1 rounded">限1件</span>
+                      </div>
+                      <div class="mb-3">
+                        <span class="text-price text-xl font-bold">¥98.99</span>/年
+                        <div class="text-xs text-gray-400 text-line-through">官网折扣价:¥700.00/1年</div>
+                      </div>
+                      <button class="bg-primary text-white px-3 py-1 rounded text-sm hover:bg-primary/90 transition">立即使用</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 分页 -->
+                <div class="flex justify-center mt-8">
+                  <div class="flex items-center gap-2">
+                    <button class="px-3 py-1 rounded border border-gray-200 text-gray-400 hover:border-primary hover:text-primary transition">
+                      <i class="fa-solid fa-angle-left"></i> 上一页
+                    </button>
+                    <button class="px-3 py-1 rounded border border-gray-200 text-gray-400 hover:border-primary hover:text-primary transition">
+                      下一页 <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
            </div>
         </main>
@@ -989,6 +1262,15 @@ export default {
   }
   .card-hover {
     @apply hover:shadow-md transition-shadow duration-200;
+  }
+  .content-auto {
+    content-visibility: auto;
+  }
+  .card-shadow {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+  .text-line-through {
+    text-decoration: line-through;
   }
 }
 

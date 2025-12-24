@@ -352,7 +352,7 @@ const handleMenuSelect = ({ key, keyPath }) => {
 		color: #425065;
 		font-size: 14px;
     border-color: #d8d8d8;
-    padding: 0 36px;
+    padding: 15px 36px;
 	}
 
 	.module-img {

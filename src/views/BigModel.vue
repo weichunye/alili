@@ -5,13 +5,13 @@
     <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
 
     <!-- 英雄区域 -->
-    <section class="hero-section" style="width: 100%; padding: 0 10%;background: url('/src/static/img/bg_2.png') no-repeat center center; background-size: cover;">
+    <section class="hero-section" style="width: 100%; height: 530px; padding: 0 10%;background: url('/src/static/img/bg_2.png') no-repeat center center; background-size: cover;">
       <div class="hero-gradient"></div>
-      <div class="hero-content" style="width: 100%; padding: 0">
-        <h1>通义大模型，Wan系列重磅升级</h1>
+      <div class="hero-content" style="width: 100%; padding: 40px 0 0 40px;">
+        <h1 style="color: #2e69c1">通义大模型，Wan系列重磅升级</h1>
         <p class="hero-subtitle">通义川2.0的预训练和大模型升级，面向电商领域的特定优化，实现多轮对话、复杂推理和实时分析等能力，支持快速构建内容生成、智能客服、文案创作等广泛应用场景。</p>
         <div class="hero-actions">
-          <el-button type="primary" size="large" class="primary-btn">立即体验</el-button>
+          <el-button type="primary" class="banner-btn" style="padding: 14px 40px">立即体验</el-button>
           <el-button type="default" size="large" class="secondary-btn">了解详情</el-button>
         </div>
         <div class="hero-cards">
@@ -883,181 +883,25 @@
       </div>
     </section>
     <!-- 客户案例区域 -->
-    <section class="customer-cases-section">
-      <div class="section-header">
-        <h2>客户案例</h2>
-        <p>与行业领先企业共同成长</p>
-      </div>
-      <div class="cases-grid">
-        <el-card class="case-card">
-          <div class="case-image">
-            <div class="image-placeholder gradient-14"></div>
-          </div>
-          <div class="case-content">
-            <h3>制造企业</h3>
-            <p>通过 AI 优化生产流程，提升生产效率 30%</p>
-          </div>
-        </el-card>
-        <el-card class="case-card">
-          <div class="case-image">
-            <div class="image-placeholder gradient-15"></div>
-          </div>
-          <div class="case-content">
-            <h3>金融机构</h3>
-            <p>AI 风控系统，降低风险损失 40%</p>
-          </div>
-        </el-card>
-        <el-card class="case-card">
-          <div class="case-image">
-            <div class="image-placeholder gradient-16"></div>
-          </div>
-          <div class="case-content">
-            <h3>医疗机构</h3>
-            <p>AI 辅助诊断系统，提高诊断准确率 25%</p>
-          </div>
-        </el-card>
-        <el-card class="case-card">
-          <div class="case-image">
-            <div class="image-placeholder gradient-17"></div>
-          </div>
-          <div class="case-content">
-            <h3>零售企业</h3>
-            <p>个性化推荐系统，提升销售额 20%</p>
-          </div>
-        </el-card>
-      </div>
-    </section>
 
     <!-- 全球基础设施区域 -->
-    <section class="infrastructure-section">
-      <div class="section-header">
-        <h2>全球基础设施</h2>
-        <p>覆盖全球的云基础设施，保障服务稳定可靠</p>
-      </div>
-      <div class="infrastructure-stats">
-        <div class="stat-item">
-          <div class="stat-number">28</div>
-          <div class="stat-label">全球地域</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">85</div>
-          <div class="stat-label">可用区</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">100+</div>
-          <div class="stat-label">国家和地区</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">300+</div>
-          <div class="stat-label">CDN 节点</div>
-        </div>
-      </div>
-    </section>
 
     <!-- 合作伙伴区域 -->
-    <section class="partners-section">
-      <div class="section-header">
-        <h2>合作伙伴</h2>
-        <p>与全球领先企业携手共进</p>
-      </div>
-      <div class="partners-grid">
-        <div class="partner-logo">
-          <div class="image-placeholder gradient-18"></div>
-        </div>
-        <div class="partner-logo">
-          <div class="image-placeholder gradient-19"></div>
-        </div>
-        <div class="partner-logo">
-          <div class="image-placeholder gradient-20"></div>
-        </div>
-        <div class="partner-logo">
-          <div class="image-placeholder gradient-21"></div>
-        </div>
-        <div class="partner-logo">
-          <div class="image-placeholder gradient-22"></div>
-        </div>
-        <div class="partner-logo">
-          <div class="image-placeholder gradient-23"></div>
-        </div>
-      </div>
-    </section>
 
     <!-- 页脚区域 -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-links">
-          <div class="link-group">
-            <h4>产品与服务</h4>
-            <ul>
-              <li>云服务器</li>
-              <li>数据库</li>
-              <li>人工智能</li>
-              <li>大数据</li>
-              <li>云存储</li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>解决方案</h4>
-            <ul>
-              <li>智能制造</li>
-              <li>智能金融</li>
-              <li>智能医疗</li>
-              <li>智能零售</li>
-              <li>智慧城市</li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>开发者中心</h4>
-            <ul>
-              <li>文档中心</li>
-              <li>API 文档</li>
-              <li>SDK 下载</li>
-              <li>开发者社区</li>
-              <li>技术博客</li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>关于我们</h4>
-            <ul>
-              <li>公司介绍</li>
-              <li>新闻动态</li>
-              <li>招贤纳士</li>
-              <li>联系我们</li>
-              <li>合作伙伴</li>
-            </ul>
-          </div>
-          <div class="link-group">
-            <h4>服务与支持</h4>
-            <ul>
-              <li>帮助中心</li>
-              <li>技术支持</li>
-              <li>在线客服</li>
-              <li>工单系统</li>
-              <li>服务状态</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="copyright">© 2023 阿里云 版权所有</div>
-          <div class="legal-links">
-            <span>隐私政策</span>
-            <span>服务条款</span>
-            <span>法律声明</span>
-            <span>网站地图</span>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
 
 export default {
   name: 'AIPlatform',
   components: {
-    Header
+    Header,
+    Footer
   },
   data() {
     return {
@@ -1334,14 +1178,15 @@ export default {
 }
 
 .hero-subtitle {
-  font-size: 18px;
-  color: #666;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
   margin-bottom: 40px;
   max-width: 800px;
 }
 
 .hero-actions {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .hero-actions .primary-btn {
@@ -2416,7 +2261,7 @@ export default {
     }
     .tab-btn.active {
       border-bottom: 2px solid #1677ff;
-      color: #1677ff;
+      color: #fff;
       font-weight: 500;
     }
     .scrollbar-thin::-webkit-scrollbar {
@@ -2426,5 +2271,11 @@ export default {
       background-color: #d9d9d9;
       border-radius: 2px;
     }
+.banner-btn {
+  font-size: 16px;
+  padding: 10px 24px;
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
 
 </style>

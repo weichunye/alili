@@ -5,7 +5,7 @@
 
     <!-- 文档与社区标题区域 -->
     <section class="doc-header-section">
-      <div class="container">
+      <div >
         <!-- 顶部横幅 -->
         <div class="banner">
             <div class="banner-content">
@@ -299,7 +299,7 @@
         </div>
     </section>
      <div class="aliyun-banner">
-        <div class="banner-content">
+        <div class="banner-content_a">
             <h1 class="banner-title">立即体验，在阿里云创造未来</h1>
             <a href="#" class="banner-btn">
                 <span>免费试用</span>
@@ -424,9 +424,8 @@ export default {
 
 .doc-header-section {
   width: 100%;
-  padding: 60px 10%;
   background-color: #fff;
-  padding: 60px 0;
+  padding: 0;
   text-align: center;
   border-bottom: 1px solid #e8e8e8;
 }
@@ -513,8 +512,7 @@ export default {
         .banner {
             width: 100%;
             height: 200px;
-            background: url('https://placeholder.com/1200x200/ffffff/cccccc?text=背景占位图') no-repeat right center;
-            background-size: contain;
+            background: #f3f3f5;
             display: flex;
             align-items: center;
             margin-bottom: 40px;
@@ -522,8 +520,13 @@ export default {
 
         .banner-content {
           width: 100%;
-          padding: 0 10%;
+          padding: 50px 10%;
+          height: 200px;
+          text-align: left;
             flex: 1;
+          text-indent: 50px;
+          background: url('/src/static/img/pic_17.png') no-repeat right center; ;
+          background-size: contain;
         }
 
         .banner-title {
@@ -541,6 +544,8 @@ export default {
 
         /* 功能卡片区域 */
         .card-list {
+          width: 100%;
+          padding: 0 10%;
             display: flex;
             justify-content: space-between;
             gap: 20px;
@@ -865,8 +870,7 @@ export default {
 
         /* 左侧卡片 - 蓝色背景+占位背景图 */
         .card-left {
-            background-color: #0066ff;
-            background-image: url("https://placeholder.pics/svg/800x400/0066FF-0088FF/FFFFFF/背景占位图"); /* 背景占位符 */
+            background:  url('/src/static/img/pic_18.png') no-repeat center center; /* 背景占位符 */
             background-size: cover;
             background-position: center;
         }
@@ -900,7 +904,7 @@ export default {
         .activity-desc {
             font-size: 14px;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         /* 活动附加信息（奖金/团队数） */
@@ -1033,16 +1037,19 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 40px 60px;
             background-color: #ffffff;
             border-bottom: 1px solid #f5f5f5;
         }
 
         /* 左侧内容区域 */
-        .banner-content {
+        .banner-content_a {
+          width: 100%;
+          padding: 30px 10%;
             display: flex;
             flex-direction: column;
             gap: 24px;
+          background: url('/src/static/img/pic_19.png') no-repeat right center;
+
         }
 
         /* 标题样式 */

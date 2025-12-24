@@ -1,5 +1,6 @@
 <template>
   <div class="ai-market-page">
+        <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
     <el-carousel
 
         :autoplay="true"
@@ -449,13 +450,19 @@
         </el-col>
       </el-row>
     </div>
-
+    <Footer />
   </div>
 </template>
 
 <script>
+  import Header from '../../components/Header.vue'
+import Footer from '../../components/Footer.vue'
 export default {
   name: 'AIMarketPage',
+  components: {
+    Header,
+    Footer
+  },
   data() {
     return {
       carouselData: [
@@ -482,10 +489,38 @@ export default {
       activeTab1: 'tool', // 工具/基础设置/模型/数据/交付 激活标签
       activeTab2: 'consumer-electronics', // 消费电子/A教育/企业应用 激活标签
       activeTab3: 'app-dev', // 应用开发等激活标签
-      activeTab4: 'tab1' // 应用开发等激活标签
+      activeTab4: 'tab1', // 应用开发等激活标签
+        activeIndex: '1',
     }
   },
-  methods: {}
+  methods: {
+     handleMenuSelect({ key, keyPath }) {
+      // 根据选择的菜单项进行路由跳转
+      if (key === '1') {
+        this.$router.push('/')
+      } else if (key === '2') {
+        // 产品菜单已改为下拉菜单
+      } else if (key === '2-1') {
+        this.$router.push('/product')
+      } else if (key === '2-2') {
+        // AI大模型页面路由
+      } else if (key === '2-3') {
+        // 视觉智能页面路由
+      } else if (key === '2-4') {
+        // 语音智能页面路由
+      } else if (key === '2-5') {
+        // 自然语言处理页面路由
+      } else if (key === '3') {
+        // 解决方案页面路由
+      } else if (key === '4') {
+        // 文档中心页面路由
+      } else if (key === '5') {
+        // 开发者社区页面路由
+      } else if (key === '6') {
+        // 关于我们页面路由
+      }
+    }
+  }
 }
 </script>
 

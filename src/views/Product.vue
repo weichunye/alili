@@ -8,18 +8,18 @@
           <h1 class="product-main-title">阿里云产品</h1>
           <p class="product-description">提供等竞争力的云产品，将计算、存储、网络、数据库、大数据、人工智能、安全等产品技术与场景需求融合，为开发者打造安全、稳定、体验卓越的云服务。</p>
           <div class="product-nav-buttons">
-            <el-button type="primary">产品矩阵</el-button>
-            <el-button>产品手册2023版</el-button>
-            <el-button>产品能力</el-button>
+            <el-button type="primary" class="banner-btn" style="padding: 14px 40px">产品矩阵</el-button>
+            <el-button style="padding: 14px 40px">产品手册2023版</el-button>
+            <el-button style="padding: 14px 40px">产品能力</el-button>
           </div>
         </div>
         <div class="top-actions">
-          <div class="action-card">
-            <el-button type="primary" size="large" class="action-btn">了解免费试用</el-button>
-            <p class="action-desc">体验云计算产品能力</p>
+          <div class="action-card" style="background: #0062ff">
+           <p style="font: 24px; color: #fff; font-weight: bold; line-height: 40px">了解免费试用</p>
+            <p style="color: #fff; " class="action-desc">体验云计算产品能力</p>
           </div>
           <div class="action-card">
-            <el-button type="primary" size="large" class="action-btn">了解产品定价</el-button>
+            <p style="font: 24px;  font-weight: bold; line-height: 40px">了解产品定价</p>
             <p class="action-desc">轻松估算成本，灵活管理成本</p>
           </div>
         </div>
@@ -361,60 +361,7 @@
           <!-- 右侧世界地图 -->
           <div class="availability-map">
             <div class="map-container">
-              <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-                <!-- 世界地图轮廓 -->
-                <path d="M180,150 Q220,130 250,140 T320,150 Q350,170 370,190 T410,230 Q430,250 450,240 T490,220 Q510,200 530,210 T570,230 Q590,250 610,240 T650,220 Q670,200 690,210 T730,230 Q750,250 770,240 T810,220 Q830,200 850,210 T890,230 Q910,250 930,240" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-                
-                <!-- 亚洲部分 -->
-                <path d="M320,150 Q350,130 380,140 T440,160 Q470,180 490,200 T530,240 Q550,260 570,250 T610,230 Q630,210 650,220 T690,240 Q710,260 730,250 T770,230 Q790,210 810,220 T850,240 Q870,260 890,250 T930,230" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-                
-                <!-- 欧洲部分 -->
-                <path d="M180,150 Q200,170 220,160 T260,150 Q280,130 300,140 T340,160 Q360,180 380,170 T420,150 Q440,130 460,140 T500,160 Q520,180 540,170 T580,150 Q600,130 620,140 T660,160 Q680,180 700,170 T740,150 Q760,130 780,140 T820,160 Q840,180 860,170 T900,150 Q920,130 940,140" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-                
-                <!-- 非洲部分 -->
-                <path d="M320,150 Q350,170 380,180 T440,200 Q470,220 490,240 T530,280 Q550,300 570,290 T610,270 Q630,250 650,260 T690,280 Q710,300 730,290 T770,270 Q790,250 810,260 T850,280 Q870,300 890,290 T930,270" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-                
-                <!-- 美洲部分 -->
-                <path d="M180,150 Q160,170 140,160 T100,150 Q80,130 60,140 T20,160 Q0,180 20,200 T60,220 Q80,240 100,230 T140,210 Q160,190 180,200 T220,220 Q240,240 260,230 T300,210 Q320,190 340,200 T380,220 Q400,240 420,230" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-                
-                <!-- 连接线 -->
-                <path d="M200,160 C300,200 400,250 500,200" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M300,140 C400,180 500,230 600,200" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M400,160 C500,200 600,250 700,220" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M500,180 C600,220 700,270 800,240" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M600,160 C700,200 800,250 900,220" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                
-                <path d="M200,220 C300,260 400,310 500,280" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M300,240 C400,280 500,330 600,300" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M400,260 C500,300 600,350 700,320" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M500,280 C600,320 700,370 800,340" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                <path d="M600,250 C650,300 700,350 750,370" fill="none" stroke="#d0e0ff" stroke-width="1.5"/>
-                
-                <!-- 数据中心节点 -->
-                <circle cx="180" cy="150" r="3" fill="#007bff"/>
-                <circle cx="220" cy="160" r="3" fill="#007bff"/>
-                <circle cx="260" cy="140" r="3" fill="#007bff"/>
-                <circle cx="300" cy="150" r="3" fill="#007bff"/>
-                <circle cx="340" cy="150" r="3" fill="#007bff"/>
-                <circle cx="380" cy="160" r="3" fill="#007bff"/>
-                <circle cx="420" cy="170" r="3" fill="#007bff"/>
-                <circle cx="460" cy="150" r="3" fill="#007bff"/>
-                <circle cx="500" cy="140" r="3" fill="#007bff"/>
-                <circle cx="540" cy="160" r="3" fill="#007bff"/>
-                <circle cx="580" cy="170" r="3" fill="#007bff"/>
-                <circle cx="620" cy="150" r="3" fill="#007bff"/>
-                <circle cx="660" cy="160" r="3" fill="#007bff"/>
-                <circle cx="700" cy="150" r="3" fill="#007bff"/>
-                <circle cx="740" cy="170" r="3" fill="#007bff"/>
-                <circle cx="780" cy="160" r="3" fill="#007bff"/>
-                <circle cx="820" cy="150" r="3" fill="#007bff"/>
-                <circle cx="860" cy="160" r="3" fill="#007bff"/>
-                <circle cx="900" cy="150" r="3" fill="#007bff"/>
-                
-                <!-- 标记点 -->
-                <circle cx="500" cy="200" r="4" fill="#007bff" stroke="white" stroke-width="2"/>
-                <text x="510" y="205" font-size="12" fill="#333">迪拜 2</text>
-              </svg>
+              <img src="/src/static/img/pic_16.png">
             </div>
           </div>
         </div>
@@ -512,12 +459,13 @@ export default {
 
 /* 顶部产品介绍区域 */
 .top_box {
-  background-color: #f5f7fa;
   padding: 60px 0;
   margin-bottom: 40px;
+  background: url('/src/static/img/pic_14.png') no-repeat center center; background-size:  100%;
 }
 
 .top-content {
+  position: relative;
   max-width: 100%;
   margin: 0 auto;
   padding: 0 10%;
@@ -554,17 +502,19 @@ export default {
 }
 
 .top-actions {
+  position: absolute;
+  right: 40px;
+  bottom: -30px;
   display: flex;
-  gap: 30px;
 }
 
 .action-card {
   background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 5px 30px ;
   text-align: center;
-  width: 250px;
+  width: 400px;
+  text-indent: 20px;
+  text-align: left;
 }
 
 .action-btn {
@@ -1222,5 +1172,11 @@ export default {
   .stat-number {
     font-size: 36px;
   }
+}
+.banner-btn {
+  font-size: 16px;
+  padding: 10px 24px;
+  background-color: #1890ff;
+  border-color: #1890ff;
 }
 </style>

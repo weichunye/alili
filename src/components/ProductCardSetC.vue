@@ -84,7 +84,7 @@
             </div>
             <p class="text-xs text-gray-text">仅限个人客户领取</p>
             <div class="mt-2 border border-gray-border rounded p-2 inline-block">
-              <div class="text-center">
+              <div class="text-center" style="padding: 0 50px">
                 <p class="text-xs text-gray-text">新客户专享</p>
                 <p class="text-lg font-bold text-orange-primary">¥10</p>
                 <p class="text-xs text-gray-text">满100减10</p>
@@ -101,7 +101,7 @@
             <p class="text-xs text-gray-text">仅限企业客户领取</p>
             <div class="mt-2 border border-gray-border rounded p-2 inline-block">
               <div class="text-center">
-                <p class="text-xs text-gray-text">新客户专享</p>
+                <p class="text-xs text-gray-text" style="padding: 0 50px">新客户专享</p>
                 <p class="text-lg font-bold text-orange-primary">¥10</p>
                 <p class="text-xs text-gray-text">满100减10</p>
               </div>

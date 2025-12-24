@@ -6,10 +6,10 @@
     <!-- 页面内容区域 -->
     <main class="flex-grow pt-20 pb-10">
       <!-- 顶部banner区域 -->
-      <section class="relative bg-gradient-to-r from-white to-aliBlue-gradient py-16 px-8 md:px-16 lg:px-24">
+      <section class="relative bg-gradient-to-r from-white to-aliBlue-gradient py-16 px-8 md:px-16 lg:px-24" style="background:url('/src/static/img/pic_21.png') no-repeat center center; ">
         <!-- 背景装饰图占位 -->
         <div class="absolute right-0 top-0 w-1/2 h-full opacity-20">
-          <img src="https://picsum.photos/800/400?random=1" alt="背景装饰" class="w-full h-full object-cover">
+          <img src="/src/static/img/pic_21.png" alt="背景装饰" class="w-full h-full object-cover">
         </div>
 
         <div class="relative max-w-7xl mx-auto">
@@ -24,7 +24,7 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- 合作模式 -->
           <div class="p-4">
-            <h2 class="text-aliBlue-primary font-semibold text-lg mb-4">分工明确的合作模式</h2>
+            <h2 class="text-aliBlue-primary font-semibold text-lg mb-4"  style="color: #086afc">分工明确的合作模式</h2>
             <p class="text-sm text-gray-700 leading-relaxed">
               阿里云将继续聚焦核心技术和通用型平台能力，行业知识和上层应用能力更多由伙伴去补齐，以清晰的边界保障伙伴利益，整合资源帮助伙伴拓客和增收，让伙伴走在前面。
             </p>
@@ -32,7 +32,7 @@
 
           <!-- 权益体系 -->
           <div class="p-4">
-            <h2 class="text-aliBlue-primary font-semibold text-lg mb-4">货真价实的权益体系</h2>
+            <h2 class="text-aliBlue-primary font-semibold text-lg mb-4"  style="color: #086afc">货真价实的权益体系</h2>
             <p class="text-sm text-gray-700 leading-relaxed">
               专项资金支持分销伙伴下沉地市，推荐集成伙伴总集，加大专业细分领域伙伴的合作规模，提升服务伙伴的履约能力，与伙伴共享商机。阿里云与合作伙伴共同以客户为中心，创造1+1 > 2的协同效应。
             </p>
@@ -40,7 +40,7 @@
 
           <!-- 发展政策 -->
           <div class="p-4">
-            <h2 class="text-aliBlue-primary font-semibold text-lg mb-4">长期稳定的发展政策</h2>
+            <h2 class="text-aliBlue-primary font-semibold text-lg mb-4"  style="color: #086afc">长期稳定的发展政策</h2>
             <p class="text-sm text-gray-700 leading-relaxed">
               政策是阿里云和合作伙伴的重要纽带。在保证政策的清晰、稳定和前瞻性的同时，阿里云将引入第三方满意度调查，对合作模式、权益、政策进行及时优化，并第一时间向伙伴传递，以便伙伴提前调整和布局。
             </p>
@@ -75,7 +75,7 @@
               <!-- 右侧图片占位区 -->
               <div class="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-purple-50 flex items-center justify-center">
                 <!-- 图片占位符，可替换为实际图片链接 -->
-                <img src="https://picsum.photos/800/400?random=1" alt="分销伙伴示意图" class="w-full h-full object-cover">
+                <img src="/src/static/img/pic_22.png" alt="分销伙伴示意图" class="w-full h-full object-cover">
               </div>
             </div>
 
@@ -108,7 +108,7 @@
             <div class="card-shadow rounded-lg overflow-hidden bg-white">
               <!-- 图片占位 -->
               <div class="h-60 bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center">
-                <img src="https://picsum.photos/seed/salesforce/800/400" alt="Salesforce 合作计划" class="w-full h-full object-cover">
+                <img src="/src/static/img/pic_23.png" alt="Salesforce 合作计划" class="w-full h-full object-cover">
               </div>
               <!-- 卡片内容 -->
               <div class="p-6">
@@ -127,7 +127,7 @@
             <div class="card-shadow rounded-lg overflow-hidden bg-white">
               <!-- 图片占位 -->
               <div class="h-60 bg-gradient-to-r from-blue-100 to-indigo-100 flex items-center justify-center">
-                <img src="https://picsum.photos/seed/tongyi/800/400" alt="通义千问合作计划" class="w-full h-full object-cover">
+                <img src="/src/static/img/pic_24.png"  alt="通义千问合作计划" class="w-full h-full object-cover">
               </div>
               <!-- 卡片内容 -->
               <div class="p-6">
@@ -146,7 +146,7 @@
             <div class="card-shadow rounded-lg overflow-hidden bg-white">
               <!-- 图片占位 -->
               <div class="h-60 bg-gradient-to-r from-blue-50 to-blue-200 flex items-center justify-center">
-                <img src="https://picsum.photos/seed/ai/800/400" alt="AI大模型合作计划" class="w-full h-full object-cover">
+                <img src="/src/static/img/pic_25.png"  alt="AI大模型合作计划" class="w-full h-full object-cover">
               </div>
               <!-- 卡片内容 -->
               <div class="p-6">

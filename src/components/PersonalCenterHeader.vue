@@ -7,7 +7,7 @@
           <svg class="w-6 h-6 text-ali-blue" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
             <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm175.7 618.2l-25.9-28.8c-3.5-3.9-9.8-3.9-13.3 0L485.6 767.5c-4.2 4.6-11 4.6-15.2 0L349.5 653.4c-3.5-3.9-9.8-3.9-13.3 0l-25.9 28.8c-3.6 4-2.9 10.3 1.4 14l152.4 166c4.4 4.8 11.9 4.8 16.3 0l152.4-166c4.3-3.7 5-10 1.4-14z" fill="currentColor"/>
           </svg>
-          <span class="ml-1 text-lg font-medium">阿里云</span>
+          <router-link to="/" class="ml-1 text-lg font-medium">阿里云</router-link>
           <span class="text-ali-gray-dark text-sm ml-1">工作台</span>
         </div>
       </div>

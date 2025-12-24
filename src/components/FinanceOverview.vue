@@ -162,6 +162,211 @@
         </div>
       </div>
     </div>
+    <!-- 成本总览区域 -->
+    <div class="cost-overview-section">
+      <!-- 左侧：成本总览提示 -->
+      <div class="cost-overview-left">
+        <div class="cost-title">
+          <span>成本总览</span>
+          <el-tooltip class="item" effect="dark" content="成本总览说明" placement="top">
+            <i class="el-icon-question-circle"></i>
+          </el-tooltip>
+        </div>
+        <div class="cost-placeholder">
+          <div class="placeholder-icon">
+            <i class="el-icon-warning"></i>
+          </div>
+          <div class="placeholder-text">
+            <el-button type="text">暂无分析内容，将开放成本分析</el-button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 右侧：成本优化仪表盘 -->
+      <div class="cost-optimization-right">
+        <div class="optimization-header">
+          <div class="optimization-title">成本优化</div>
+          <div class="optimization-date">监测周期: 2025-12</div>
+        </div>
+        <div class="dashboard-container">
+          <div class="gauge-chart" ref="costGaugeChart"></div>
+        </div>
+        <div class="optimization-tabs">
+          <el-tabs v-model="activeTab" type="card">
+            <el-tab-pane label="标杆评分结果" name="benchmark">
+              <div class="benchmark-result">
+                <div class="result-item">
+                  <div class="result-label">异常成本</div>
+                  <div class="result-value">0 个</div>
+                </div>
+              </div>
+            </el-tab-pane>
+            <el-tab-pane label="优化建议" name="suggestion">
+              <div class="suggestion-result">
+                <div class="result-item">
+                  <div class="result-label">优化建议</div>
+                  <div class="result-value">0 个</div>
+                </div>
+                <div class="result-item">
+                  <div class="result-label">预估节省金额</div>
+                  <div class="result-value price">¥0.00</div>
+                </div>
+              </div>
+            </el-tab-pane>
+          </el-tabs>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="mx-auto px-4 py-8">
+        <!-- 账户详情标题 -->
+        <h2 class="text-xl font-semibold text-gray-700 mb-6">2025-11 账户详情</h2>
+
+        <!-- 账户详情计算模块 -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-8">
+          <!-- 账户月末余额 -->
+          <div class="md:col-span-3 bg-white rounded-lg shadow-sm p-5">
+            <div class="border-left-primary pl-3 mb-4">
+              <p class="text-sm text-gray-500">账户月末余额</p>
+              <p class="text-2xl font-bold text-gray-700">¥ 2</p>
+            </div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span>现金余额</span>
+                <span class="text-gray-600">¥ 2</span>
+              </div>
+              <div class="flex justify-between">
+                <span>信控退款余额</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>债权凭证/汇票余额</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>账单未结清余额</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 等号 -->
+          <div class="md:col-span-1 flex items-center justify-center">
+            <span class="text-2xl text-gray-400">=</span>
+          </div>
+
+          <!-- 账户月初余额 -->
+          <div class="md:col-span-3 bg-white rounded-lg shadow-sm p-5">
+            <div class="pl-3 mb-4">
+              <p class="text-sm text-gray-500">账户月初余额</p>
+              <p class="text-2xl font-bold text-gray-700">¥ 2</p>
+            </div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span>现金余额</span>
+                <span class="text-gray-600">¥ 2</span>
+              </div>
+              <div class="flex justify-between">
+                <span>信控退款余额</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>债权凭证/汇票余额</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>账单未结清余额</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 加号 -->
+          <div class="md:col-span-1 flex items-center justify-center">
+            <span class="text-2xl text-gray-400">+</span>
+          </div>
+
+          <!-- 本月收入金额 -->
+          <div class="md:col-span-3 bg-white rounded-lg shadow-sm p-5">
+            <div class="pl-3 mb-4">
+              <p class="text-sm text-gray-500">本月收入金额</p>
+              <p class="text-2xl font-bold text-gray-700">¥ 0</p>
+            </div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span>现金充值及转入</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>债权凭证/汇票充值及转入</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>订单在线支付</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 减号 -->
+          <div class="md:col-span-1 flex items-center justify-center">
+            <span class="text-2xl text-gray-400">-</span>
+          </div>
+
+          <!-- 本月支出金额 -->
+          <div class="md:col-span-3 bg-white rounded-lg shadow-sm p-5">
+            <div class="pl-3 mb-4">
+              <p class="text-sm text-gray-500">本月支出金额</p>
+              <p class="text-2xl font-bold text-gray-700">¥ 0</p>
+            </div>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span>现金提现及转出</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>信控提现及转出</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>债权凭证/汇票提现及转出</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span>新增账单</span>
+                <span class="text-gray-600">¥ 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 公告模块 -->
+        <div class="bg-white rounded-lg shadow-sm p-5">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-semibold text-gray-700">公告</h3>
+            <a href="#" class="text-primary text-sm hover:underline">查看全部</a>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+            <div class="space-y-2">
+              <a href="#" class="block text-gray-600 hover:text-primary">云产品属性名称治理说明</a>
+              <a href="#" class="block text-gray-600 hover:text-primary">费用与成本旧版控制台下线公告</a>
+            </div>
+            <div class="space-y-2">
+              <a href="#" class="block text-gray-600 hover:text-primary">【公告】云通信短信产品分账明细字段调整</a>
+              <a href="#" class="block text-gray-600 hover:text-primary">成本明细订阅信息优化公告</a>
+            </div>
+            <div class="space-y-2">
+              <a href="#" class="block text-gray-600 hover:text-primary">阿里云账单升级邀测公告</a>
+              <a href="#" class="block text-gray-600 hover:text-primary">摊销成本系统维护通知</a>
+            </div>
+            <div class="space-y-2">
+              <a href="#" class="block text-gray-600 hover:text-primary">关于退款规则升级期间账单详情显示的说明</a>
+              <a href="#" class="block text-gray-600 hover:text-primary">资源包退订规则更新公告</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -195,12 +400,18 @@ export default {
       // 当前激活的月份
       activeMonth: '2025-11',
       // 图表实例
-      chartInstance: null
+      chartInstance: null,
+      // 成本优化标签页激活状态
+      activeTab: 'benchmark',
+      // 成本仪表盘实例
+      costGaugeChart: null
     }
   },
   mounted() {
     // 初始化图表
     this.initChart()
+    // 初始化成本仪表盘
+    this.initCostGaugeChart()
   },
   methods: {
     // 初始化费用总览图表
@@ -332,12 +543,91 @@ export default {
     // 月份点击事件
     handleMonthClick(month) {
       this.activeMonth = month
+    },
+    // 初始化成本仪表盘图表
+    initCostGaugeChart() {
+      this.costGaugeChart = echarts.init(this.$refs.costGaugeChart)
+
+      // 仪表盘配置
+      const option = {
+        tooltip: {
+          formatter: '{a} <br/>{b} : {c}%'
+        },
+        series: [
+          {
+            name: '成本优化率',
+            type: 'gauge',
+            detail: {
+              formatter: '{value}%',
+              fontSize: 24,
+              color: '#333'
+            },
+            data: [
+              {
+                value: 65,
+                name: '优化率'
+              }
+            ],
+            title: {
+              fontSize: 14,
+              color: '#666'
+            },
+            axisLine: {
+              lineStyle: {
+                width: 20,
+                color: [
+                  [0.3, '#67E0E3'],
+                  [0.7, '#37A2DA'],
+                  [1, '#FD666D']
+                ]
+              }
+            },
+            pointer: {
+              itemStyle: {
+                color: '#333'
+              }
+            },
+            axisTick: {
+              distance: -20,
+              length: 8,
+              lineStyle: {
+                color: '#fff',
+                width: 2
+              }
+            },
+            splitLine: {
+              distance: -20,
+              length: 30,
+              lineStyle: {
+                color: '#fff',
+                width: 5
+              }
+            },
+            axisLabel: {
+              color: '#666',
+              fontSize: 12,
+              distance: -40
+            }
+          }
+        ]
+      }
+
+      this.costGaugeChart.setOption(option)
+
+      // 监听窗口大小变化，自适应图表
+      window.addEventListener('resize', () => {
+        this.costGaugeChart.resize()
+      })
     }
   },
   beforeDestroy() {
     // 销毁图表实例，防止内存泄漏
     if (this.chartInstance) {
       this.chartInstance.dispose()
+    }
+    // 销毁成本仪表盘实例
+    if (this.costGaugeChart) {
+      this.costGaugeChart.dispose()
     }
   }
 }
@@ -438,6 +728,7 @@ export default {
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
 .el-steps {
@@ -466,10 +757,124 @@ export default {
   font-weight: 500;
 }
 
+/* 成本总览区域样式 */
+.cost-overview-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.cost-overview-left {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.cost-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cost-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  border: 1px dashed #e0e0e0;
+  border-radius: 4px;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+  color: #f0c24c;
+  margin-bottom: 15px;
+}
+
+.placeholder-text {
+  color: #999;
+}
+
+.cost-optimization-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.optimization-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.optimization-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.optimization-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.dashboard-container {
+  height: 200px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.optimization-tabs {
+  margin-top: 20px;
+}
+
+.benchmark-result, .suggestion-result {
+  padding: 15px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.result-label {
+  color: #666;
+}
+
+.result-value {
+  font-weight: 500;
+}
+
+.result-value.price {
+  color: #f56c6c;
+  font-weight: bold;
+}
+
 /* 响应式适配 */
 @media (max-width: 1200px) {
   .detail-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cost-overview-section {
+    flex-direction: column;
   }
 }
 
@@ -488,4 +893,3 @@ export default {
   }
 }
 </style>
-

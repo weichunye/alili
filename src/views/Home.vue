@@ -1,4 +1,4 @@
-﻿<template>
+﻿﻿<template>
   <div class="aliyun-ai-platform">
     <!-- 顶部导航栏 -->
     <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
@@ -51,9 +51,9 @@
         <div class="section-header">
           <h2>精选云上 AI 应用，助力业务创新</h2>
         </div>
-        <div class="ai-showcase">
-          <el-card class="ai-card main-ai-card" style="color: #fff;">
-            <div class="ai-card-header gradient-1" style="height: 100%;color: #fff;">
+        <div class="ai-showcase ">
+          <el-card class="ai-card main-ai-card gradient-1" style="color: #fff;">
+            <div class="ai-card-header " style="height: 100%;color: #fff;">
               <h3 style="color: #fff;">阿里云 AI 体验馆</h3>
               <p style="font-size: 20px; padding: 20px 0;color: #fff;">一站式体验阿里云AI能力，快速验证应用场景和效果</p>
               <div class="btn">
@@ -62,7 +62,7 @@
             </div>
           </el-card>
           <div class="ai-cards-grid">
-            <el-card v-for="(card, index) in aiCards" :key="index" :class="['ai-card', 'small-ai-card', card.size === 'small' ? 'small-ai-card' : '']">
+            <el-card v-for="(card, index) in aiCards" :key="index" :class="['ai-card', 'small-ai-card', card.size === 'small' ? 'small-ai-card' : '',]">
               <div class="ai-card-header" :class="card.size === 'small' ? 'small-header' : ''">
                 <h4>{{ card.title }}</h4>
                 <p>{{ card.desc }}</p>
@@ -86,15 +86,15 @@
         <div class="mx-auto" style="background: #fff; padding: 30px 20px;">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- 左侧区域 -->
-            <div class="bg-grad rounded-xl p-8 flex flex-col justify-between">
-              <div>
+            <div class="bg-grad rounded-xl  flex flex-col justify-between">
+              <div style="margin: 20px 0 0 50px">
                 <h2 class="text-2xl font-bold mb-6 text-gray-900">{{ tongyiModels.main.title }}</h2>
                 <ul class="space-y-3 mb-8">
                   <li v-for="(feature, index) in tongyiModels.main.features" :key="index" class="check-item">{{ feature }}</li>
                 </ul>
               </div>
               <div>
-                <button class="bg-[#165DFF] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-[#0E4BDB] transition-colors">
+                <button  style="margin-bottom: 80px; margin-left: 30px " class="bg-[#165DFF] text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-[#0E4BDB] transition-colors">
                   模型广场 <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
@@ -172,49 +172,180 @@
             </ul>
           </el-card>
 
-          <div class="product-groups">
-            <el-card
-              v-for="(product, index) in selectedProducts"
-              :key="index"
-              class="products-card group-card"
-            >
-              <div class="product-header">
-                <h3>{{ product.title }}</h3>
-                <p class="product-desc">{{ product.desc }}</p>
+          <div class="product-groups" style="background: #fff; padding: 30px 20px;">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div 
+                v-for="(product, index) in selectedProducts" 
+                :key="index"
+                :class="[
+                  'border-b', 
+                  'border-borderColor', 
+                  index < 3 ? 'pb-4' : '',
+                  index >= 3 && index < 12 ? 'py-4' : '',
+                  index >= 12 ? 'py-4' : ''
+                ]"
+              >
+                <h3 class="text-textMain font-medium text-lg mb-2">
+                  {{ product.title }}
+                  <span v-if="product.tag" class="product-tag">{{ product.tag }}</span>
+                </h3>
+                <p class="text-textSub text-sm" :class="index < 3 ? 'mb-3' : ''">{{ product.desc }}</p>
+                <div v-if="product.actions.length > 0" class="flex gap-2">
+                  <button style="padding: 10px 20px"
+                    v-for="(action, actionIndex) in product.actions"
+                    :key="actionIndex"
+                    :class="[
+                      'product-btn',
+                      action.type === 'primary' ? 'bg-primary' : '',
+                      action.type === 'default' ? 'bg-secondary text-primary' : '',
+                      product.actions.length === 1 ? 'w-full' : ''
+                    ]"
+                  >
+                    {{ action.text }}
+                  </button>
+                </div>
               </div>
-              <div class="product-actions">
-                <el-button
-                  v-for="(action, actionIndex) in product.actions"
-                  :key="actionIndex"
-                  :type="action.type"
-                  size="small"
-                  :disabled="action.disabled"
-                >
-                  {{ action.text }}
-                </el-button>
-              </div>
-            </el-card>
+            </div>
+<!--            <el-card-->
+<!--              v-for="(product, index) in selectedProducts"-->
+<!--              :key="index"-->
+<!--              class="products-card group-card"-->
+<!--            >-->
+<!--              <div class="product-header">-->
+<!--                <h3>{{ product.title }}</h3>-->
+<!--                <p class="product-desc">{{ product.desc }}</p>-->
+<!--              </div>-->
+<!--              <div class="product-actions">-->
+<!--                <el-button-->
+<!--                  v-for="(action, actionIndex) in product.actions"-->
+<!--                  :key="actionIndex"-->
+<!--                  :type="action.type"-->
+<!--                  size="small"-->
+<!--                  :disabled="action.disabled"-->
+<!--                >-->
+<!--                  {{ action.text }}-->
+<!--                </el-button>-->
+<!--              </div>-->
+<!--            </el-card>-->
           </div>
         </div>
       </section>
+    </div>
 
       <!-- 技术解决方案区域 -->
       <section class="solutions-section">
         <div class="section-header">
           <h2>卓越的技术解决方案，加速云上应用构建</h2>
         </div>
-        <div class="solutions-grid">
-          <el-card v-for="(solution, index) in solutions" :key="index" class="solution-card">
-            <!-- <div class="solution-icon">
-              <i :class="solution.icon"></i>
-            </div> -->
-            <h3>{{ solution.title }}</h3>
-            <p class="solution-desc">{{ solution.desc }}</p>
-            <el-button type="text" class="solution-more">查看详情 →</el-button>
-          </el-card>
+        <div class="solutions-grid" style="width: 100%; padding: 0 10%">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- 卡片1：小程序搭建 -->
+            <div class="border border-borderGray rounded-lg p-6 card-hover">
+              <div class="flex justify-between items-start mb-4">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-mobile-screen-button text-primary text-xl"></i>
+                  <h3 class="text-card-title font-medium">10分钟搭建微信、支付宝小程序</h3>
+                </div>
+                <span class="card-tag">小程序</span>
+              </div>
+              <p class="text-card-desc text-grayText mb-4">
+                在阿里云上快速部署博客网站，并将网站服务快速应用到微信、支付宝小程序。
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="card-label">云服务器 ECS</span>
+                <span class="card-label">云数据库 RDS</span>
+                <span class="card-label">云解析 DNS</span>
+                <span class="card-label">域名与网站</span>
+              </div>
+              <div class="flex justify-end">
+                <a href="#" class="text-primary text-sm">
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 卡片2：企业门户网站 -->
+            <div class="border border-borderGray rounded-lg p-6 card-hover">
+              <div class="flex justify-between items-start mb-4">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-code text-primary text-xl"></i>
+                  <h3 class="text-card-title font-medium">低代码高效构建企业门户网站</h3>
+                </div>
+                <span class="card-tag">网站搭建</span>
+              </div>
+              <p class="text-card-desc text-grayText mb-4">
+                通过可视化的方式添加多种风格的门户组件，帮助企业快速高效地构建多端门户网站。
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="card-label">多端低代码开发平台魔笔</span>
+                <span class="card-label">云数据库 RDS</span>
+                <span class="card-label">云解析 DNS</span>
+                <span class="card-label">域名与网站</span>
+              </div>
+              <div class="flex justify-end">
+                <a href="#" class="text-primary text-sm">
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 卡片3：静态资源加速 -->
+            <div class="border border-borderGray rounded-lg p-6 card-hover">
+              <div class="flex justify-between items-start mb-4">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-globe text-primary text-xl"></i>
+                  <h3 class="text-card-title font-medium">网站静态资源访问加速</h3>
+                </div>
+                <span class="card-tag">网站加速</span>
+              </div>
+              <p class="text-card-desc text-grayText mb-4">
+                用户跨地域访问慢？用阿里云CDN分发OSS上的网站静态文件，提速降本。
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="card-label">对象存储 OSS</span>
+                <span class="card-label">CDN</span>
+              </div>
+              <div class="flex justify-end">
+                <a href="#" class="text-primary text-sm">
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 卡片4：SSL证书部署 -->
+            <div class="border border-borderGray rounded-lg p-6 card-hover">
+              <div class="flex justify-between items-start mb-4">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-shield-halved text-primary text-xl"></i>
+                  <h3 class="text-card-title font-medium">部署SSL证书实现Web服务加密访问</h3>
+                </div>
+                <span class="card-tag">网站加速</span>
+              </div>
+              <p class="text-card-desc text-grayText mb-4">
+                HTTPS 加密防数据泄露和中间人攻击，阿里云免费 SSL 证书支持多种服务器。
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="card-label">域名与网站</span>
+                <span class="card-label">数字证书管理服务 (原SSL证书)</span>
+              </div>
+              <div class="flex justify-end">
+                <a href="#" class="text-primary text-sm">
+                  <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+<!--          <el-card v-for="(solution, index) in solutions" :key="index" class="solution-card">-->
+<!--            &lt;!&ndash; <div class="solution-icon">-->
+<!--              <i :class="solution.icon"></i>-->
+<!--            </div> &ndash;&gt;-->
+<!--            <h3>{{ solution.title }}</h3>-->
+<!--            <p class="solution-desc">{{ solution.desc }}</p>-->
+<!--            <el-button type="text" class="solution-more">查看详情 →</el-button>-->
+<!--          </el-card>-->
         </div>
       </section>
-
+<div style="width: 100%; padding: 40px 10%">
       <!-- 超值权益区域 -->
       <section class="benefits-section">
         <div class="section-header">
@@ -287,23 +418,28 @@
           <div v-for="(logo, index) in infrastructure.compliance" :key="index" class="compliance-logo">{{ logo }}</div>
         </div>
       </section> -->
+</div>
 
       <!-- 数字经济时代区域 -->
       <section class="digital-economy-section">
         <div class="section-header">
           <h2>数字经济时代，云计算为创新提速</h2>
         </div>
-        <div class="economy-features">
+        <div class="economy-features"  >
+
           <el-card class="economy-card">
+            <div style="width: 100%; padding: 40px 10%">
             <div  style="padding: 20px 1%; width: 23%;float: left; line-height: 50px;" v-for="(feature, index) in economyFeatures" :key="index" >
 
             <h3 style="font-size: 24px;line-height: 60px; color: #1890ff; border-bottom: 1px solid #dedede;">{{ feature.title }}</h3>
             <p class="economy-desc">{{ feature.desc }}</p>
             </div>
+            </div>
           </el-card>
+
         </div>
       </section>
-
+      <div style="width: 100%; padding: 40px 10%">
       <!-- 专属服务区域 -->
       <section class="services-section">
         <div class="section-header">
@@ -382,6 +518,7 @@ export default {
     return {
       activeIndex: '1',
       selectedCategory: '1',
+
       // 精选AI应用卡片数据
       aiCards: [
         {
@@ -735,6 +872,107 @@ export default {
           }
         ]
       },
+      // 精选产品数据
+      selectedProducts: [
+        {
+          title: '云服务器 ECS',
+          desc: '安全可靠、弹性可伸缩的云计算服务',
+          tag: '',
+          actions: [
+            { type: 'primary', text: '免费试用' },
+            { type: 'default', text: '查看详情' }
+          ]
+        },
+        {
+          title: '通义大模型',
+          desc: '多元化、高性能、安全可靠的大模型服务',
+          tag: '大模型',
+          actions: [
+            { type: 'primary', text: '模型体验' },
+            { type: 'default', text: '查看详情' }
+          ]
+        },
+        {
+          title: '大模型服务平台百炼',
+          desc: '大模型服务与应用平台',
+          tag: '大模型',
+          actions: [
+            { type: 'default', text: '查看详情' }
+          ]
+        },
+        {
+          title: '域名与网站',
+          desc: '提供智能易用的域名与建站服务',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '轻量应用服务器',
+          desc: '快速构建应用程序和网站，即刻迈出上云第一步',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '对象存储 OSS',
+          desc: '稳定、安全、高性价比、高性能的云存储服务',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '云数据库 RDS',
+          desc: '全托管，含MySQL、PostgreSQL、SQL Server、MariaDB多引擎',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '短信服务',
+          desc: '国内短信简单易用，安全可靠，秒级触达，全球覆盖200+国家和地区',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '数字证书管理服务 (原SSL证书)',
+          desc: '实现全站 HTTPS，呈现可信的 Web 访问',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '无影云电脑',
+          desc: '随时随地安全接入的云上超级电脑',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '人工智能平台 PAI',
+          desc: '一站式AI开发、训练和推理服务',
+          tag: '大模型',
+          actions: []
+        },
+        {
+          title: '云解析 DNS',
+          desc: '覆盖公网/内网、递归/权威、移动APP等全场景解析服务',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '云原生数据库 PolarDB',
+          desc: '100%兼容MySQL、PostgreSQL，兼容Oracle，支持集中和分布式',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '大数据开发治理平台 DataWorks',
+          desc: '一站式智能数据开发治理平台',
+          tag: '',
+          actions: []
+        },
+        {
+          title: '云防火墙',
+          desc: '云原生的云上边界网络安全防护产品',
+          tag: '',
+          actions: []
+        }
+      ],
       // 技术解决方案数据
       solutions: [
         {
@@ -924,11 +1162,7 @@ export default {
       this.selectedCategory = categoryId;
     }
   },
-  computed: {
-    selectedProducts() {
-      return this.products.groups.filter(product => product.categoryId === this.selectedCategory);
-    }
-  }
+
 };
 </script>
 
@@ -1106,7 +1340,7 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
-.ai-cards-grid > *:nth-child(1) {
+/* .ai-cards-grid > *:nth-child(1) {
   background: linear-gradient(135deg, #f6ffed 0%, #b7eb8f 100%);
 }
 .ai-cards-grid > *:nth-child(2) {
@@ -1120,10 +1354,11 @@ export default {
 }
 .ai-cards-grid > *:nth-child(5) {
   background: linear-gradient(135deg, #f0f5ff 0%, #adc6ff 100%);
-}
+} */
 
 .small-ai-card {
   min-height: 140px;
+  background: linear-gradient(135deg, #f9fafd 0%, #d8e2fb 100%);
 }
 
 .ai-card-header {
@@ -1160,7 +1395,7 @@ export default {
 }
 
 .small-image {
-  height: 80px;
+  height: 115px;
 }
 
 .image-placeholder {
@@ -1188,25 +1423,30 @@ export default {
 }
 
 
-/* .gradient-2 {
-  background: linear-gradient(135deg, #f6ffed 0%, #b7eb8f 100%);
+ .gradient-2 {
+   background: url("/src/static/img/pic_8.png") no-repeat center bottom;
+   background-size: auto 110px;
 }
 
 .gradient-3 {
-  background: linear-gradient(135deg, #fff7e6 0%, #ffd591 100%);
+  background: url("/src/static/img/pic_9.png") no-repeat center bottom;
+  background-size: auto 110px;
 }
 
 .gradient-4 {
-  background: linear-gradient(135deg, #f9f0ff 0%, #d3adf7 100%);
+  background: url("/src/static/img/pic_10.png") no-repeat center bottom;
+  background-size: auto 110px;
 }
 
 .gradient-5 {
-  background: linear-gradient(135deg, #fff2f0 0%, #ffccc7 100%);
+  background: url("/src/static/img/pic_11.png") no-repeat center bottom;
+  background-size: auto 110px;
 }
 
 .gradient-6 {
-  background: linear-gradient(135deg, #f0f5ff 0%, #adc6ff 100%);
-} */
+  background: url("/src/static/img/pic_12.png") no-repeat center bottom;
+  background-size: auto 110px;
+}
 
 /* 通义大模型区域 */
 .tongyi-model-section {
@@ -1220,7 +1460,8 @@ export default {
 }
 
 .bg-grad {
-  background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+  background: url("/src/static/img/gif_1.gif") no-repeat left center;
+  background-size: auto 500px;
 }
 
 .check-item {
@@ -1420,6 +1661,7 @@ export default {
 /* 技术解决方案区域 */
 .solutions-section {
   padding: 60px 0;
+  background: #fff;
 }
 
 .solutions-grid {
@@ -1471,7 +1713,7 @@ export default {
 
 .solution-more {
   color: #fff;
-  padding: 20px 30px;
+  padding: 12px 30px;
   font-size: 14px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -1524,7 +1766,7 @@ export default {
   border: none;
   width: 100%;
   margin-top: 8px;
-  line-height: 50px;
+  line-height: 16px;
 }
 
 .benefit-list {
@@ -1762,7 +2004,6 @@ export default {
 .economy-card {
   padding: 32px 24px;
   text-align: center;
-  border: 1px solid #e8e8e8;
   border-radius: 8px;
   transition: all 0.3s;
  background: linear-gradient(
@@ -2135,4 +2376,7 @@ export default {
             background-size: contain;
             opacity: 0.9;
         }
+.bg-primary{
+  color: #fff;
+}
 </style>
