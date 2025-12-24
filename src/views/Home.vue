@@ -1,25 +1,25 @@
-﻿﻿<template>
+﻿<template>
   <div class="aliyun-ai-platform">
     <!-- 顶部导航栏 -->
-    <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
+    <Header :active-index="activeIndex" />
 
     <!-- 英雄区域 -->
     <section class="hero-section" style="width: 100%; padding: 0 10%; background: url('/src/static/img/bg_1.png') no-repeat center center; background-size: cover;">
       <div class="hero-gradient"></div>
       <div class="hero-content">
-        <h1>极速部署 DeepSeek-OCR</h1>
-        <p class="hero-subtitle">阿里云内置 DeepSeek-OCR 模型服务，高性能图像识别助力快速管理文档</p>
+        <h1>限时免费 超 7000万 AI 大模型 tokens</h1>
+        <p class="hero-subtitle">支持 Qwen3 全系列模型一键部署，超值低价强大算力，即刻开启 AI 应用构建</p>
         <div class="hero-actions">
-          <el-button type="primary" size="large" class="primary-btn">立即部署</el-button>
+          <el-button type="primary" size="large" @click="goToCloudServer(2)" class="primary-btn">立即查看</el-button>
           <el-button type="default" size="large" class="secondary-btn">了解更多</el-button>
         </div>
         <div class="hero-cards">
           <el-card class="hero-card">
-            <div class="card-title">
+            <div class="card-title"  @click="goToCloudServer(1)">
               <i class="el-icon-tickets"></i>
               超轻 99 元云服务器，新老同享
             </div>
-            <p class="card-desc">持续创新的云服务，用云更简单，活动期间新老同价，开放必抢</p>
+            <p class="card-desc"  @click="goToCloudServer(1)">持续创新的云服务，用云更简单，活动期间新老同价，开放必抢</p>
           </el-card>
           <el-card class="hero-card">
             <div class="card-title">
@@ -174,12 +174,12 @@
 
           <div class="product-groups" style="background: #fff; padding: 30px 20px;">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div 
-                v-for="(product, index) in selectedProducts" 
+              <div
+                v-for="(product, index) in selectedProducts"
                 :key="index"
                 :class="[
-                  'border-b', 
-                  'border-borderColor', 
+                  'border-b',
+                  'border-borderColor',
                   index < 3 ? 'pb-4' : '',
                   index >= 3 && index < 12 ? 'py-4' : '',
                   index >= 12 ? 'py-4' : ''
@@ -1132,32 +1132,11 @@ export default {
     });
   },
   methods: {
-    handleMenuSelect({ key, keyPath }) {
-      // 根据选择的菜单项进行路由跳转
-      if (key === '1') {
-        this.$router.push('/bigmodel')
-      } else if (key === '2') {
-        // 产品菜单已改为下拉菜单
-      } else if (key === '2-1') {
-        this.$router.push('/product')
-      } else if (key === '2-2') {
-        // AI大模型页面路由
-      } else if (key === '2-3') {
-        // 视觉智能页面路由
-      } else if (key === '2-4') {
-        // 语音智能页面路由
-      } else if (key === '2-5') {
-        // 自然语言处理页面路由
-      } else if (key === '3') {
-        // 解决方案页面路由
-      } else if (key === '4') {
-        // 文档中心页面路由
-      } else if (key === '5') {
-        // 开发者社区页面路由
-      } else if (key === '6') {
-        // 关于我们页面路由
-      }
+    goToCloudServer(name) {
+      console.log('00')
+      this.$router.push('/pages/page'+name);
     },
+
     selectCategory(categoryId) {
       this.selectedCategory = categoryId;
     }
@@ -1284,6 +1263,7 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   background-color: white;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .card-title {

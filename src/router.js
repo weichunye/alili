@@ -14,6 +14,9 @@ import Partner from './views/Partner.vue'
 import CloudMarket from './views/cloudMarket/cloudMarket.vue'
 // 导入控制台页面组件
 import Console from './views/user/Console.vue'
+// 导入pages目录下的组件
+import Page1 from './views/pages/page1.vue'
+import Page2 from './views/pages/page2.vue'
 
 Vue.use(VueRouter)
 
@@ -83,6 +86,17 @@ const routes = [
     path: '/console',
     name: 'Console',
     component: Console
+  },
+  // 添加pages目录下的路由
+  {
+    path: '/pages/page1',
+    name: 'Page1',
+    component: Page1
+  },
+  {
+    path: '/pages/page2',
+    name: 'Page2',
+    component: Page2
   }
 ]
 

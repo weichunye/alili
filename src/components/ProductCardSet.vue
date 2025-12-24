@@ -2,132 +2,41 @@
   <div>
     <!-- 标题区域 -->
     <div class="mb-6">
-      <h1 class="text-[28px] font-bold text-gray-900">
-        {{ title }}
-      </h1>
+      <h1 class="text-[28px] font-bold text-gray-900" v-html="title"></h1>
       <p class="mt-2 text-sm text-gray-desc">{{ description }}</p>
     </div>
 
     <!-- 产品卡片容器 -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <!-- 卡片1：2vCPU 4GiB 宝塔Linux面板 -->
-      <div class="card-border rounded  h-full ">
-        <div style="padding: 30px 30px 0 30px"  class="bg_m">
-          <div class="font-semibold text-gray-800 mb-2">轻量应用服务器2vCPU 4GiB</div>
-          <p class="text-xs text-gray-desc mb-4">适用于搭建Web应用/小程序</p>
+      <!-- 动态生成的卡片 -->
+      <div v-for="(card, index) in productCards" :key="index" class="card-border rounded h-full">
+        <div style="padding: 30px 30px 0 30px" class="bg_m">
+          <div class="font-semibold text-gray-800 mb-2">{{ card.title }}</div>
+          <p class="text-xs text-gray-desc mb-4">{{ card.description }}</p>
 
           <div class="grid grid-cols-3 gap-2 text-sm mb-8">
             <div>
               <p class="text-gray-desc">应用镜像</p>
-              <p class="mt-1">宝塔Linux面板</p>
+              <p class="mt-1">{{ card.image }}</p>
             </div>
             <div>
               <p class="text-gray-desc">购买时长</p>
-              <p class="mt-1">1个月</p>
+              <p class="mt-1">{{ card.duration }}</p>
             </div>
           </div>
 
           <div class="mb-6">
-            <p class="text-orange-price text-xl font-bold">¥70<span class="text-sm font-normal">.00/1月</span></p>
-            <p class="text-xs text-gray-light mt-1">官网折扣价:¥70.00/1月</p>
+            <p class="text-orange-price text-xl font-bold">¥{{ card.price }}<span class="text-sm font-normal">.00/{{ card.durationUnit }}</span>
+              <a v-if="card.hasDiscount" href="#" class="text-blue-primary text-xs font-normal ml-1">了解优惠</a>
+            </p>
+            <p class="text-xs text-gray-light mt-1">官网折扣价:¥{{ card.price }}.00/{{ card.durationUnit }}</p>
           </div>
         </div>
 
-        <div style="padding: 20px 0; width: 100%; background: #F4F8FE">
-        <button class="w-[100px] h-[32px] border border-gray-300 rounded flex items-center justify-center mx-auto hover:bg-gray-50 transition-colors">
-          立即购买
-        </button>
-        </div>
-      </div>
-
-      <!-- 卡片2：4vCPU 16GiB 翼龙面板 -->
-      <div class="card-border rounded h-full ">
-        <div style="padding: 30px 30px 0 30px"  class="bg_m">
-        <div class="font-semibold text-gray-800 mb-2">轻量应用服务器4vCPU 16GiB</div>
-        <p class="text-xs text-gray-desc mb-4">适用于搭建游戏自建服</p>
-
-        <div class="grid grid-cols-3 gap-2 text-sm mb-8">
-          <div>
-            <p class="text-gray-desc">应用镜像</p>
-            <p class="mt-1">翼龙面板</p>
-          </div>
-          <div>
-            <p class="text-gray-desc">购买时长</p>
-            <p class="mt-1">1个月</p>
-          </div>
-        </div>
-
-        <div class="mb-6">
-          <p class="text-orange-price text-xl font-bold">¥300<span class="text-sm font-normal">.00/1月</span></p>
-          <p class="text-xs text-gray-light mt-1">官网折扣价:¥300.00/1月</p>
-        </div>
-        </div>
         <div style="padding: 20px 0; width: 100%; background: #F4F8FE">
           <button class="w-[100px] h-[32px] border border-gray-300 rounded flex items-center justify-center mx-auto hover:bg-gray-50 transition-colors">
             立即购买
           </button>
-        </div>
-
-
-      </div>
-
-      <!-- 卡片3：2vCPU 1GiB WooCommerce -->
-      <div class="card-border rounded  h-full ">
-        <div style="padding: 30px 30px 0 30px"  class="bg_m">
-        <div class="font-semibold text-gray-800 mb-2">轻量应用服务器2vCPU 1GiB</div>
-        <p class="text-xs text-gray-desc mb-4">适用于搭建电商独立站</p>
-
-        <div class="grid grid-cols-3 gap-2 text-sm mb-8">
-          <div>
-            <p class="text-gray-desc">应用镜像</p>
-            <p class="mt-1">WooCommerce</p>
-          </div>
-          <div>
-            <p class="text-gray-desc">购买时长</p>
-            <p class="mt-1">1年</p>
-          </div>
-        </div>
-
-        <div class="mb-6">
-          <p class="text-orange-price text-xl font-bold">¥408<span class="text-sm font-normal">.00/1年</span></p>
-          <p class="text-xs text-gray-light mt-1">官网折扣价:¥408.00/1年</p>
-        </div>
-        </div>
-        <div style="padding: 20px 0; width: 100%; background: #F4F8FE">
-        <button class="w-[100px] h-[32px] border border-gray-300 rounded flex items-center justify-center mx-auto hover:bg-gray-50 transition-colors">
-          立即购买
-        </button>
-        </div>
-      </div>
-
-      <!-- 卡片4：2vCPU 4GiB WordPress -->
-      <div class="card-border rounded h-full ">
-        <div style="padding: 30px 30px 0 30px " class="bg_m">
-        <div class="font-semibold text-gray-800 mb-2">轻量应用服务器2vCPU 4GiB</div>
-        <p class="text-xs text-gray-desc mb-4">适用于网站搭建</p>
-
-        <div class="grid grid-cols-3 gap-2 text-sm mb-8">
-          <div>
-            <p class="text-gray-desc">应用镜像</p>
-            <p class="mt-1">WordPress</p>
-          </div>
-          <div>
-            <p class="text-gray-desc">购买时长</p>
-            <p class="mt-1">1年</p>
-          </div>
-        </div>
-
-        <div class="mb-6">
-          <p class="text-orange-price text-xl font-bold">¥714<span class="text-sm font-normal">.00/1年</span>
-            <a href="#" class="text-blue-primary text-xs font-normal ml-1">了解优惠</a>
-          </p>
-          <p class="text-xs text-gray-light mt-1">官网折扣价:¥714.00/1年</p>
-        </div>
-        </div>
-        <div style="padding: 20px 0; width: 100%; background: #F4F8FE">
-        <button class="w-[100px] h-[32px] border border-gray-300 rounded flex items-center justify-center mx-auto hover:bg-gray-50 transition-colors">
-          立即购买
-        </button>
         </div>
       </div>
     </div>
@@ -145,6 +54,58 @@ export default {
     description: {
       type: String,
       default: 'BGP 全球覆盖+200Mbps带宽，独立站/小游戏丝滑运行'
+    },
+    count: {
+      type: Number,
+      default: 4
+    }
+  },
+  data() {
+    return {
+      productCards: []
+    }
+  },
+  mounted() {
+    this.generateProductCards()
+  },
+  methods: {
+    generateProductCards() {
+      // 假数据模板数组
+      const cpuOptions = ['2vCPU', '4vCPU', '8vCPU']
+      const memoryOptions = ['1GiB', '4GiB', '8GiB', '16GiB']
+      const imageOptions = ['宝塔Linux面板', '翼龙面板', 'WooCommerce', 'WordPress', 'LAMP', 'Node.js']
+      const durationOptions = ['1个月', '3个月', '6个月', '1年']
+      const durationUnitOptions = ['1月', '1年']
+      const descriptionOptions = [
+        '适用于搭建Web应用/小程序',
+        '适用于搭建游戏自建服',
+        '适用于搭建电商独立站',
+        '适用于网站搭建',
+        '适用于开发测试环境',
+        '适用于企业级应用部署'
+      ]
+
+      // 生成假数据
+      this.productCards = Array.from({ length: this.count }, (_, index) => {
+        const cpu = cpuOptions[Math.floor(Math.random() * cpuOptions.length)]
+        const memory = memoryOptions[Math.floor(Math.random() * memoryOptions.length)]
+        const image = imageOptions[Math.floor(Math.random() * imageOptions.length)]
+        const duration = durationOptions[Math.floor(Math.random() * durationOptions.length)]
+        const durationUnit = duration.includes('年') ? '1年' : '1月'
+        const description = descriptionOptions[Math.floor(Math.random() * descriptionOptions.length)]
+        const price = Math.floor(Math.random() * 1000) + 50 // 50-1050之间的随机价格
+        const hasDiscount = Math.random() > 0.7 // 30%概率有优惠
+
+        return {
+          title: `轻量应用服务器${cpu} ${memory}`,
+          description,
+          image,
+          duration,
+          durationUnit,
+          price,
+          hasDiscount
+        }
+      })
     }
   }
 }
@@ -165,8 +126,7 @@ export default {
   color: #9ca3af;
 }
 .bg_m{
-  background: linear-gradient(180deg, #ECF2FF 0%, rgba(255, 255, 255, 0.10) 100%);;
+  background: linear-gradient(180deg, #ECF2FF 0%, rgba(255, 255, 255, 0.10) 100%);
 }
 </style>
-
 
