@@ -96,7 +96,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥459.00/1年</div>
               </div>
-              <button class="btn-buy"  @click="drawer = true">立即购买</button>
+              <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
 
             <!-- 产品2：云服务器ECS e实例 -->
@@ -129,7 +129,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥1009.19/1年</div>
               </div>
-               <button class="btn-buy"  @click="drawer = true">立即购买</button>
+               <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
 
             <!-- 产品3：轻量应用服务器2核0.5G -->
@@ -157,7 +157,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥28.00/1月</div>
               </div>
-               <button class="btn-buy"  @click="drawer = true">立即购买</button>
+               <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
 
             <!-- 产品4：轻量应用服务器2核1G -->
@@ -185,7 +185,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥34.00/1月</div>
               </div>
-               <button class="btn-buy"  @click="drawer = true">立即购买</button>
+               <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥1203.96/1年</div>
               </div>
-               <button class="btn-buy"  @click="drawer = true">立即购买</button>
+               <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
 
             <!-- 产品6：云服务器ECS3 u2a实例 -->
@@ -255,7 +255,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥1479.48/1年</div>
               </div>
-               <button class="btn-buy"  @click="drawer = true">立即购买</button>
+               <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
 
             <!-- 产品7：云服务器ECS c9a实例 -->
@@ -286,7 +286,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥218.86/1月</div>
               </div>
-               <button class="btn-buy"  @click="drawer = true">立即购买</button>
+               <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
 
             <!-- 产品8：云服务器ECS3 g9a实例 -->
@@ -317,7 +317,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥277.99/1月</div>
               </div>
-               <button class="btn-buy"  @click="drawer = true">立即购买</button>
+               <button class="btn-buy"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.product-name').textContent; drawer = true">立即购买</button>
             </div>
           </div>
         </div>
@@ -970,7 +970,7 @@
     </main>
     <Footer />
     <el-drawer
-        title="我是标题"
+        :title="currentProductName"
         :visible.sync="drawer"
         :direction="direction"
         :before-close="handleClose">
@@ -978,7 +978,7 @@
         <!-- 标题栏 -->
         <div class="flex items-center justify-between mb-8 border-b pb-4">
           <div class="flex items-center">
-            <h1 class="text-xl font-medium mr-4">轻量应用服务器 2核2G</h1>
+            <h1 class="text-xl font-medium mr-4">{{ currentProductName }}</h1>
             <a href="#" class="text-primary text-sm hover:underline">更多配置购买</a>
           </div>
         </div>
@@ -1242,6 +1242,7 @@ export default {
       ],
       drawer: false,
       direction: 'rtl',
+      currentProductName: '' // 当前选中的产品名称
     }
   },
   methods: {
