@@ -13,8 +13,8 @@
             >
           </p>
           <div class="service-tabs">
-            <el-button type="primary" class="tab-btn active">售前咨询</el-button>
-            <el-button type="default" class="tab-btn">售后咨询</el-button>
+            <el-button type="primary" class="tab-btn active" @click="toLInk('/pages/page13')">售前咨询</el-button>
+            <el-button type="default" class="tab-btn" @click="toLInk('/pages/page13')">售后咨询</el-button>
             <el-button type="default" class="tab-btn">帮助与支持</el-button>
           </div>
         </el-col>
@@ -370,7 +370,12 @@ export default {
   data() {
     return {}
   },
-  methods: {}
+  methods: {
+    toLInk(link){
+      this.$router.push(link)
+
+    },
+  }
 }
 </script>
 

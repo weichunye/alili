@@ -20,6 +20,17 @@ import Page2 from './views/pages/page2.vue'
 import Moxing1 from './views/pages/moxing1.vue'
 import Moxing2 from './views/pages/moxing2.vue'
 import page3 from './views/pages/page3.vue'
+import page4 from './views/pages/page4.vue'//免费试用
+import page5 from './views/pages/page5.vue'
+import page6 from './views/pages/page6.vue'
+import Hezuo from './views/pages/hezuo.vue'
+import page7 from './views/pages/page7.vue'
+import page8 from './views/pages/page8.vue'
+import page9 from './views/pages/page9.vue'//立即购买
+import page10 from './views/pages/page10.vue'//解决方案免费试用
+import page11 from './views/pages/page11.vue'//新手指南
+import page12 from './views/pages/page12.vue'//报价咨询
+import page13 from './views/pages/page13.vue'//咨询
 
 Vue.use(VueRouter)
 
@@ -116,7 +127,63 @@ const routes = [
     path: '/pages/page3',
     name: 'page3',
     component: page3
-  }
+  } ,
+  {
+    path: '/pages/page4',//免费试用
+    name: 'page4',
+    component: page4
+  },
+  {
+    path: '/pages/hezuo',
+    name: 'hezuo',
+    component: Hezuo
+  },
+  {
+    path: '/pages/page5',
+    name: 'page5',
+    component: page5
+  },
+  {
+    path: '/pages/page6',
+    name: 'page6',
+    component: page6
+  },
+  {
+    path: '/pages/page7',
+    name: 'page7',
+    component: page7
+  },
+  {
+    path: '/pages/page8',
+    name: 'page8',
+    component: page8
+  },
+  {
+    path: '/pages/page9',//立即购买
+    name: 'page9',
+    component: page9
+  },
+  {
+    path: '/pages/page10',
+    name: 'page10',
+    component: page10
+  },
+  {
+    path: '/pages/page11/:h',
+    name: 'page11',
+    component: page11  }
+    ,
+
+  {
+    path: '/pages/page12',
+    name: 'page12',
+    component: page12
+  },
+  {
+    path: '/pages/page13',
+    name: 'page13',
+    component: page13
+  },
 ]
 
 const router = new VueRouter({
@@ -125,6 +192,10 @@ const router = new VueRouter({
 })
 
 export default router
+
+
+
+
 
 
 

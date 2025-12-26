@@ -49,6 +49,13 @@ module.exports = {
         textLight: '#8c8c8c', // 浅色文字
         hotTag: '#ff4d4f', // HOT标签色
         newTag: '#13c2c2', // NEW标签色
+        product:{
+            primary: '#FF6A00', // 橙色按钮主色
+            secondary: '#466EFF', // 蓝色文字主色
+            textDark: '#333333', // 深色文字
+            textLight: '#666666', // 浅色文字
+            bgLight: '#F9F7FF', // 背景淡紫色
+        }
       },
       fontFamily: {
         sans: ['PingFang SC', 'Microsoft YaHei', 'sans-serif'],

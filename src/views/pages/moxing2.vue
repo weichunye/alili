@@ -1,8 +1,8 @@
 <template>
-  <div class="aliyun-page your-bg-class">
+  <div class="aliyun-page ">
     <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
 
-    <div class="flex h-screen overflow-hidden">
+    <div class="flex h-screen overflow-hidden" style="width: 100%; padding: 0 10%">
       <div class="flex h-screen overflow-hidden">
         <!-- 侧边栏 -->
         <aside class="w-64 bg-white border-r border-border flex flex-col">

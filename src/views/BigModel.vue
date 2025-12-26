@@ -11,8 +11,8 @@
         <h1 style="color: #2e69c1">通义大模型，Wan系列重磅升级</h1>
         <p class="hero-subtitle">通义川2.0的预训练和大模型升级，面向电商领域的特定优化，实现多轮对话、复杂推理和实时分析等能力，支持快速构建内容生成、智能客服、文案创作等广泛应用场景。</p>
         <div class="hero-actions">
-          <el-button type="primary" class="banner-btn" style="padding: 14px 40px">立即体验</el-button>
-          <el-button type="default" size="large" class="secondary-btn">了解详情</el-button>
+          <el-button type="primary" class="banner-btn" style="padding: 14px 40px" @click="toLInk('/pages/moxing1')">立即体验</el-button>
+          <el-button type="default" size="large" class="secondary-btn"  @click="toLInk('/pages/hezuo')">合作咨询</el-button>
         </div>
         <div class="hero-cards">
           <el-card class="hero-card">
@@ -94,7 +94,7 @@
                         <span class="feature-tag">研报生成</span>
                     </div>
                 </div>
-                <a href="#" class="experience-btn">模型体验中心 →</a>
+                <span  @click="toLInk('/pages/moxing1')" class="experience-btn">模型体验中心 →</span>
             </div>
         </div>
     </div>
@@ -113,7 +113,7 @@
     <!-- 通义万相2.6 视频生成Banner区 -->
     <section class="container mx-auto px-4 py-6 mb-8" style="width: 100%; height: 400px; padding: 0 ;background: url('/src/static/img/bg_3.png') no-repeat center center; background-size:  100%;">
         <div class=" rounded-xl overflow-hidden">
-            <div class="grid md:grid-cols-3 gap-4">
+            <div class="grid md:grid-cols-3 gap-4" @click="toLInk('/pages/moxing2')">
                 <!-- 左侧文字区 -->
                 <div class="p-8 flex flex-col justify-center" style="padding-left: 15%;padding-top: 100px">
                     <h2 class="text-2xl font-bold mb-4 text-darkText">通义万相2.6 - 视频生成</h2>
@@ -173,9 +173,9 @@
                 <p class="text-lightText text-sm mb-6">
                     Qwen3系列小尺寸视觉理解模型，实现思考模式和非思考模式的有效融合，效果优于开源版Qwen3-VL-30B-A3B，响应速度快。
                 </p>
-                <a href="#" style="color: #0066ff" class="text-primary font-medium text-sm hover:text-primary/80 transition-colors flex items-center gap-1">
+                <span @click="toLInk('/pages/moxing2')" style="color: #0066ff; cursor: pointer" class="text-primary font-medium text-sm hover:text-primary/80 transition-colors flex items-center gap-1">
                     立即体验<i class="el-icon-right"></i>
-                </a>
+                </span>
             </div>
 
             <!-- 通义万相-图生视频2.6-I2V -->
@@ -189,9 +189,9 @@
                 <p class="text-lightText text-sm mb-6">
                     通义万相2.6-图生视频，智能分镜调度支持多镜头叙事，更高品质的声音生成，多人稳定对话，更自然真实音色，最高支持15秒时长生成。
                 </p>
-                <a href="#" style="color: #0066ff" class="text-primary font-medium text-sm hover:text-primary/80 transition-colors flex items-center gap-1">
+                <span @click="toLInk('/pages/moxing2')" style="color: #0066ff; cursor: pointer" class="text-primary font-medium text-sm hover:text-primary/80 transition-colors flex items-center gap-1">
                     立即体验<i class="el-icon-right"></i>
-                </a>
+                </span>
             </div>
 
             <!-- 通义百聆 - CosyVoice-V3-Flash -->
@@ -205,9 +205,9 @@
                 <p class="text-lightText text-sm mb-6">
                     CosyVoice 是通义实验室依托大规模预训练语言模型，深度融合文本理解和语音生成的新一代生成式语音合成大模型，支持文本至语音的实时流式合成。
                 </p>
-                <a href="#" style="color: #0066ff" class="text-primary font-medium text-sm hover:text-primary/80 transition-colors flex items-center gap-1">
+                <span @click="toLInk('/pages/moxing2')"style="color: #0066ff; cursor: pointer" class="text-primary font-medium text-sm hover:text-primary/80 transition-colors flex items-center gap-1">
                     立即体验 <i class="el-icon-right"></i>
-                </a>
+                </span>
             </div>
         </div>
     </section>
@@ -230,7 +230,7 @@
       <!-- 卡片网格 -->
       <div class="card-grid">
         <!-- 动态渲染卡片 -->
-        <div class="model-card" v-for="model in currentModels" :key="model.id">
+        <div class="model-card" v-for="model in currentModels" :key="model.id" @click="toLInk('/pages/moxing2')">
           <div class="card-tags">
             <span class="new-tag" v-if="model.tags.includes('全新升级')">全新升级</span>
             <span class="func-tag" v-for="tag in model.tags" :key="tag" v-if="tag !== '全新升级' && tag !== '开源模型'">{{ tag }}</span>
@@ -363,7 +363,7 @@
 
             <!-- 按钮组 -->
             <div style="display: flex; gap: 16px;">
-              <button style="padding: 8px 16px; background-color: #1890ff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">立即体验 →</button>
+              <button style="padding: 8px 16px; background-color: #1890ff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;" @click="toLInk('/pages/page1')">立即体验 →</button>
               <button style="padding: 8px 16px; background-color: #f0f0f0; color: #666; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">合作咨询</button>
             </div>
           </div>
@@ -616,7 +616,7 @@
               <div style="font-size: 12px; color: #999;">官网折扣价: ¥20.00/3月</div>
             </div>
 
-            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">立即购买</button>
+            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;" @click="drawer = true">立即购买</button>
 
             <div style="text-align: center; margin-top: 16px;">
               <span style="font-size: 12px; color: #999; cursor: pointer;">▼</span>
@@ -644,7 +644,7 @@
               <div style="font-size: 12px; color: #999;">官网折扣价: ¥11.66/3月</div>
             </div>
 
-            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">立即购买</button>
+            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;" @click="drawer = true">立即购买</button>
 
             <div style="text-align: center; margin-top: 16px;">
               <span style="font-size: 12px; color: #999; cursor: pointer;">▼</span>
@@ -672,7 +672,7 @@
               <div style="font-size: 12px; color: #999;">官网折扣价: ¥57.60/1年</div>
             </div>
 
-            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">立即购买</button>
+            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;" @click="drawer = true">立即购买</button>
 
             <div style="text-align: center; margin-top: 16px;">
               <span style="font-size: 12px; color: #999; cursor: pointer;">▼</span>
@@ -699,7 +699,7 @@
               <div style="font-size: 12px; color: #999;">官网折扣价: ¥11.66/3月</div>
             </div>
 
-            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">立即购买</button>
+            <button style="width: 100%; padding: 10px; background-color: #1890ff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;" @click="drawer = true">立即购买</button>
 
             <div style="text-align: center; margin-top: 16px;">
               <span style="font-size: 12px; color: #999; cursor: pointer;">▼</span>
@@ -858,7 +858,7 @@
               cursor: pointer;
               fontSize: 14px;
               transition: all 0.3s ease;
-            " @mouseover="{ backgroundColor: '#e6f7ff' }" @mouseout="{ backgroundColor: '#fff' }">
+            " @mouseover="{ backgroundColor: '#e6f7ff' }" @mouseout="{ backgroundColor: '#fff' }" @click="toLInk('/pages/page5')">
               查看详情
             </button>
           </div>
@@ -882,13 +882,75 @@
         </div>
       </div>
     </section>
-    <!-- 客户案例区域 -->
+    <el-drawer
+        title="我是标题"
+        :visible.sync="drawer"
+        :direction="direction"
+        :before-close="handleClose">
+      <div class="max-w-2xl mx-auto p-4 md:p-6 border border-neutral-200 rounded-lg shadow-sm">
+        <!-- 头部标题 -->
+        <div class="flex justify-between items-center mb-6 pb-4 border-b border-neutral-200">
+          <h1 class="text-lg font-medium">通义千问-Qwen-Image图像生成模型资源包</h1>
+          <a href="#" class="text-primary text-sm hover:underline">更多配置购买</a>
+          <button class="text-neutral-800 hover:text-neutral-900">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
 
-    <!-- 全球基础设施区域 -->
+        <!-- 资源包容量 -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium mb-2">资源包容量</label>
+          <div class="flex items-center mb-3">
+            <!-- 容量选项 -->
+            <button class="px-6 py-2 bg-primary text-white rounded-l-md border border-primary btn-hover">80 张</button>
+            <button class="px-6 py-2 bg-white text-neutral-800 rounded-r-md border border-neutral-200 hover:bg-neutral-100 btn-hover">400 张</button>
+          </div>
 
-    <!-- 合作伙伴区域 -->
+          <!-- 说明文本 -->
+          <div class="text-sm text-neutral-800 leading-relaxed mb-4">
+            <p class="mb-2">本资源包仅可抵扣qwen-image、qwen-image-edit通义千问生图模型使用（新人免费额度消耗完后开始抵扣），由于通义千问系列生图模型价格不同，不同模型生图存在抵扣系数的差异， qwen-image图片生成抵扣系数为1（生成1张图消耗1张资源包额度）， qwen-image-edit图片编辑抵扣系数为1.2（编辑1张图消耗1.2张资源包额度），不同模型图片生成价格见列表。</p>
+            <p class="font-medium mb-1">示例如下：</p>
+            <p class="mb-1">场景一：假设当前资源包余量5张，如果接下来1小时内使用qwen-image生图9张，资源包可抵扣5张，余量0张；如果接下来1小时内使用qwen-image-edit编辑图片8张，按对应的抵扣系数折算，实际需要8*1.2=9.6个资源包张数，然而资源包余量仅5张，缺口的4.6张则根据资源包单价（0.25元/张）按量出账1.15元；</p>
+            <p>场景二：假设当前资源包余量10张，接下来1小时内使用qwen-image-edit生图8张，按对应的抵扣系数折算，消耗资源包容量 8 * 1.2 = 9.6 张，资源包余量0.4张，后续所产生的超出资源包余量的部分则根据模型价格按量出账，例如：后续继续使用qwen-image-edit编辑2张图片，第一张按照1.2的抵扣系数换算为1.2张资源包单位，资源包抵扣0.4张，未抵扣部分按量出账0.8张 * 0.25元/张 = 0.2元，第二张按照qwen-image-edit的价格出账0.3元，因此后续编辑2张图片按量出账金额0.5元。</p>
+          </div>
+        </div>
 
-    <!-- 页脚区域 -->
+        <!-- 资源包类型 -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium mb-2">资源包类型</label>
+          <div class="inline-block px-6 py-2 bg-primary text-white rounded-md border border-primary btn-hover">
+            通义千问图像生成模型资源包qwen-image
+          </div>
+        </div>
+
+        <!-- 购买数量 -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium mb-2">购买数量</label>
+          <div class="flex items-center" style="width: 200px">
+            <el-input-number v-model="num" :min="1"  label="描述文字"></el-input-number>
+          </div>
+        </div>
+
+        <!-- 有效期 -->
+        <div class="mb-10">
+          <label class="block text-sm font-medium mb-2">有效期</label>
+          <div class="inline-block px-6 py-2 bg-primary text-white rounded-md border border-primary btn-hover">
+            3个月
+          </div>
+        </div>
+
+        <!-- 底部购买栏 -->
+        <div class="flex justify-end items-center pt-6 border-t border-neutral-200">
+          <div class="mr-6">
+            <span class="text-sm text-neutral-800">应付费用</span>
+            <span class="text-xl font-bold text-neutral-900 ml-1">¥20.00</span>
+          </div>
+          <button class="px-8 py-2 bg-secondary text-white rounded-md hover:bg-secondary/90 btn-hover">
+            立即购买
+          </button>
+        </div>
+      </div>
+    </el-drawer>
     <Footer />
   </div>
 </template>
@@ -1069,10 +1131,24 @@ export default {
           title: '通义百聆-Fun-ASR',
           desc: '开源语音识别模型，支持多种语言和场景，提供高精度的语音转文字服务。'
         }
-      ]
+      ],
+      drawer: false,
+      direction: 'rtl',
+      num:1
     };
   },
   methods: {
+    toLInk(link){
+      this.$router.push(link)
+
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
+    },
     handleMenuSelect({ key, keyPath }) {
       // 根据选择的菜单项进行路由跳转
       if (key === '1') {
@@ -1112,7 +1188,8 @@ export default {
     // 根据当前激活的标签返回对应的模型数据
     currentModels() {
       return this.activeTab === 'closed' ? this.closedModels : this.openModels;
-    }
+    },
+
   }
 };
 </script>

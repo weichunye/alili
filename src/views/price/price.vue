@@ -1,14 +1,14 @@
 <template>
 	<div class="aliyun-pricing-page">
 		<!-- 顶部导航区 -->
-    <Header :active-index="activeIndex" @menu-select="handleMenuSelect" />
+    <Header :active-index="activeIndex"  />
 		<header class="header-m">
 			<div class="header-container-m">
 				<div class="title-text">阿里云定价</div>
 				<div class="desc-text" >了解阿里云定价策略，自助估算价格，持续管控和优化成本</div>
 
 				<div class="priceBtn">
-          <el-button type="primary" class="active-btn">报价咨询</el-button>
+          <el-button type="primary" class="active-btn" @click="toLInk('/pages/page12')">报价咨询</el-button>
           <el-button type="text" class="header-btn">使用价格计算器</el-button>
         </div>
 			</div>
@@ -150,21 +150,71 @@
 			</div>
 		</section>
     <Footer />
+
 	</div>
+
+
 </template>
 
-<script setup>
+<script >
 import Header from '../../components/Header.vue'
 import Footer from '../../components/Footer.vue'
-import { ref } from 'vue'
 
-// 定义导航栏激活项，定价页面对应index="6"
-const activeIndex = ref('6')
+export default {
+  name: 'Product',
+  components: {
+    Header,
+    Footer
+  },
+  data() {
+    return {
+      activeIndex: '2',
+      checkedCategories: {
+        compute: false,
+        gpu: false,
+        bareMetal: false,
+        ecI: false,
+        ebs: false,
+        eas: false,
+        container: false
+      },
+      // 控制分类展开/折叠状态
+      expandedCategories: {
+        compute: true,  // 默认展开计算分类
+        storage: false,
+        network: false,
+        security: false,
+        database: false,
+        ai: false,
+        cloudNative: false,
+        enterprise: false,
+        iot: false,
+        devTools: false,
+        migration: false,
+        privateCloud: false
+      },
+      num:1,
+      drawer: false,
+      direction: 'rtl',
+    }
+  },
+  methods: {
+    toLInk(link){
+      this.$router.push(link)
 
-// 处理菜单选择事件
-const handleMenuSelect = ({ key, keyPath }) => {
-  console.log('Menu selected:', key, keyPath)
-  activeIndex.value = key
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
+    },
+
+  },
+  mounted() {
+
+  }
 }
 </script>
 

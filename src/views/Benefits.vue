@@ -96,7 +96,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥459.00/1年</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+              <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 产品2：云服务器ECS e实例 -->
@@ -129,7 +129,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥1009.19/1年</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+               <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 产品3：轻量应用服务器2核0.5G -->
@@ -157,7 +157,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥28.00/1月</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+               <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 产品4：轻量应用服务器2核1G -->
@@ -185,7 +185,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥34.00/1月</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+               <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥1203.96/1年</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+               <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 产品6：云服务器ECS3 u2a实例 -->
@@ -255,7 +255,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥1479.48/1年</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+               <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 产品7：云服务器ECS c9a实例 -->
@@ -286,7 +286,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥218.86/1月</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+               <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 产品8：云服务器ECS3 g9a实例 -->
@@ -317,7 +317,7 @@
                 </div>
                 <div class="price-original">官网折扣价：¥277.99/1月</div>
               </div>
-              <button class="btn-buy">立即购买</button>
+               <button class="btn-buy"  @click="drawer = true">立即购买</button>
             </div>
           </div>
         </div>
@@ -386,7 +386,7 @@
                     <p>免费试用: 开通后享100张免费试用</p>
                     <p>适用场景: 覆盖广告营销、内容出版、多语富本本地化、品牌维护及创意餐等需求</p>
                 </div>
-               <button class="w-full bg-orange hover:bg-orange/90 text-white py-2 rounded text-sm font-medium">立即购买</button>
+               <button class="w-full bg-orange hover:bg-orange/90 text-white py-2 rounded text-sm font-medium"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 语言模型产品 -->
@@ -407,7 +407,7 @@
                     <p>免费试用: 每个模型开通即享百万tokens</p>
                     <p>适用场景: 覆盖复杂内容创作、复杂数据分析与解释、智能客服与虚拟助手等业务场景</p>
                 </div>
-              <button class="w-full bg-orange hover:bg-orange/90 text-white py-2 rounded text-sm font-medium">立即购买</button>
+              <button class="w-full bg-orange hover:bg-orange/90 text-white py-2 rounded text-sm font-medium"  @click="drawer = true">立即购买</button>
             </div>
         </div>
 
@@ -436,7 +436,7 @@
                 </div>
                 <p class="text-orange-price font-bold mb-1">¥20.00<span class="text-xs text-gray-500 font-normal">/3月</span></p>
                 <p class="text-xs text-gray-500 mb-4">官网折扣价:¥20.00/3月</p>
-                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium">立即购买</button>
+                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 套餐2 -->
@@ -462,7 +462,7 @@
                 </div>
                 <p class="text-orange-price font-bold mb-1">¥20.00<span class="text-xs text-gray-500 font-normal">/6月</span></p>
                 <p class="text-xs text-gray-500 mb-4">官网折扣价:¥20.00/6月</p>
-                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium">立即购买</button>
+                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 套餐3 -->
@@ -488,7 +488,7 @@
                 </div>
                 <p class="text-orange-price font-bold mb-1">¥11.66<span class="text-xs text-gray-500 font-normal">/3月</span></p>
                 <p class="text-xs text-gray-500 mb-4">官网折扣价:¥11.66/3月</p>
-                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium">立即购买</button>
+                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium"  @click="drawer = true">立即购买</button>
             </div>
 
             <!-- 套餐4 -->
@@ -514,7 +514,7 @@
                 </div>
                 <p class="text-orange-price font-bold mb-1">¥20.00<span class="text-xs text-gray-500 font-normal">/3月</span></p>
                 <p class="text-xs text-gray-500 mb-4">官网折扣价:¥20.00/3月</p>
-                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium">立即购买</button>
+                <button class="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-1 rounded text-xs font-medium"  @click="drawer = true">立即购买</button>
             </div>
         </div>
     </div>
@@ -969,6 +969,222 @@
       </div>
     </main>
     <Footer />
+    <el-drawer
+        title="我是标题"
+        :visible.sync="drawer"
+        :direction="direction"
+        :before-close="handleClose">
+      <div class="max-w-4xl mx-auto bg-white p-6 shadow-sm" style="position: relative">
+        <!-- 标题栏 -->
+        <div class="flex items-center justify-between mb-8 border-b pb-4">
+          <div class="flex items-center">
+            <h1 class="text-xl font-medium mr-4">轻量应用服务器 2核2G</h1>
+            <a href="#" class="text-primary text-sm hover:underline">更多配置购买</a>
+          </div>
+        </div>
+
+        <!-- 表单内容区域 -->
+        <form class="space-y-8">
+          <!-- 实例类型 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">实例类型</label>
+            <div class="inline-flex border rounded-md">
+              <button type="button" class="px-4 py-2 bg-blue-50 border-b-active font-medium">服务器实例</button>
+            </div>
+          </div>
+
+          <!-- 地域选择 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">地域</label>
+            <div class="space-y-2">
+              <select class="w-full max-w-xs px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option>华南2 (河源)</option>
+                <option>华东1 (杭州)</option>
+                <option>华北2 (北京)</option>
+              </select>
+              <div class="text-xs text-gray-500 max-w-2xl leading-relaxed">
+                选择靠近您客户的地域可提高网络访问速度。非中国内地地域（如中国香港、新加坡等）提供国际带宽，如您在中国内地使用，可能有较大的网络延迟。
+                <a href="#" class="text-primary hover:underline">教我选择?</a><br>
+                轻量应用数据库必须和轻量应用服务器在同一地域才能搭配使用<br>
+                轻量应用数据库服务和轻量应用服务器在同一地域才能支持内网访问<br>
+                当前轻量应用容器服务只能通过公网访问轻量应用数据库服务
+              </div>
+            </div>
+          </div>
+
+          <!-- 镜像选择 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">镜像</label>
+            <div class="space-y-2">
+              <!-- 镜像标签 -->
+              <div class="inline-flex border rounded-md mb-3">
+                <button type="button" class="px-4 py-2 bg-blue-50 border-b-active font-medium">应用镜像</button>
+                <button type="button" class="px-4 py-2 text-gray-600 hover:bg-gray-50">系统镜像</button>
+                <button type="button" class="px-4 py-2 text-gray-600 hover:bg-gray-50">自定义镜像</button>
+              </div>
+
+              <!-- 镜像卡片 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-2xl">
+                <!-- 宝塔Linux面板 -->
+                <div class="border rounded-md p-3 card-hover bg-blue-50 border-blue-500">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-server text-green-500 mr-2"></i>
+                    <span class="font-medium">宝塔Linux面板</span>
+                  </div>
+                  <div class="text-sm text-gray-500">阿里云专家版 9.2.0</div>
+                </div>
+
+                <!-- 1Panel -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-window-maximize text-blue-500 mr-2"></i>
+                    <span class="font-medium">1Panel</span>
+                  </div>
+                  <div class="text-sm text-gray-500">1.10.26</div>
+                </div>
+
+                <!-- WordPress -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-wordpress text-purple-500 mr-2"></i>
+                    <span class="font-medium">WordPress</span>
+                  </div>
+                  <div class="text-sm text-gray-500">6.7.1</div>
+                </div>
+
+                <!-- WooCommerce -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-shopping-cart text-blue-600 mr-2"></i>
+                    <span class="font-medium">WooCommerce</span>
+                  </div>
+                  <div class="text-sm text-gray-500">9.4.7</div>
+                </div>
+
+                <!-- 翼龙面板 -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-dragon text-orange-500 mr-2"></i>
+                    <span class="font-medium">翼龙面板</span>
+                  </div>
+                  <div class="text-sm text-gray-500">1.11.7.1</div>
+                </div>
+
+                <!-- Cloudreve -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-cloud text-sky-500 mr-2"></i>
+                    <span class="font-medium">Cloudreve</span>
+                  </div>
+                  <div class="text-sm text-gray-500">3.8.3</div>
+                </div>
+
+                <!-- Docker -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-cubes text-blue-700 mr-2"></i>
+                    <span class="font-medium">Docker</span>
+                  </div>
+                  <div class="text-sm text-gray-500">26.1.3</div>
+                </div>
+              </div>
+
+              <!-- 镜像说明 -->
+              <div class="text-xs text-gray-500 max-w-2xl">
+                宝塔Linux面板是广东思腾安全技术有限公司旗下提升运维效率的服务器管理软件，支持一键LAMP/LNMP/集群/监控/网站/FTP/数据库/JAVA等100多项服务器管理功能，来源于阿里云云市场。
+              </div>
+            </div>
+          </div>
+
+          <!-- 套餐配置 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">套餐配置</label>
+            <div class="space-y-2">
+              <div class="border rounded-md max-w-xs p-4 bg-blue-50 border-blue-500">
+                <div class="font-medium mb-2">通用型 45元/月</div>
+                <ul class="text-sm space-y-1 text-gray-700">
+                  <li>vCPU 2核</li>
+                  <li>内存 2 GB</li>
+                  <li>ESSD 40 GB</li>
+                  <li>限峰值带宽 200 Mbps</li>
+                  <li>公网线路类型 BGP</li>
+                  <li>固定公网地址 1IPv4</li>
+                </ul>
+              </div>
+
+              <!-- 套餐说明 -->
+              <div class="text-xs text-gray-500 max-w-2xl leading-relaxed">
+                如果您购买的是服务器实例，请注意：<br>
+                实例规格峰值公网带宽为出、入方向的峰值上限，不作为业务承诺指标，当阿里云在业务高峰期出现资源争抢时，公网带宽可能会受到限制和产生网络丢包，不适合应用于对公网质量有强保障诉求的场景。<br>
+                对于包含每月流量的实例规格，只有超出每月额度的公网出流量才会产生额外费用，请查看<a href="#" class="text-primary hover:underline">流量计费方式</a>了解详情。<br>
+                对于不包含每月流量的实例规格，公网出流量、入流量均不会产生费用。<br>
+                中国香港/海外地域轻量应用实例价格包含额外的操作系统版权费用，请注意实例规格价格变化。<br>
+                BGP_NC=BGP (非中国优化)，中国大陆用户使用BGP (非中国优化) 线路有较高的公网时延和丢包率，国际版规格仅适用于不需要对中国大陆用户提供服务的应用场景。<br>
+                如果您购买的是数据库服务实例，请注意：<br>
+                当前通过公网访问轻量数据库服务产生的公网流量计费不收费
+              </div>
+            </div>
+          </div>
+
+          <!-- 数据盘 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">数据盘</label>
+            <div class="flex items-center space-x-2 max-w-xs">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">-</button>
+              <input type="number" value="0" class="w-12 text-center border rounded-md py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">+</button>
+              <span class="text-sm">GB</span>
+            </div>
+            <div class="text-xs text-gray-500">请选择额外增加的数据盘大小</div>
+          </div>
+
+          <!-- 购买时长 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">购买时长</label>
+            <div class="space-y-2 max-w-xs">
+              <select class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option>1年</option>
+                <option>2年</option>
+                <option>3年</option>
+                <option>1个月</option>
+                <option>3个月</option>
+                <option>6个月</option>
+              </select>
+
+              <div class="flex items-center space-x-2 mt-1">
+                <input type="checkbox" id="auto-renew" class="rounded text-blue-500 focus:ring-blue-500">
+                <label for="auto-renew" class="text-sm text-gray-700">到期自动续费</label>
+              </div>
+
+              <div class="text-xs text-gray-500 bg-gray-50 p-2 rounded-md">
+                建议勾选到期自动续费，可避免因资源到期停机或释放而影响业务。勾选后，自动续费周期为<span class="text-primary">每</span>月，在实例到期前会以实时价格自动扣费。自动续费可随时取消。<a href="#" class="text-primary hover:underline">了解更多></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 购买数量 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">购买数量</label>
+            <div class="flex items-center space-x-2 max-w-xs">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">-</button>
+              <input type="number" value="1" class="w-12 text-center border rounded-md py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">+</button>
+            </div>
+          </div>
+
+          <!-- 结算栏 -->
+          <div class="flex items-center justify-between pt-4 border-t mt-6" style="width: 30%; background: #fff; padding: 0 30px; position: fixed; right: 0; bottom: 0">
+            <div class="text-right">
+              <div class="text-sm text-gray-500">应付费用</div>
+              <div class="text-2xl font-bold text-orange-500">¥68.00</div>
+              <div class="text-xs text-gray-500 line-through">¥459.00 <a href="#" class="text-primary hover:underline">查看明细</a></div>
+            </div>
+            <button type="button" class="px-8 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors font-medium">立即购买</button>
+          </div>
+        </form>
+      </div>
+
+    </el-drawer>
   </div>
 </template>
 
@@ -1023,7 +1239,9 @@ export default {
           status: '已过期',
           expireTime: '2023-06-30'
         }
-      ]
+      ],
+      drawer: false,
+      direction: 'rtl',
     }
   },
   methods: {
@@ -1040,12 +1258,24 @@ export default {
         this.$message.info(`查看${benefit.name}详情`)
         // 这里可以添加查看详情的具体逻辑
       }
-    }
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
+    },
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+::v-deep{
+  //.el-drawer{
+  //  position: relative;
+  //}
+}
 /*@layer utilities {*/
 /*  .content-auto {*/
 /*    content-visibility: auto;*/

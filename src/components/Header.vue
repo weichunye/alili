@@ -1365,6 +1365,9 @@ export default {
         case '/bigmodel':
           this.activeIndex = '1';
           break;
+        case '/product':
+          this.activeIndex = '2';
+          break;
         case '/solutions':
           this.activeIndex = '3';
           break;
@@ -1401,6 +1404,9 @@ export default {
       switch(key) {
         case '1':
           this.$router.push('/bigmodel');
+          break;
+        case '2':
+          this.$router.push('/product');
           break;
         case '3':
           this.$router.push('/solutions');

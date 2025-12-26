@@ -200,6 +200,7 @@
                       action.type === 'default' ? 'bg-secondary text-primary' : '',
                       product.actions.length === 1 ? 'w-full' : ''
                     ]"
+                          @click="toLInk(action)"
                   >
                     {{ action.text }}
                   </button>
@@ -356,7 +357,7 @@
             <div class="benefit-header">
               <h3>{{ benefit.title }}</h3>
               <p>{{ benefit.desc }}</p>
-              <el-button type="primary" class="benefit-btn  solution-more">{{ benefit.btnText }}</el-button>
+              <el-button  @click="toLInk(benefit)"  type="primary" class="benefit-btn  solution-more">{{ benefit.btnText }}</el-button>
             </div>
             <ul class="benefit-list">
               <li v-for="(item, itemIndex) in benefit.items" :key="itemIndex">
@@ -491,10 +492,10 @@
         <div class="banner">
         <div class="banner-content">
             <h2 class="banner-title">立即体验，在阿里云上创造未来</h2>
-            <a href="#" class="btn-trial">
+            <span class="btn-trial" @click="goToCloudServer('page4')">
                 免费试用
                 <span>→</span>
-            </a>
+            </span>
         </div>
         <div class="banner-bg"></div>
     </div>
@@ -879,7 +880,7 @@ export default {
           desc: '安全可靠、弹性可伸缩的云计算服务',
           tag: '',
           actions: [
-            { type: 'primary', text: '免费试用' },
+            { type: 'primary', text: '免费试用',link:'/pages/page4' },
             { type: 'default', text: '查看详情' }
           ]
         },
@@ -888,7 +889,7 @@ export default {
           desc: '多元化、高性能、安全可靠的大模型服务',
           tag: '大模型',
           actions: [
-            { type: 'primary', text: '模型体验' },
+            { type: 'primary', text: '模型体验',link:'/pages/moxing1'  },
             { type: 'default', text: '查看详情' }
           ]
         },
@@ -897,7 +898,7 @@ export default {
           desc: '大模型服务与应用平台',
           tag: '大模型',
           actions: [
-            { type: 'default', text: '查看详情' }
+            { type: 'default', text: '查看详情' ,link:'product' }
           ]
         },
         {
@@ -1002,6 +1003,7 @@ export default {
           title: '超值优选',
           desc: '超优云上套餐，低至0元，200+款产品免费体验',
           btnText: '立即抢购',
+          link: 'benefits',
           items: [
             { icon: 'el-icon-gift', title: '140+云产品免费试用', desc: '新用户专享，最长可享12个月免费使用期' },
             { icon: 'el-icon-calculator', title: '弹性计费，长期低价', desc: '按需付费，长期使用更优惠，节省成本' },
@@ -1013,6 +1015,7 @@ export default {
           title: '智启 AI',
           desc: '智启 AI 全面能力，加速 AI 应用落地',
           btnText: '开始体验',
+          link: '/pages/moxing1',
           items: [
             { icon: 'el-icon-brain', title: '通义千问 3.5 能力全开', desc: '强大的大模型能力，支持多场景应用' },
             { icon: 'el-icon-robot', title: '云起实验室 DeepSeek 体验', desc: '免费体验前沿 AI 模型，快速上手' },
@@ -1134,6 +1137,11 @@ export default {
   methods: {
     goToCloudServer(name) {
       this.$router.push('/pages/'+name);
+    },
+    toLInk(data){
+      console.log("data",data)
+        this.$router.push(data.link)
+
     },
 
     selectCategory(categoryId) {

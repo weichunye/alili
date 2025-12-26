@@ -1,21 +1,20 @@
 <template>
   <div class="aliyun-ai-platform">
-    <!-- 顶部导航栏 -->
+    <!-- 免费试用 -->
     <Header :active-index="activeIndex"  />
     <div class="top_box">
       <div class="top-content">
         <div class="top-text">
-          <h1 class="product-main-title">阿里云产品</h1>
+          <h1 class="product-main-title">免费试用</h1>
           <p class="product-description">提供等竞争力的云产品，将计算、存储、网络、数据库、大数据、人工智能、安全等产品技术与场景需求融合，为开发者打造安全、稳定、体验卓越的云服务。</p>
           <div class="product-nav-buttons">
-            <el-button type="primary" class="banner-btn" style="padding: 14px 40px" @click="toLInk('/pages/page6')">产品月刊</el-button>
-            <el-button style="padding: 14px 40px"  @click="toLInk('/pages/page7')">产品手册2023版</el-button>
-<!--            <el-button style="padding: 14px 40px">产品能力</el-button>-->
+            <el-button type="primary" class="banner-btn" style="padding: 14px 40px">我的试用</el-button>
+
           </div>
         </div>
         <div class="top-actions">
           <div class="action-card" style="background: #0062ff">
-           <p style="font: 24px; color: #fff; font-weight: bold; line-height: 40px">了解免费试用</p>
+            <p style="font: 24px; color: #fff; font-weight: bold; line-height: 40px">了解免费试用</p>
             <p style="color: #fff; " class="action-desc">体验云计算产品能力</p>
           </div>
           <div class="action-card">
@@ -171,105 +170,141 @@
               <h2 class="product-category-title">计算</h2>
               <p class="product-category-desc">阿里云提供丰富的云服务器、容器、函数计算等产品，满足不同场景的计算需求，助力您的业务快速发展。</p>
             </div>
+            <!-- 搜索栏 -->
+            <div class="mb-6">
+              <div class="relative">
+                <input type="text" placeholder="搜索试用产品" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <i class="fa fa-search absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              </div>
+              <p class="text-gray-500 text-sm mt-2">为您展示 5 款试用产品</p>
+            </div>
 
-            <!-- 产品卡片网格 -->
-            <div class="product-card-grid">
-              <!-- 云服务器ECS -->
-              <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>云服务器 ECS <span class="new-badge">新品</span></h3>
+            <!-- 产品卡片容器 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- 卡片1：ECS免费试用（个人版） -->
+              <div class="border border-gray-200 rounded-lg p-5 card-shadow">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="text-sm bg-blue-50 text-blue-600 px-2 py-1 rounded">云服务器</span>
+                  <span class="text-sm bg-gray-50 text-gray-600 px-2 py-1 rounded">个人版</span>
                 </div>
-                <p class="product-card-desc">云服务器（Elastic Compute Service，简称 ECS）是一种简单高效、处理能力可弹性伸缩的计算服务，帮助您快速构建更稳定、安全的应用，提升运维效率，降低IT成本。</p>
+                <div class="flex justify-end text-xs text-gray-500 mb-2">额度3个月内有效</div>
+
+                <h3 class="text-base font-medium mb-2">云服务器ECS免费试用（个人版）</h3>
+                <p class="text-sm text-gray-600 mb-3 text-ellipsis-2">专为开发者打造，适用于网站和应用的托管、开发及测试环境、多人在线游戏部署等。现支持香港地区试用。</p>
+
+                <div class="text-lg font-bold text-blue-600 mb-4">免费额度300元</div>
+
+                <div class="text-xs text-gray-500 space-y-1 mb-6">
+                  <p>规格信息：8个规格可选，最高可试用规格vCPU8GiB；7个地域可选；每月免费流量：20GB（中国内地地域）+200GB（非中国内地地域）；试用CS不支持售卖</p>
+                  <p>可试用人群：个人认证，且为产品新用户</p>
+                </div>
+
+                <div class="flex justify-center gap-3 mt-4">
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                </div>
               </div>
 
-              <!-- GPU云服务器 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>GPU云服务器</h3>
+              <!-- 卡片2：轻量应用服务器 2vCPU 4GiB（Web应用） -->
+              <div class="border border-gray-200 rounded-lg p-5 card-shadow">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="text-sm bg-blue-50 text-blue-600 px-2 py-1 rounded">云服务器</span>
+                  <span class="text-xs text-gray-500">额度1个月内有效</span>
                 </div>
-                <p class="product-card-desc">GPU云服务器是提供GPU算力的弹性计算服务，适用于深度学习、科学计算、图形图像处理等应用场景，帮助您快速构建高性能计算环境。</p>
+
+                <h3 class="text-base font-medium mb-2">轻量应用服务器 2vCPU 4GiB</h3>
+                <p class="text-sm text-gray-600 mb-3 text-ellipsis-2">专为Web应用及小程序开发打造，预装宝塔Linux面板阿里云专家版，显著提升部署效率，让您专注核心功能开发。</p>
+
+                <div class="text-lg font-bold text-blue-600 mb-4">适用于搭建Web应用/...</div>
+
+                <div class="text-xs text-gray-500 space-y-1 mb-6">
+                  <p>可试用人群：认证用户，且为产品新用户</p>
+                  <p>商品特点：支持北京、上海等14个中国内地地域试用</p>
+                  <p>商品功能：贴近应用，简单易用</p>
+                  <p>商品优势：200Mbps峰值带宽</p>
+                </div>
+
+                <div class="flex justify-center gap-3 mt-4">
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                </div>
               </div>
 
-              <!-- 智能计算灵骏 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>智能计算灵骏</h3>
+              <!-- 卡片3：轻量应用服务器 2vCPU 4GiB（网站搭建） -->
+              <div class="border border-gray-200 rounded-lg p-5 card-shadow">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="text-sm bg-blue-50 text-blue-600 px-2 py-1 rounded">云服务器</span>
+                  <span class="text-xs text-gray-500">额度1个月内有效</span>
                 </div>
-                <p class="product-card-desc">智能计算灵骏是阿里云推出的新一代智能计算服务，提供高性能、高性价比的计算资源，支持多种计算框架和应用场景。</p>
+
+                <h3 class="text-base font-medium mb-2">轻量应用服务器 2vCPU 4GiB</h3>
+                <p class="text-sm text-gray-600 mb-3 text-ellipsis-2">专为网站搭建设计，预装WordPress镜像，支持通过可视化面板一键部署，从个人站点到企业级网站都能从容应对。</p>
+
+                <div class="text-lg font-bold text-blue-600 mb-4">适用于网站搭建</div>
+
+                <div class="text-xs text-gray-500 space-y-1 mb-6">
+                  <p>可试用人群：认证用户，且为产品新用户</p>
+                  <p>商品特点：支持北京、上海等14个中国内地地域试用</p>
+                  <p>商品功能：贴近应用，简单易用</p>
+                  <p>商品优势：200Mbps峰值带宽</p>
+                </div>
+
+                <div class="flex justify-center gap-3 mt-4">
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                </div>
               </div>
 
-              <!-- 弹性裸金属服务器 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>弹性裸金属服务器</h3>
+              <!-- 卡片4：轻量应用服务器 2vCPU 4GiB（容器环境） -->
+              <div class="border border-gray-200 rounded-lg p-5 card-shadow">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="text-sm bg-blue-50 text-blue-600 px-2 py-1 rounded">云服务器</span>
+                  <span class="text-xs text-gray-500">额度1个月内有效</span>
                 </div>
-                <p class="product-card-desc">弹性裸金属服务器（Elastic Bare Metal Server）是一种兼具物理服务器性能和云服务器弹性的计算服务，为您提供极致的计算性能和灵活性。</p>
+
+                <h3 class="text-base font-medium mb-2">轻量应用服务器 2vCPU 4GiB</h3>
+                <p class="text-sm text-gray-600 mb-3 text-ellipsis-2">预装Docker CE镜像，提供一键式自动化容器环境部署，有效屏蔽底层配置复杂性，让您聚焦核心业务逻辑的构建与创新，实现基础设施即代码的敏捷开发...</p>
+
+                <div class="text-lg font-bold text-blue-600 mb-4">适用于搭建容器环境</div>
+
+                <div class="text-xs text-gray-500 space-y-1 mb-6">
+                  <p>可试用人群：认证用户，且为产品新用户</p>
+                  <p>商品特点：支持北京、上海等14个中国内地地域试用</p>
+                  <p>商品功能：贴近应用，简单易用</p>
+                  <p>商品优势：200Mbps峰值带宽</p>
+                </div>
+
+                <div class="flex justify-center gap-3 mt-4">
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                </div>
               </div>
 
-              <!-- 弹性容器实例ECI -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>弹性容器实例ECI</h3>
+              <!-- 卡片5：轻量应用服务器 2vCPU 1GiB（电商独立站） -->
+              <div class="border border-gray-200 rounded-lg p-5 card-shadow md:col-span-2 lg:col-span-1">
+                <div class="flex justify-between items-start mb-3">
+                  <span class="text-sm bg-blue-50 text-blue-600 px-2 py-1 rounded">云服务器</span>
+                  <span class="text-xs text-gray-500">额度1个月内有效</span>
                 </div>
-                <p class="product-card-desc">弹性容器实例（Elastic Container Instance）是敏捷安全的Serverless容器运行环境，让您高效运行容器化应用，无需管理服务器。</p>
-              </div>
 
-              <!-- 专有宿主机 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>专有宿主机</h3>
-                </div>
-                <p class="product-card-desc">专有宿主机（Dedicated Host）是指服务商提供的物理服务器，您可以独占整台服务器资源，部署ECS实例，享受物理服务器级别的资源隔离和安全保障。</p>
-              </div>
+                <h3 class="text-base font-medium mb-2">轻量应用服务器 2vCPU 1GiB</h3>
+                <p class="text-sm text-gray-600 mb-3 text-ellipsis-2">预装WooCommerce镜像，您可快速搭建并管理在线商店，轻松添加商品、处理订单和管理库存，享受高效便捷的管理界面，轻松扩展业务。</p>
 
-              <!-- 云虚拟主机 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>云虚拟主机</h3>
-                </div>
-                <p class="product-card-desc">云虚拟主机是一种简单易用的网站托管服务，支持多种网站开发语言和数据库，帮助您快速搭建和管理网站，适用于个人网站、中小企业网站等场景。</p>
-              </div>
+                <div class="text-lg font-bold text-blue-600 mb-4">适用于搭建电商独立站</div>
 
-              <!-- 计算巢服务 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>计算巢服务 <span class="new-badge">新品</span></h3>
+                <div class="text-xs text-gray-500 space-y-1 mb-6">
+                  <p>可试用人群：认证用户，且为产品新用户</p>
+                  <p>商品特点：支持东京、伦敦等11个海外地域（不含中国香港）试用</p>
+                  <p>商品功能：贴近应用，简单易用</p>
                 </div>
-                <p class="product-card-desc">计算巢服务（Compute Nest）是一站式的服务发布、部署和管理平台，支持服务商和企业用户快速构建和交付服务，提升服务交付效率和质量。</p>
-              </div>
 
-              <!-- 轻量应用服务器 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>轻量应用服务器</h3>
+                <div class="flex justify-center gap-3 mt-4">
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
                 </div>
-                <p class="product-card-desc">轻量应用服务器（Alibaba Cloud Lightweight Application Server）是面向中小企业和开发者的新一代云服务器产品，提供便捷的应用部署和管理能力，帮助您快速构建和管理应用。</p>
-              </div>
-
-              <!-- 云盒 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>云盒</h3>
-                </div>
-                <p class="product-card-desc">云盒是阿里云推出的一体机产品，将阿里云的计算、存储、网络等服务能力集成到物理设备中，提供本地部署的云服务体验，帮助企业快速构建混合云架构。</p>
-              </div>
-
-              <!-- 弹性伸缩 -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>弹性伸缩</h3>
-                </div>
-                <p class="product-card-desc">弹性伸缩（Auto Scaling）是根据用户的业务需求和策略，自动调整弹性计算资源的管理服务，帮助您实现资源的弹性伸缩，保障业务的稳定性和可用性。</p>
-              </div>
-
-              <!-- 弹性高性能计算E-HPC -->
-               <div class="product-card" @click="toLInk('/pages/page8')">
-                <div class="product-card-header">
-                  <h3>弹性高性能计算E-HPC</h3>
-                </div>
-                <p class="product-card-desc">弹性高性能计算（Elastic High Performance Computing）是阿里云提供的高性能计算服务，支持多种高性能计算应用场景，帮助您快速构建和管理高性能计算集群。</p>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -378,8 +413,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
+import Header from '../../components/Header.vue'
+import Footer from '../../components/Footer.vue'
 
 export default {
   name: 'Product',
@@ -417,10 +452,6 @@ export default {
     }
   },
   methods: {
-    toLInk(link){
-      this.$router.push(link)
-
-    },
     handleMenuSelect({ key, keyPath }) {
       // 根据选择的菜单项进行路由跳转
       if (key === '1') {
@@ -648,7 +679,6 @@ export default {
   border-radius: 8px;
   padding: 20px;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .product-card:hover {
@@ -1132,6 +1162,15 @@ export default {
 
 .infrastructure-link a:hover i {
   transform: translateX(4px);
+}
+.card-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.text-ellipsis-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* 响应式设计 */

@@ -8,39 +8,39 @@
       <div class="left-sidebar">
         <!-- 搜索框 -->
         <div class="search-box">
-          <el-input 
-            placeholder="搜索解决方案" 
+          <el-input
+            placeholder="搜索解决方案"
             prefix-icon="el-icon-search"
             v-model="searchQuery"
           />
         </div>
-        
+
         <!-- 解决方案导航 -->
         <div class="solutions-nav">
           <!-- 解决方案首页 -->
           <a href="#" class="solution-home">解决方案首页</a>
-          
+
           <!-- AI 分类 -->
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('ai')"
             >
               <span class="category-name">AI</span>
               <i :class="['el-icon', openCategories.includes('ai') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
-            
+
             <div v-if="openCategories.includes('ai')" class="category-content">
               <!-- 模型推理与调用 -->
               <div class="sub-category">
-                <div 
-                  class="sub-category-header" 
+                <div
+                  class="sub-category-header"
                   @click="toggleSubCategory('model-inference')"
                 >
                   <span class="sub-category-name">模型推理与调用</span>
                   <i :class="['el-icon', openSubCategories.includes('model-inference') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
                 </div>
-                
+
                 <div v-if="openSubCategories.includes('model-inference')" class="sub-category-content">
                   <a href="#" class="solution-item">创意加速署：AI 绘画创作</a>
                   <a href="#" class="solution-item">10 分钟在聊天系统中增加一个 AI 助手</a>
@@ -61,113 +61,113 @@
                   <a href="#" class="solution-item">10 分钟在网站上增加一个 AI 助手</a>
                 </div>
               </div>
-              
+
               <!-- 模型训练与部署 -->
               <div class="sub-category">
-                <div 
-                  class="sub-category-header" 
+                <div
+                  class="sub-category-header"
                   @click="toggleSubCategory('model-training')"
                 >
                   <span class="sub-category-name">模型训练与部署</span>
                   <i :class="['el-icon', openSubCategories.includes('model-training') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
                 </div>
-                
+
                 <div v-if="openSubCategories.includes('model-training')" class="sub-category-content">
                   <!-- 子项可以在这里添加 -->
                 </div>
               </div>
-              
+
               <!-- 模型应用与工具 -->
               <div class="sub-category">
-                <div 
-                  class="sub-category-header" 
+                <div
+                  class="sub-category-header"
                   @click="toggleSubCategory('model-applications')"
                 >
                   <span class="sub-category-name">模型应用与工具</span>
                   <i :class="['el-icon', openSubCategories.includes('model-applications') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
                 </div>
-                
+
                 <div v-if="openSubCategories.includes('model-applications')" class="sub-category-content">
                   <!-- 子项可以在这里添加 -->
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- 其他分类 -->
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('internet')"
             >
               <span class="category-name">互联网应用开发</span>
               <i :class="['el-icon', openCategories.includes('internet') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
           </div>
-          
+
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('big-data')"
             >
               <span class="category-name">大数据</span>
               <i :class="['el-icon', openCategories.includes('big-data') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
           </div>
-          
+
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('security')"
             >
               <span class="category-name">安全</span>
               <i :class="['el-icon', openCategories.includes('security') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
           </div>
-          
+
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('network')"
             >
               <span class="category-name">网络</span>
               <i :class="['el-icon', openCategories.includes('network') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
           </div>
-          
+
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('observability')"
             >
               <span class="category-name">可观测</span>
               <i :class="['el-icon', openCategories.includes('observability') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
           </div>
-          
+
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('migration')"
             >
               <span class="category-name">上云与迁云</span>
               <i :class="['el-icon', openCategories.includes('migration') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
           </div>
-          
+
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('global')"
             >
               <span class="category-name">企业出海</span>
               <i :class="['el-icon', openCategories.includes('global') ? 'el-icon-arrow-up' : 'el-icon-arrow-down']"></i>
             </div>
           </div>
-          
+
           <div class="solution-category">
-            <div 
-              class="category-header" 
+            <div
+              class="category-header"
               @click="toggleCategory('government')"
             >
               <span class="category-name">政企业务</span>
@@ -176,7 +176,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="right-content">
        <!-- 标题区域 -->
         <div class="header">
@@ -245,7 +245,7 @@
         <div class="start-now">
             <h2>即刻开始</h2>
             <p class="start-now-desc">解决方案免费试用<br>阿里云面向客户实际的业务需求场景，提供了一系列的技术解决方案及免费试用权益，便于客户完成 POC (Proof of Concept) 验证及业务决策。<br>阿里云解决方案免费试用权益通过试用角形式发放，试用点专用于解决方案学习及验证时创建的试用资源抵扣。</p>
-            <a href="#" class="start-btn">立即体验</a>
+            <a href="#" class="start-btn"  @click="toLInk('/pages/page10')">立即体验</a>
         </div>
       </div>
     </div>
@@ -278,7 +278,7 @@ export default {
       console.log(key, keyPath);
       this.activeIndex = key;
     },
-    
+
     // 切换分类展开/收起
     toggleCategory(category) {
       const index = this.openCategories.indexOf(category);
@@ -288,7 +288,7 @@ export default {
         this.openCategories.push(category);
       }
     },
-    
+
     // 切换子分类展开/收起
     toggleSubCategory(subCategory) {
       const index = this.openSubCategories.indexOf(subCategory);
@@ -297,7 +297,11 @@ export default {
       } else {
         this.openSubCategories.push(subCategory);
       }
-    }
+    },
+    toLInk(link){
+      this.$router.push(link)
+
+    },
   }
 };
 </script>
@@ -611,7 +615,7 @@ export default {
   .solutions-content {
     flex-direction: column;
   }
-  
+
   .left-sidebar {
     width: 100%;
   }

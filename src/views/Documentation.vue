@@ -17,7 +17,7 @@
         <!-- 功能卡片列表 -->
         <div class="card-list">
             <!-- 新手指南卡片 -->
-            <div class="card">
+            <div class="card" @click="toLInk('page11',{h:'新手指南',title:'新手上云指南聚焦最简的上云路径，提供“了解阿里云”、“注册阿里云账号”、“云产品免费试用教程”、“使用阿里云方式”和“账号管理”等知识或操作步骤，是您了解和使用阿里云的入门级指引，帮助您快速开启云上构建之旅。'})">
                 <div class="card-text">
                     <div class="card-title">新手指南</div>
                     <div class="card-desc">快速上手，免费试用90+云产品</div>
@@ -26,7 +26,7 @@
             </div>
 
             <!-- 云采用框架卡片 -->
-            <div class="card">
+            <div class="card" @click="toLInk('page11',{h:'云采用框架',title:'新手上云指南聚焦最简的上云路径，提供“了解阿里云”、“注册阿里云账号”、“云产品免费试用教程”、“使用阿里云方式”和“账号管理”等知识或操作步骤，是您了解和使用阿里云的入门级指引，帮助您快速开启云上构建之旅。'})">
                 <div class="card-text">
                     <div class="card-title">云采用框架</div>
                     <div class="card-desc">上云技术指导和最佳实践</div>
@@ -35,7 +35,7 @@
             </div>
 
             <!-- 卓越架构卡片 -->
-            <div class="card">
+            <div class="card"  @click="toLInk('page11',{h:'卓越架构NEW',title:'新手上云指南聚焦最简的上云路径，提供“了解阿里云”、“注册阿里云账号”、“云产品免费试用教程”、“使用阿里云方式”和“账号管理”等知识或操作步骤，是您了解和使用阿里云的入门级指引，帮助您快速开启云上构建之旅。'})">
                 <div class="card-text">
                     <div class="card-title">卓越架构<span class="new-tag">NEW</span></div>
                     <div class="card-desc">用云、管云的技术指导和最佳实践</div>
@@ -55,7 +55,7 @@
     </div>
     </section>
     <section>
-      
+
     </section>
 
     <!-- 产品文档区域 -->
@@ -66,8 +66,8 @@
           <!-- 左侧分类菜单 -->
           <div class="docs-sidebar">
             <ul class="category-menu">
-              <li 
-                v-for="(category, index) in categories" 
+              <li
+                v-for="(category, index) in categories"
                 :key="index"
                 :class="{ active: selectedCategory === category.id }"
                 @click="selectCategory(category.id)"
@@ -79,13 +79,13 @@
               <a href="#" class="explore-link">探索更多产品文档 <i class="el-icon-right"></i></a>
             </div>
           </div>
-          
+
           <!-- 右侧产品列表 -->
           <div class="docs-main">
             <div class="product-grid">
-              <div 
-                v-for="(product, index) in filteredProducts" 
-                :key="index" 
+              <div
+                v-for="(product, index) in filteredProducts"
+                :key="index"
                 class="product-item"
               >
                 <h3 class="product-title">{{ product.name }}</h3>
@@ -105,98 +105,98 @@
             <h3 class="resource-title">API</h3>
             <p class="resource-desc">面向开发者提供阿里巴巴云的API参考文档。采用OpenAPI规范，提供RESTful风格的API，覆盖90%以上的云产品。</p>
           </div>
-          
+
           <!-- SDK -->
           <div class="resource-category">
             <h3 class="resource-title">SDK</h3>
             <p class="resource-desc">为每个产品提供不同语言的开发包，内容丰富完善。支持多种主流开发语言，提供代码示例、最佳实践和常见问题解答。</p>
           </div>
-          
+
           <!-- 适配器 -->
           <div class="resource-category">
             <h3 class="resource-title">适配器</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- WAF开发指南 -->
           <div class="resource-category">
             <h3 class="resource-title">WAF开发指南</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- Windrunner -->
           <div class="resource-category">
             <h3 class="resource-title">Windrunner</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 智能时序管理工具 -->
           <div class="resource-category">
             <h3 class="resource-title">智能时序管理工具</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 资源编排 ROS -->
           <div class="resource-category">
             <h3 class="resource-title">资源编排 ROS</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- LBC 负载均衡器 -->
           <div class="resource-category">
             <h3 class="resource-title">LBC 负载均衡器</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 云审计 -->
           <div class="resource-category">
             <h3 class="resource-title">云审计</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 数据传输 DTS -->
           <div class="resource-category">
             <h3 class="resource-title">数据传输 DTS</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- WebIDE -->
           <div class="resource-category">
             <h3 class="resource-title">WebIDE</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 集群内监控 -->
           <div class="resource-category">
             <h3 class="resource-title">集群内监控</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- CLI 工具 -->
           <div class="resource-category">
             <h3 class="resource-title">CLI 工具</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 虚拟机HA管理工具 -->
           <div class="resource-category">
             <h3 class="resource-title">虚拟机HA管理工具</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 运维编排 -->
           <div class="resource-category">
             <h3 class="resource-title">运维编排</h3>
             <p class="resource-desc"></p>
           </div>
-          
+
           <!-- 自动化运维编排 -->
           <div class="resource-category">
             <h3 class="resource-title">自动化运维编排</h3>
             <p class="resource-desc"></p>
           </div>
         </div>
-        
+
         <!-- 底部扩展功能区 -->
         <div class="tools-extension">
           <div class="extension-item">
@@ -221,7 +221,7 @@
     </section>
     <section style="padding: 60px 0; width: 100%; padding: 0 10%;">
        <h1 class="page-title">活动与大赛</h1>
-        
+
         <!-- 活动列表 -->
         <div class="activity-list">
             <!-- 左侧活动卡片 -->
@@ -359,36 +359,36 @@ export default {
         { id: 16, categoryId: 'all', name: '云防火墙', description: '云原生的云上边界网络安全防护产品' },
         { id: 17, categoryId: 'all', name: '负载均衡 SLB', description: '对云上流量进行按需分发的服务' },
         { id: 18, categoryId: 'all', name: 'Web应用防火墙 WAF', description: '专业稳定一站式解决Web应用核心安全痛点' },
-        
+
         // 计算分类产品
         { id: 19, categoryId: 'compute', name: '云服务器 ECS', description: '安全可靠、弹性可伸缩的云计算服务' },
         { id: 20, categoryId: 'compute', name: '无影云电脑', description: '随时随地安全接入的云上超级电脑' },
         { id: 21, categoryId: 'compute', name: '轻量应用服务器', description: '快速构建应用程序和网站，即刻迈出上云第一步' },
-        
+
         // 容器分类产品
         { id: 22, categoryId: 'container', name: '容器服务 Kubernetes 版 ACK', description: '提供一站式管理容器应用的K8s服务' },
-        
+
         // 存储分类产品
         { id: 23, categoryId: 'storage', name: '文件存储 NAS', description: '大规模共享访问，弹性扩展的文件存储服务' },
         { id: 24, categoryId: 'storage', name: '对象存储 OSS', description: '稳定、安全、高性价比、高性能的云存储服务' },
-        
+
         // 网络与CDN分类产品
         { id: 25, categoryId: 'network', name: '域名与网站', description: '提供简易易用的域名与建站服务' },
         { id: 26, categoryId: 'network', name: '负载均衡 SLB', description: '对云上流量进行按需分发的服务' },
-        
+
         // 安全分类产品
         { id: 27, categoryId: 'security', name: '云防火墙', description: '云原生的云上边界网络安全防护产品' },
         { id: 28, categoryId: 'security', name: 'Web应用防火墙 WAF', description: '专业稳定一站式解决Web应用核心安全痛点' },
         { id: 29, categoryId: 'security', name: '数字证书管理服务（原SSL证书）', description: '实现全站HTTPS，呈现可信的 Web 访问' },
-        
+
         // 数据库分类产品
         { id: 30, categoryId: 'database', name: '云数据库 RDS', description: '全托管，含MySQL、PostgreSQL、SQL Server、MariaDB多引擎' },
         { id: 31, categoryId: 'database', name: '云原生数据库 PolarDB', description: '100%兼容MySQL、PostgreSQL，兼容Oracle，支持集中和分布式' },
-        
+
         // 大数据计算分类产品
         { id: 32, categoryId: 'bigdata', name: '大数据开发治理平台 DataWorks', description: '全链路数据开发治理平台' },
         { id: 33, categoryId: 'bigdata', name: '云原生大数据计算服务 MaxCompute', description: '面向分析的企业级SaaS模式数据仓库' },
-        
+
         // 人工智能与机器学习分类产品
         { id: 34, categoryId: 'ai', name: '人工智能平台 PAI', description: '一站AI开发、训练和推理服务' },
         { id: 35, categoryId: 'ai', name: '大模型服务平台百炼', description: '大模型服务与应用平台' }
@@ -402,7 +402,30 @@ export default {
     },
     selectCategory(categoryId) {
       this.selectedCategory = categoryId;
-    }
+    },
+    toLInk(link, params) {
+      // 分离path参数和query参数
+      const pathParams = {};
+      const queryParams = {};
+
+      // 将h保留为path参数，其他参数作为query参数
+      if (params.h) {
+        pathParams.h = params.h;
+      }
+
+      // 将title等其他参数作为query参数
+      Object.keys(params).forEach(key => {
+        if (key !== 'h') {
+          queryParams[key] = params[key];
+        }
+      });
+
+      this.$router.push({
+        name: link,
+        params: pathParams,
+        query: queryParams
+      });
+    },
   },
   computed: {
     filteredProducts() {
@@ -559,6 +582,7 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
+          cursor: pointer;
         }
 
         .card-text {
@@ -601,7 +625,7 @@ export default {
     padding: 60px 0;
     background-color: #fff;
   }
-  
+
   .product-docs-section h2 {
     font-size: 28px;
     font-weight: 700;
@@ -609,18 +633,18 @@ export default {
     margin-bottom: 40px;
     text-align: center;
   }
-  
+
   .docs-content {
     display: flex;
     gap: 40px;
   }
-  
+
   /* 左侧分类菜单样式 */
   .docs-sidebar {
     width: 200px;
     flex-shrink: 0;
   }
-  
+
   .category-menu {
     list-style: none;
     padding: 0;
@@ -628,31 +652,31 @@ export default {
     border: 1px solid #e8e8e8;
     border-radius: 4px;
   }
-  
+
   .category-menu li {
     padding: 12px 16px;
     cursor: pointer;
     transition: all 0.3s ease;
     border-bottom: 1px solid #e8e8e8;
   }
-  
+
   .category-menu li:last-child {
     border-bottom: none;
   }
-  
+
   .category-menu li:hover {
     background-color: #f5f5f5;
   }
-  
+
   .category-menu li.active {
     background-color: #1890ff;
     color: #fff;
   }
-  
+
   .explore-more {
     text-align: center;
   }
-  
+
   .explore-link {
     display: inline-flex;
     align-items: center;
@@ -662,78 +686,78 @@ export default {
     font-size: 14px;
     transition: all 0.3s ease;
   }
-  
+
   .explore-link:hover {
     text-decoration: underline;
   }
-  
+
   /* 右侧产品列表样式 */
   .docs-main {
     flex: 1;
   }
-  
+
   .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  
+
   .product-item {
     padding: 20px;
     border: 1px solid #e8e8e8;
     border-radius: 4px;
     transition: all 0.3s ease;
   }
-  
+
   .product-item:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-color: #1890ff;
   }
-  
+
   .product-title {
     font-size: 16px;
     font-weight: 600;
     color: #333;
     margin-bottom: 8px;
   }
-  
+
   .product-desc {
     font-size: 14px;
     color: #666;
     line-height: 1.5;
     margin: 0;
   }
-  
+
   /* 响应式设计 */
   @media (max-width: 1200px) {
     .product-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
+
   @media (max-width: 768px) {
     .doc-header-section h1 {
       font-size: 28px;
     }
-    
+
     .quick-entry-grid {
       grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .docs-content {
       flex-direction: column;
     }
-    
+
     .docs-sidebar {
       width: 100%;
     }
-    
+
     .category-menu {
       display: flex;
       flex-wrap: wrap;
       border: none;
     }
-    
+
     .category-menu li {
       border: 1px solid #e8e8e8;
       border-radius: 4px;
@@ -741,16 +765,16 @@ export default {
       margin-bottom: 10px;
       white-space: nowrap;
     }
-    
+
     .category-menu li.active {
       border-color: #1890ff;
     }
-    
+
     .product-grid {
       grid-template-columns: 1fr;
     }
   }
-  
+
   @media (max-width: 480px) {
     .quick-entry-grid {
       grid-template-columns: 1fr;
@@ -763,7 +787,7 @@ export default {
     background-color: #fff;
     border-top: 1px solid #e8e8e8;
   }
-  
+
   .tools-resources-section h2 {
     font-size: 28px;
     font-weight: 700;
@@ -771,40 +795,40 @@ export default {
     margin-bottom: 40px;
     text-align: center;
   }
-  
+
   .resources-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     margin-bottom: 40px;
   }
-  
+
   .resource-category {
     padding: 20px;
     border: 1px solid #e8e8e8;
     border-radius: 4px;
     transition: all 0.3s ease;
   }
-  
+
   .resource-category:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-color: #1890ff;
   }
-  
+
   .resource-title {
     font-size: 16px;
     font-weight: 600;
     color: #333;
     margin-bottom: 10px;
   }
-  
+
   .resource-desc {
     font-size: 14px;
     color: #666;
     line-height: 1.5;
     margin: 0;
   }
-  
+
   /* 底部扩展功能区样式 */
   .tools-extension {
     display: flex;
@@ -815,7 +839,7 @@ export default {
     background-color: #f5f7fa;
     border-radius: 4px;
   }
-  
+
   .extension-item {
     padding: 10px 20px;
     background-color: #fff;
@@ -823,18 +847,18 @@ export default {
     border-radius: 20px;
     transition: all 0.3s ease;
   }
-  
+
   .extension-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-color: #1890ff;
   }
-  
+
   .extension-icon {
     font-size: 14px;
     font-weight: 500;
     color: #333;
   }
-  
+
   .extension-arrow {
     font-size: 16px;
     color: #666;
@@ -1097,35 +1121,36 @@ export default {
       grid-template-columns: repeat(4, 1fr);
     }
   }
-  
+
   @media (max-width: 992px) {
     .resources-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  
+
   @media (max-width: 768px) {
     .tools-resources-section h2 {
       font-size: 24px;
     }
-    
+
     .resources-grid {
       grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .tools-extension {
       flex-wrap: wrap;
       gap: 10px;
     }
-    
+
     .extension-arrow {
       margin: 0 5px;
     }
   }
-  
+
   @media (max-width: 480px) {
     .resources-grid {
       grid-template-columns: 1fr;
     }
   }
 </style>
+
