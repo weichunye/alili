@@ -497,7 +497,7 @@
         </div>
       </section> -->
       <!-- 页脚区域 -->
-      <div class="banner">
+      <div class="banner" style="width: 100%; padding: 0 10%">
         <div class="banner-content">
           <h2 class="banner-title">立即体验，在阿里云上创造未来</h2>
           <span class="btn-trial" @click="goToCloudServer('page4')">

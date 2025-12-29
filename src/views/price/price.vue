@@ -143,12 +143,16 @@
 		</section>
 
 		<!-- 底部体验区 -->
-		<section class="experience-section">
-			<div class="experience-container section">
-				<h2 class="experience-title">立即体验，在阿里云创造未来</h2>
-				<el-button type="primary" class="experience-btn">免费试用</el-button>
-			</div>
-		</section>
+    <div class="banner">
+      <div class="banner-content">
+        <h2 class="banner-title">立即体验，在阿里云上创造未来</h2>
+        <span class="btn-trial" @click="goToCloudServer('page4')">
+                免费试用
+                <span>→</span>
+            </span>
+      </div>
+      <div class="banner-bg"></div>
+    </div>
     <Footer />
 
 	</div>
@@ -209,6 +213,9 @@ export default {
             done();
           })
           .catch(_ => {});
+    },
+    goToCloudServer(name) {
+      window.open('/pages/'+name, "_blank")
     },
 
   },
@@ -500,8 +507,53 @@ export default {
 		width: 80px;
 		height: 80px;
 	}
+  /* 横幅容器 */
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #f6f6f6;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+  }
 
-	/* 响应式适配 */
+  /* 内容区域 */
+  .banner-content {
+    position: relative;
+    z-index: 2;
+
+  }
+
+  /* 标题样式 */
+  .banner-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+  /* 按钮样式 */
+  .btn-trial {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+    height: 48px;
+    background: linear-gradient(90deg, #165DFF 0%, #4080FF 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 24px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* 响应式适配 */
 	@media (max-width: 1200px) {
 
 		.header-container,

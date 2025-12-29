@@ -10,7 +10,7 @@
               <h1 class="banner-title">上云优选 普惠权益</h1>
               <p class="banner-subtitle">上云无忧，创新加速。助力快速构建云上应用</p>
               <span class="banner-time">活动时间</span>
-              <el-button type="primary" class="banner-btn" style="padding: 15px 50px; border-radius: 0">立即领取</el-button>
+              <el-button type="primary" class="banner-btn" style="padding: 15px 50px; border-radius: 0" @click="toLInk('/pages/page17')">查看我的权益</el-button>
             </div>
 
           </div>
@@ -1249,6 +1249,10 @@ export default {
     handleMenuSelect(menuInfo) {
       // 处理菜单选择事件
       console.log('菜单选择信息:', menuInfo)
+    },
+    toLInk(link){
+      window.open(link, "_blank")
+
     },
     useBenefit(benefit) {
       // 使用权益的逻辑

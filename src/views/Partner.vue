@@ -116,7 +116,7 @@
                 <p class="text-gray-600 text-sm mb-4">
                   该计划基于Salesforce产品与生态体系，与阿里云生态体系进行融合，共同为客户提供优质的产品、咨询、规划、迁移、上云、交付等服务，从而帮助客户成功的生态合作计划。
                 </p>
-                <a href="#" class="text-primary text-sm flex items-center">
+                <a href="#" class="text-primary text-sm flex items-center" @click="toLInk('/pages/page19')">
                   查看计划
                   <span class="ml-1 text-xs">●</span>
                 </a>
@@ -135,7 +135,7 @@
                 <p class="text-gray-600 text-sm mb-4">
                   阿里云面向生态开放以通义千问为代表的模型能力和训练底座，与产品生态伙伴展开在行业模型方向的MaaS（模型即服务）产品的集成与被集成的合作计划。
                 </p>
-                <a href="#" class="text-primary text-sm flex items-center">
+                <a href="#" class="text-primary text-sm flex items-center" @click="toLInk('/pages/page19')">
                   查看计划
                   <span class="ml-1 text-xs">●</span>
                 </a>
@@ -154,7 +154,7 @@
                 <p class="text-gray-600 text-sm mb-4">
                   为鼓励具备AI大模型销售与服务能力的合作伙伴与阿里云共同拓展巨大市场，提升通义大模型调用量与市场占有率，并结合自身能力向客户提供优质服务，特制定该生态合作计划。
                 </p>
-                <a href="#" class="text-primary text-sm flex items-center">
+                <a href="#" class="text-primary text-sm flex items-center" @click="toLInk('/pages/page19')">
                   查看计划
                   <span class="ml-1 text-xs">●</span>
                 </a>
@@ -461,7 +461,11 @@ export default {
     // 选择故事的方法
     selectStory(story) {
       this.selectedStory = story;
-    }
+    },
+    toLInk(link){
+      window.open(link, "_blank")
+
+    },
   }
 }
 </script>

@@ -34,6 +34,9 @@ import page13 from './views/pages/page13.vue'//咨询
 import page14 from './views/pages/page14.vue'//更多文档（官网文档）
 import page15 from './views/pages/page15.vue'//我的试用（个人中心像）
 import page16 from './views/pages/page16.vue'//免费试用指南
+import page17 from './views/pages/page17.vue'//我的权益
+import page18 from './views/pages/page18.vue'//云市场的ai精品推荐详情
+import page19 from './views/pages/page19.vue'//合作伙伴计划详情
 import Suggestion from './views/pages/Suggestion.vue'//建议提交
 
 Vue.use(VueRouter)
@@ -206,6 +209,21 @@ const routes = [
     path: '/pages/page16',
     name: 'page16',
     component: page16
+  },
+  {
+    path: '/pages/page17',
+    name: 'page17',
+    component: page17
+  },
+  {
+    path: '/pages/page18',
+    name: 'page18',
+    component: page18
+  },
+  {
+    path: '/pages/page19',
+    name: 'page19',
+    component: page19
   }
 ]
 
@@ -215,6 +233,8 @@ const router = new VueRouter({
 })
 
 export default router
+
+
 
 
 

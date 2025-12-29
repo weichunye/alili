@@ -17,10 +17,10 @@
           <div class="text-section">
             <h1 class="title">{{ item.title }}</h1>
             <p class="desc">{{ item.desc }}</p>
-            <el-button class="more-btn" type="primary" >
-            了解更多
+<!--            <el-button class="more-btn" type="primary"  @click="toLInk('/pages/page18')" >-->
+<!--            了解更多-->
 
-            </el-button>
+<!--            </el-button>-->
           </div>
           <!-- 右侧图片区域 -->
 
@@ -84,7 +84,7 @@
           <p class="card-desc">
             覆盖智能硬件、创意设计、数字人、知识管理等全场景，为企业提供安全可靠、便捷高效、成本优化的优质AI应用。
           </p>
-          <el-button type="text" class="card-more-btn">查看更多</el-button>
+          <el-button type="text" class="card-more-btn" @click="toLInk('/pages/page18')">查看更多</el-button>
         </div>
       </el-col>
         <el-col :span="18" class="right-content">
@@ -143,7 +143,7 @@
           <p class="card-desc">
             行业场景汇聚经过严格筛选的优质AI产品与服务，覆盖行业解决方案的全方位需求，为企业提供开箱即用的AI解决方案。
           </p>
-          <el-button type="text" class="card-more-btn">查看更多</el-button>
+          <el-button type="text" class="card-more-btn"  @click="toLInk('/pages/page18')">查看更多</el-button>
         </div>
       </el-col>
 
@@ -308,7 +308,7 @@
 
             </el-col>
             <el-col :span="24" class="product-card" style="text-align: right">
-              <el-button type="text" class="card-more-btn" style="margin-top: 5px;">查看更多</el-button>
+              <el-button type="text" class="card-more-btn" style="margin-top: 5px;"  @click="toLInk('/pages/page18')">查看更多</el-button>
             </el-col>
           </el-row>
         </el-col>
@@ -519,7 +519,11 @@ export default {
       } else if (key === '6') {
         // 关于我们页面路由
       }
-    }
+    },
+    toLInk(link){
+      window.open(link, "_blank")
+
+    },
   }
 }
 </script>

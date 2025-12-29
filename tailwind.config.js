@@ -55,6 +55,15 @@ module.exports = {
             textDark: '#333333', // 深色文字
             textLight: '#666666', // 浅色文字
             bgLight: '#F9F7FF', // 背景淡紫色
+        },
+        partner:{
+          primary: '#F15A22', // 主橙色
+          secondary: '#4080FF', // 主蓝色
+          orangeLight: '#F9E0D6', // 浅橙背景
+          orangeDark: '#E64A19', // 深橙
+          grayLight: '#F5F5F5', // 浅灰
+          grayMid: '#9E9E9E', // 中灰
+          grayDark: '#333333', // 深灰
         }
       },
       fontFamily: {
