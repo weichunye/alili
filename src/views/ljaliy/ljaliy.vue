@@ -178,17 +178,17 @@
           <h4>分析报告</h4>
           <p>最权威、最全面、最新鲜的行业报告解读。</p>
 
-          <el-button type="text" class="detail-btn">查看所有分析报告</el-button>
+          <el-button type="text" class="detail-btn" @click="toLInk('/pages/page3')">查看所有分析报告</el-button>
         </el-col>
         <el-col :span="8" class="insight-card">
           <h4>白皮书</h4>
           <p>汇集各领域前沿白皮书，全方位带你了解各行。</p>
-          <el-button type="text" class="detail-btn">查看所有白皮书</el-button>
+          <el-button type="text" class="detail-btn"  @click="toLInk('/pages/page3')">查看所有白皮书</el-button>
         </el-col>
         <el-col :span="8" class="insight-card">
           <h4>电子书</h4>
           <p>关于云计算和阿里云的深度读物。</p>
-          <el-button type="text" class="detail-btn">查看所有电子书</el-button>
+          <el-button type="text" class="detail-btn"  @click="toLInk('/pages/page3')">查看所有电子书</el-button>
         </el-col>
       </el-row>
 
@@ -304,7 +304,11 @@ export default {
       // 根据Header组件传递的menuInfo进行处理
       // 由于Header组件内部已经处理了路由跳转，这里可以添加其他需要的逻辑
       console.log('菜单选择信息:', menuInfo)
-    }
+    },
+    toLInk(link){
+      window.open(link, "_blank")
+
+    },
   }
 }
 </script>

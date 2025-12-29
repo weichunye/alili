@@ -420,11 +420,11 @@ export default {
         }
       });
 
-      this.$router.push({
+      window.open({
         name: link,
         params: pathParams,
         query: queryParams
-      });
+      }, "_blank");
     },
   },
   computed: {

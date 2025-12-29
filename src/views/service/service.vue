@@ -71,8 +71,8 @@
                   </div>
 
                   <div>
-                    <el-button type="text" class="text-btn">售前咨询</el-button>
-                    <el-button type="text" class="text-btn">售后咨询</el-button>
+                    <el-button type="text" class="text-btn" @click="toLInk('/pages/page13')">售前咨询</el-button>
+                    <el-button type="text" class="text-btn"  @click="toLInk('/pages/page13')">售后咨询</el-button>
                     <el-button type="text" class="text-btn">备案咨询</el-button>
                   </div>
                 </div>
@@ -98,7 +98,7 @@
                     <h4 class="item-title">技术工单</h4>
                     <p class="item-desc">技术工单为您提供产品配置指导、故障排查等技术支持</p>
                   </div>
-                  <el-button type="primary" size="mini" class="action-btn">提交工单</el-button>
+                  <el-button type="primary" size="mini" class="action-btn"  @click="toLInk('/pages/page13')">提交工单</el-button>
                 </div>
               </el-col>
               <el-col :span="12">
@@ -108,8 +108,8 @@
                     <p class="item-desc">任何对阿里云产品与服务的建议和投诉</p>
                   </div>
                   <div>
-                    <el-button type="primary" class="action-btn">我要建议</el-button>
-                    <el-button type="primary" class="action-btn">我要投诉</el-button>
+                    <el-button type="primary" class="action-btn" @click="toLInk('/pages/Suggestion')">我要建议</el-button>
+                    <el-button type="primary" class="action-btn" @click="toLInk('/pages/Suggestion')">我要投诉</el-button>
                   </div>
                 </div>
               </el-col>
@@ -133,7 +133,7 @@
                   <h4 class="item-title">文档中心</h4>
                   <p class="item-desc">产品介绍、使用指导、最佳实践等全品类的产品文档</p>
                 </div>
-                <el-button type="primary" class="action-btn">查看更多</el-button>
+                <el-button type="primary" class="action-btn" @click="toLInk('/pages/page14')">查看更多</el-button>
               </div>
             </el-col>
             <el-col :span="12">
@@ -142,7 +142,7 @@
                   <h4 class="item-title">新手入门</h4>
                   <p class="item-desc">通过快速入门/教程、实战、学习路径等帮您快速玩转云产品</p>
                 </div>
-                <el-button type="primary" class="action-btn">查看更多</el-button>
+                <el-button type="primary" class="action-btn"@click="toLInkA('page11',{h:'新手指南',title:'新手上云指南聚焦最简的上云路径，提供“了解阿里云”、“注册阿里云账号”、“云产品免费试用教程”、“使用阿里云方式”和“账号管理”等知识或操作步骤，是您了解和使用阿里云的入门级指引，帮助您快速开启云上构建之旅。'})">查看更多</el-button>
               </div>
             </el-col>
             <el-col :span="12">
@@ -155,7 +155,7 @@
                   <el-button type="text" class="text-btn">域名检测工具</el-button>
                   <el-button type="text" class="text-btn">域名代续费</el-button>
                 </div>
-                <el-button type="primary" class="action-btn">查看全部</el-button>
+                <el-button type="primary" class="action-btn" @click="toLInk('/pages/page13')">查看更多</el-button>
               </div>
             </el-col>
             <el-col :span="12">
@@ -372,8 +372,31 @@ export default {
   },
   methods: {
     toLInk(link){
-      this.$router.push(link)
+      window.open(link, "_blank")
 
+    },
+    toLInkA(link, params) {
+      // 分离path参数和query参数
+      const pathParams = {};
+      const queryParams = {};
+
+      // 将h保留为path参数，其他参数作为query参数
+      if (params.h) {
+        pathParams.h = params.h;
+      }
+
+      // 将title等其他参数作为query参数
+      Object.keys(params).forEach(key => {
+        if (key !== 'h') {
+          queryParams[key] = params[key];
+        }
+      });
+
+      window.open({
+        name: link,
+        params: pathParams,
+        query: queryParams
+      }, "_blank");
     },
   }
 }

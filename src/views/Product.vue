@@ -418,17 +418,17 @@ export default {
   },
   methods: {
     toLInk(link){
-      this.$router.push(link)
+      window.open(link, "_blank")
 
     },
     handleMenuSelect({ key, keyPath }) {
       // 根据选择的菜单项进行路由跳转
       if (key === '1') {
-        this.$router.push('/')
+        window.open('/', "_blank")
       } else if (key === '2') {
         // 产品菜单已改为下拉菜单
       } else if (key === '2-1') {
-        this.$router.push('/product')
+        window.open('/product', "_blank")
       } else if (key === '2-2') {
         // AI大模型页面路由
       } else if (key === '2-3') {

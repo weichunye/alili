@@ -57,7 +57,7 @@
     </div>
   <div style="width: 100%; padding: 0 10%; background: #eaf2ff" >
 
-    <main class="container mx-auto px-4 py-6">
+    <main class="   py-6">
       <!-- 拼手速专区 -->
       <section class="mb-8">
         <div class="bg-white rounded-lg p-4 mb-4">
@@ -145,7 +145,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 40G高效云盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 5M带宽 · 每月1000G流量</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+              <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
             <!-- 产品卡片2 -->
             <div class="product-card">
@@ -158,7 +158,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 80G高效云盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 10M带宽 · 每月2000G流量</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
             <!-- 产品卡片3 -->
             <div class="product-card">
@@ -171,7 +171,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 160G高效云盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 20M带宽 · 每月5000G流量</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@
                 <li><i class="fa-solid fa-shield-halved w-5 text-blue"></i> 基础安全防护</li>
                 <li><i class="fa-solid fa-infinity w-5 text-blue"></i> 按年付费，续费同价</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 50G系统盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 公网带宽3M</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
             <!-- 产品卡片2 -->
             <div class="product-card">
@@ -236,7 +236,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 80G系统盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 公网带宽5M</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
             <!-- 产品卡片3 -->
             <div class="product-card">
@@ -249,7 +249,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 100G系统盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 公网带宽8M</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
           </div>
         </div>
@@ -279,7 +279,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 100G高效云盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 5M公网带宽</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
             <!-- 产品卡片2 -->
             <div class="product-card">
@@ -292,7 +292,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 200G高效云盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 8M公网带宽</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
             <!-- 产品卡片3 -->
             <div class="product-card">
@@ -305,7 +305,7 @@
                 <li><i class="fa-solid fa-hard-drive w-5 text-blue"></i> 400G高效云盘</li>
                 <li><i class="fa-solid fa-wifi w-5 text-blue"></i> 10M公网带宽</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
           </div>
 
@@ -348,7 +348,7 @@
       <!-- ECS专属安全防护包 -->
       <section class="mb-8">
         <div class="bg-white rounded-lg p-4 mb-4">
-          <h2 class="text-xl font-bold text-gray-dark mb-2">[ECS专属安全防护包] 买ECS立享主机与数据安全防护</h2>
+          <h2 class="text-xl font-bold text-gray-dark mb-2">ECS专属安全防护包 买ECS立享主机与数据安全防护</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- 防护包1 -->
             <div class="product-card border-l-4 border-orange">
@@ -360,7 +360,7 @@
                 <li><i class="fa-solid fa-shield-halved w-5 text-blue"></i> 基础漏洞扫描</li>
                 <li><i class="fa-solid fa-lock w-5 text-blue"></i> 登录异常提醒</li>
               </ul>
-              <button class="btn-orange w-full">立即购买</button>
+               <button class="btn-orange w-full"  @click="currentProductName = $event.target.closest('.product-card').querySelector('.text-gray-dark.font-medium').textContent; drawer = true">立即购买</button>
             </div>
             <!-- 防护包2 -->
             <div class="product-card border-l-4 border-blue">
@@ -466,6 +466,222 @@
     </main>
   </div>
     <Footer />
+    <el-drawer
+        :title="currentProductName"
+        :visible.sync="drawer"
+        :direction="direction"
+        :before-close="handleClose">
+      <div class="max-w-4xl mx-auto bg-white p-6 shadow-sm" style="position: relative">
+        <!-- 标题栏 -->
+        <div class="flex items-center justify-between mb-8 border-b pb-4">
+          <div class="flex items-center">
+            <h1 class="text-xl font-medium mr-4">{{ currentProductName }}</h1>
+            <a href="#" class="text-primary text-sm hover:underline">更多配置购买</a>
+          </div>
+        </div>
+
+        <!-- 表单内容区域 -->
+        <form class="space-y-8">
+          <!-- 实例类型 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">实例类型</label>
+            <div class="inline-flex border rounded-md">
+              <button type="button" class="px-4 py-2 bg-blue-50 border-b-active font-medium">服务器实例</button>
+            </div>
+          </div>
+
+          <!-- 地域选择 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">地域</label>
+            <div class="space-y-2">
+              <select class="w-full max-w-xs px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option>华南2 (河源)</option>
+                <option>华东1 (杭州)</option>
+                <option>华北2 (北京)</option>
+              </select>
+              <div class="text-xs text-gray-500 max-w-2xl leading-relaxed">
+                选择靠近您客户的地域可提高网络访问速度。非中国内地地域（如中国香港、新加坡等）提供国际带宽，如您在中国内地使用，可能有较大的网络延迟。
+                <a href="#" class="text-primary hover:underline">教我选择?</a><br>
+                轻量应用数据库必须和轻量应用服务器在同一地域才能搭配使用<br>
+                轻量应用数据库服务和轻量应用服务器在同一地域才能支持内网访问<br>
+                当前轻量应用容器服务只能通过公网访问轻量应用数据库服务
+              </div>
+            </div>
+          </div>
+
+          <!-- 镜像选择 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">镜像</label>
+            <div class="space-y-2">
+              <!-- 镜像标签 -->
+              <div class="inline-flex border rounded-md mb-3">
+                <button type="button" class="px-4 py-2 bg-blue-50 border-b-active font-medium">应用镜像</button>
+                <button type="button" class="px-4 py-2 text-gray-600 hover:bg-gray-50">系统镜像</button>
+                <button type="button" class="px-4 py-2 text-gray-600 hover:bg-gray-50">自定义镜像</button>
+              </div>
+
+              <!-- 镜像卡片 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-2xl">
+                <!-- 宝塔Linux面板 -->
+                <div class="border rounded-md p-3 card-hover bg-blue-50 border-blue-500">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-server text-green-500 mr-2"></i>
+                    <span class="font-medium">宝塔Linux面板</span>
+                  </div>
+                  <div class="text-sm text-gray-500">阿里云专家版 9.2.0</div>
+                </div>
+
+                <!-- 1Panel -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-window-maximize text-blue-500 mr-2"></i>
+                    <span class="font-medium">1Panel</span>
+                  </div>
+                  <div class="text-sm text-gray-500">1.10.26</div>
+                </div>
+
+                <!-- WordPress -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-wordpress text-purple-500 mr-2"></i>
+                    <span class="font-medium">WordPress</span>
+                  </div>
+                  <div class="text-sm text-gray-500">6.7.1</div>
+                </div>
+
+                <!-- WooCommerce -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-shopping-cart text-blue-600 mr-2"></i>
+                    <span class="font-medium">WooCommerce</span>
+                  </div>
+                  <div class="text-sm text-gray-500">9.4.7</div>
+                </div>
+
+                <!-- 翼龙面板 -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-dragon text-orange-500 mr-2"></i>
+                    <span class="font-medium">翼龙面板</span>
+                  </div>
+                  <div class="text-sm text-gray-500">1.11.7.1</div>
+                </div>
+
+                <!-- Cloudreve -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-cloud text-sky-500 mr-2"></i>
+                    <span class="font-medium">Cloudreve</span>
+                  </div>
+                  <div class="text-sm text-gray-500">3.8.3</div>
+                </div>
+
+                <!-- Docker -->
+                <div class="border rounded-md p-3 card-hover">
+                  <div class="flex items-center mb-2">
+                    <i class="fa fa-cubes text-blue-700 mr-2"></i>
+                    <span class="font-medium">Docker</span>
+                  </div>
+                  <div class="text-sm text-gray-500">26.1.3</div>
+                </div>
+              </div>
+
+              <!-- 镜像说明 -->
+              <div class="text-xs text-gray-500 max-w-2xl">
+                宝塔Linux面板是广东思腾安全技术有限公司旗下提升运维效率的服务器管理软件，支持一键LAMP/LNMP/集群/监控/网站/FTP/数据库/JAVA等100多项服务器管理功能，来源于阿里云云市场。
+              </div>
+            </div>
+          </div>
+
+          <!-- 套餐配置 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">套餐配置</label>
+            <div class="space-y-2">
+              <div class="border rounded-md max-w-xs p-4 bg-blue-50 border-blue-500">
+                <div class="font-medium mb-2">通用型 45元/月</div>
+                <ul class="text-sm space-y-1 text-gray-700">
+                  <li>vCPU 2核</li>
+                  <li>内存 2 GB</li>
+                  <li>ESSD 40 GB</li>
+                  <li>限峰值带宽 200 Mbps</li>
+                  <li>公网线路类型 BGP</li>
+                  <li>固定公网地址 1IPv4</li>
+                </ul>
+              </div>
+
+              <!-- 套餐说明 -->
+              <div class="text-xs text-gray-500 max-w-2xl leading-relaxed">
+                如果您购买的是服务器实例，请注意：<br>
+                实例规格峰值公网带宽为出、入方向的峰值上限，不作为业务承诺指标，当阿里云在业务高峰期出现资源争抢时，公网带宽可能会受到限制和产生网络丢包，不适合应用于对公网质量有强保障诉求的场景。<br>
+                对于包含每月流量的实例规格，只有超出每月额度的公网出流量才会产生额外费用，请查看<a href="#" class="text-primary hover:underline">流量计费方式</a>了解详情。<br>
+                对于不包含每月流量的实例规格，公网出流量、入流量均不会产生费用。<br>
+                中国香港/海外地域轻量应用实例价格包含额外的操作系统版权费用，请注意实例规格价格变化。<br>
+                BGP_NC=BGP (非中国优化)，中国大陆用户使用BGP (非中国优化) 线路有较高的公网时延和丢包率，国际版规格仅适用于不需要对中国大陆用户提供服务的应用场景。<br>
+                如果您购买的是数据库服务实例，请注意：<br>
+                当前通过公网访问轻量数据库服务产生的公网流量计费不收费
+              </div>
+            </div>
+          </div>
+
+          <!-- 数据盘 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">数据盘</label>
+            <div class="flex items-center space-x-2 max-w-xs">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">-</button>
+              <input type="number" value="0" class="w-12 text-center border rounded-md py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">+</button>
+              <span class="text-sm">GB</span>
+            </div>
+            <div class="text-xs text-gray-500">请选择额外增加的数据盘大小</div>
+          </div>
+
+          <!-- 购买时长 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">购买时长</label>
+            <div class="space-y-2 max-w-xs">
+              <select class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <option>1年</option>
+                <option>2年</option>
+                <option>3年</option>
+                <option>1个月</option>
+                <option>3个月</option>
+                <option>6个月</option>
+              </select>
+
+              <div class="flex items-center space-x-2 mt-1">
+                <input type="checkbox" id="auto-renew" class="rounded text-blue-500 focus:ring-blue-500">
+                <label for="auto-renew" class="text-sm text-gray-700">到期自动续费</label>
+              </div>
+
+              <div class="text-xs text-gray-500 bg-gray-50 p-2 rounded-md">
+                建议勾选到期自动续费，可避免因资源到期停机或释放而影响业务。勾选后，自动续费周期为<span class="text-primary">每</span>月，在实例到期前会以实时价格自动扣费。自动续费可随时取消。<a href="#" class="text-primary hover:underline">了解更多></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 购买数量 -->
+          <div class="space-y-2">
+            <label class="block text-sm font-medium text-gray-700">购买数量</label>
+            <div class="flex items-center space-x-2 max-w-xs">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">-</button>
+              <input type="number" value="1" class="w-12 text-center border rounded-md py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <button type="button" class="px-2 py-1 border rounded-md hover:bg-gray-50">+</button>
+            </div>
+          </div>
+
+          <!-- 结算栏 -->
+          <div class="flex items-center justify-between pt-4 border-t mt-6" style="width: 30%; background: #fff; padding: 0 30px; position: fixed; right: 0; bottom: 0">
+            <div class="text-right">
+              <div class="text-sm text-gray-500">应付费用</div>
+              <div class="text-2xl font-bold text-orange-500">¥68.00</div>
+              <div class="text-xs text-gray-500 line-through">¥459.00 <a href="#" class="text-primary hover:underline">查看明细</a></div>
+            </div>
+            <button type="button" class="px-8 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors font-medium">立即购买</button>
+          </div>
+        </form>
+      </div>
+
+    </el-drawer>
   </div>
 </template>
 
@@ -481,7 +697,10 @@ export default {
   },
   data() {
     return {
-      activeIndex: ''
+      activeIndex: '',
+      drawer: false,
+      direction: 'rtl',
+      currentProductName: '' // 当前选中的产品名称
     }
   },
   methods: {
@@ -571,5 +790,6 @@ export default {
   transition-duration: 150ms;
 }
 </style>
+
 
 

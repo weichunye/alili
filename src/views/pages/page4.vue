@@ -8,18 +8,18 @@
           <h1 class="product-main-title">免费试用</h1>
           <p class="product-description">提供等竞争力的云产品，将计算、存储、网络、数据库、大数据、人工智能、安全等产品技术与场景需求融合，为开发者打造安全、稳定、体验卓越的云服务。</p>
           <div class="product-nav-buttons">
-            <el-button type="primary" class="banner-btn" style="padding: 14px 40px">我的试用</el-button>
+            <el-button type="primary" class="banner-btn" style="padding: 14px 40px" @click="toLInk('/pages/page15')">我的试用</el-button>
 
           </div>
         </div>
         <div class="top-actions">
-          <div class="action-card" style="background: #0062ff">
-            <p style="font: 24px; color: #fff; font-weight: bold; line-height: 40px">了解免费试用</p>
-            <p style="color: #fff; " class="action-desc">体验云计算产品能力</p>
+          <div class="action-card" style="background: #0062ff; cursor: pointer" @click="toLInk('/benefits')" >
+            <p style="font: 24px; color: #fff; font-weight: bold; line-height: 40px">云服务器 ECS 99计划</p>
+            <p style="color: #fff; " class="action-desc">低至99元1年，低价省薪</p>
           </div>
           <div class="action-card">
-            <p style="font: 24px;  font-weight: bold; line-height: 40px">了解产品定价</p>
-            <p class="action-desc">轻松估算成本，灵活管理成本</p>
+            <p style="font: 24px;  font-weight: bold; line-height: 40px; cursor: pointer"   @click="toLInk('moxing1')" >智启通义千问3，模力全开</p>
+            <p class="action-desc">混合推理模型 8 款模型全开源，至高可享 800 万免费 token</p>
           </div>
         </div>
       </div>
@@ -200,8 +200,10 @@
                 </div>
 
                 <div class="flex justify-center gap-3 mt-4">
-                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
-                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition"  @click="toLInk('/pages/page16')">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition"
+                          @click=" drawer = true"
+                  >立即试用</button>
                 </div>
               </div>
 
@@ -225,8 +227,8 @@
                 </div>
 
                 <div class="flex justify-center gap-3 mt-4">
-                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
-                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition"  @click="toLInk('/pages/page16')">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition"     @click=" drawer = true">立即试用</button>
                 </div>
               </div>
 
@@ -250,8 +252,8 @@
                 </div>
 
                 <div class="flex justify-center gap-3 mt-4">
-                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
-                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition"  @click="toLInk('/pages/page16')">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition"     @click=" drawer = true">立即试用</button>
                 </div>
               </div>
 
@@ -275,8 +277,8 @@
                 </div>
 
                 <div class="flex justify-center gap-3 mt-4">
-                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
-                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition"  @click="toLInk('/pages/page16')">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition"     @click=" drawer = true">立即试用</button>
                 </div>
               </div>
 
@@ -299,8 +301,8 @@
                 </div>
 
                 <div class="flex justify-center gap-3 mt-4">
-                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition">试用教程</button>
-                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">立即试用</button>
+                  <button class="px-4 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50 transition"  @click="toLInk('/pages/page16')">试用教程</button>
+                  <button class="px-4 py-1 text-sm bg-white border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition"     @click=" drawer = true">立即试用</button>
                 </div>
               </div>
             </div>
@@ -409,6 +411,253 @@
 
     <!-- 页脚 -->
     <Footer />
+    <el-drawer
+        title="云服务器ECS免费试用"
+        :visible.sync="drawer"
+        :direction="direction"
+        :before-close="handleClose">
+      <div class="max-w-[1200px] mx-auto px-4 py-6">
+        <!-- 页面标题 -->
+        <h1 class="text-[20px] font-bold mb-6">云服务器ECS免费试用（企业版）</h1>
+
+        <!-- 试用须知 -->
+        <div class="mb-6 text-sm">
+          <div class="flex items-start mb-2">
+            <span class="inline-block w-5 text-ali-blue font-bold">1.</span>
+            <span>当前试用ECS为按量付费实例，不满足国内ICP备案要求，如需备案请前往购买页选购包年包月实例<u class="text-ali-blue cursor-pointer">立即前往</u></span>
+          </div>
+          <div class="flex items-start">
+            <span class="inline-block w-5 text-ali-blue font-bold">2.</span>
+            <span>您可在免费范围内（包括免费总额度、每小时免费额度、免费地域、免费规格），灵活调整试用ECS所在地域、ECS试用规格及台数。</span>
+          </div>
+        </div>
+
+        <!-- 试用信息表格 -->
+        <div class="mb-6 border border-ali-border rounded">
+          <table class="w-full text-sm">
+            <thead>
+            <tr class="table-header-bg border-b border-ali-border">
+              <th class="py-3 px-4 text-left font-medium">试用信息</th>
+              <th class="py-3 px-4 text-left font-medium">试用有效期</th>
+              <th class="py-3 px-4 text-left font-medium">免费范围</th>
+              <th class="py-3 px-4 text-left font-medium">超额情况</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="border-b border-ali-border">
+              <td class="py-3 px-4"></td>
+              <td class="py-3 px-4">3个月</td>
+              <td class="py-3 px-4">免费总额度 <span class="text-ali-orange font-medium">660元</span><br>每小时免费额度上限 <span class="text-ali-orange font-medium">1.833元</span></td>
+              <td class="py-3 px-4">超出免费额度部分需自付<br><a href="#" class="text-ali-blue">ECS按量收费&gt;</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 免费地域 -->
+        <div class="mb-6">
+          <label class="block mb-2 text-sm font-medium">免费地域</label>
+          <div class="relative w-64">
+            <select class="w-full py-2 px-3 border border-ali-border rounded appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-ali-blue/30 focus:border-ali-blue">
+              <option>华东1（杭州）</option>
+              <option>北京</option>
+              <option>广州</option>
+              <option>成都</option>
+              <option>香港</option>
+              <option>河源</option>
+              <option>乌兰察布</option>
+            </select>
+            <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <i class="fa fa-chevron-down text-ali-gray text-xs"></i>
+            </div>
+          </div>
+          <p class="mt-1 text-xs text-ali-gray">7个免费地域可选：北京、杭州、广州、成都、香港、河源、乌兰察布</p>
+        </div>
+
+        <!-- ECS实例及系统盘 -->
+        <div class="mb-6">
+          <label class="block mb-2 text-sm font-medium">ECS实例及系统盘</label>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-ali-border rounded">
+              <thead>
+              <tr class="table-header-bg">
+                <th class="py-3 px-3 text-left font-medium border-b border-ali-border"><input type="checkbox" class="mr-2"></th>
+                <th class="py-3 px-3 text-left font-medium border-b border-ali-border">vCPU&内存</th>
+                <th class="py-3 px-3 text-left font-medium border-b border-ali-border">ECS实例</th>
+                <th class="py-3 px-3 text-left font-medium border-b border-ali-border">系统盘及容量</th>
+                <th class="py-3 px-3 text-left font-medium border-b border-ali-border">数量</th>
+                <th class="py-3 px-3 text-left font-medium border-b border-ali-border">参考价格</th>
+                <th class="py-3 px-3 text-left font-medium border-b border-ali-border">免费可用时长 <i class="fa fa-question-circle text-ali-gray cursor-pointer"></i></th>
+              </tr>
+              </thead>
+              <tbody>
+              <!-- 行1 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">2核(vCPU)<br>4GB</td>
+                <td class="py-3 px-3">通用算力型 u1</td>
+                <td class="py-3 px-3">ESSD Entry<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.38/小时</td>
+                <td class="py-3 px-3">约1736小时</td>
+              </tr>
+              <!-- 行2 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">2核(vCPU)<br>4GB</td>
+                <td class="py-3 px-3">计算型 c7</td>
+                <td class="py-3 px-3">ESSD云盘<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.45/小时</td>
+                <td class="py-3 px-3">约1466小时</td>
+              </tr>
+              <!-- 行3 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">2核(vCPU)<br>8GB</td>
+                <td class="py-3 px-3">通用算力型 u1</td>
+                <td class="py-3 px-3">ESSD Entry<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.479/小时</td>
+                <td class="py-3 px-3">约1377小时</td>
+              </tr>
+              <!-- 行4 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">2核(vCPU)<br>8GB</td>
+                <td class="py-3 px-3">通用型 g7</td>
+                <td class="py-3 px-3">ESSD云盘<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.565/小时</td>
+                <td class="py-3 px-3">约1168小时</td>
+              </tr>
+              <!-- 行5 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">2核(vCPU)<br>16GB</td>
+                <td class="py-3 px-3">通用算力型 u1</td>
+                <td class="py-3 px-3">ESSD Entry<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.625/小时</td>
+                <td class="py-3 px-3">约1056小时</td>
+              </tr>
+              <!-- 行6 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">4核(vCPU)<br>8GB</td>
+                <td class="py-3 px-3">通用算力型 u1</td>
+                <td class="py-3 px-3">ESSD Entry<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.731/小时</td>
+                <td class="py-3 px-3">约902小时</td>
+              </tr>
+              <!-- 行7 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">2核(vCPU)<br>16GB</td>
+                <td class="py-3 px-3">内存型 r7</td>
+                <td class="py-3 px-3">ESSD云盘<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.738/小时</td>
+                <td class="py-3 px-3">约894小时</td>
+              </tr>
+              <!-- 行8 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">4核(vCPU)<br>8GB</td>
+                <td class="py-3 px-3">计算型 c7</td>
+                <td class="py-3 px-3">ESSD云盘<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.857/小时</td>
+                <td class="py-3 px-3">约770小时</td>
+              </tr>
+              <!-- 行9 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">4核(vCPU)<br>16GB</td>
+                <td class="py-3 px-3">通用算力型 u1</td>
+                <td class="py-3 px-3">ESSD Entry<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥0.929/小时</td>
+                <td class="py-3 px-3">约710小时</td>
+              </tr>
+              <!-- 行10 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">4核(vCPU)<br>16GB</td>
+                <td class="py-3 px-3">通用型 g7</td>
+                <td class="py-3 px-3">ESSD云盘<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥1.089/小时</td>
+                <td class="py-3 px-3">约606小时</td>
+              </tr>
+              <!-- 行11 -->
+              <tr class="hover-highlight border-b border-ali-border">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">8核(vCPU)<br>16GB</td>
+                <td class="py-3 px-3">通用算力型 u1</td>
+                <td class="py-3 px-3">ESSD Entry<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥1.433/小时</td>
+                <td class="py-3 px-3">约460小时</td>
+              </tr>
+              <!-- 行12 -->
+              <tr class="hover-highlight">
+                <td class="py-3 px-3"><input type="checkbox" class="mr-2"></td>
+                <td class="py-3 px-3">8核(vCPU)<br>16GB</td>
+                <td class="py-3 px-3">计算型 c7</td>
+                <td class="py-3 px-3">ESSD云盘<br>40GB</td>
+                <td class="py-3 px-3">1台</td>
+                <td class="py-3 px-3">¥1.673/小时</td>
+                <td class="py-3 px-3">约394小时</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 操作系统 -->
+        <div class="mb-8">
+          <label class="block mb-2 text-sm font-medium">操作系统</label>
+          <div class="flex gap-4">
+            <!-- Windows Server 选项卡 -->
+            <div class="w-64 border border-ali-blue rounded bg-ali-blue/5">
+              <div class="py-2 px-3 border-b border-ali-blue bg-white">
+                <span class="inline-block w-2 h-2 bg-ali-blue rounded-full mr-2"></span>
+                <span>Windows Server</span>
+              </div>
+              <select class="w-full py-2 px-3 border-0 rounded-b focus:outline-none focus:ring-2 focus:ring-ali-blue/30">
+                <option>2022 数据中心版 64位 中文版</option>
+                <option>2019 数据中心版 64位 中文版</option>
+                <option>2016 数据中心版 64位 中文版</option>
+              </select>
+            </div>
+
+            <!-- Alibaba Cloud Linux 选项卡 -->
+            <div class="w-64 border border-ali-border rounded">
+              <div class="py-2 px-3 border-b border-ali-border bg-white">
+                <span class="inline-block w-2 h-2 bg-white border border-ali-gray rounded-full mr-2"></span>
+                <span>Alibaba Cloud Linux</span>
+              </div>
+              <select class="w-full py-2 px-3 border-0 rounded-b focus:outline-none focus:ring-2 focus:ring-ali-blue/30">
+                <option>3.2104 LTS 64位</option>
+                <option>2.1903 LTS 64位</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- 结算栏 -->
+        <div class="flex items-center justify-between pt-4 border-t mt-6" style="width: 30%; background: #fff; padding: 0 30px; position: fixed; right: 0; bottom: 0">
+          <div class="text-right">
+            <div class="text-sm text-gray-500"></div>
+            <div class="text-2xl font-bold text-orange-500"></div>
+            <div class="text-xs text-gray-500 line-through"></div>
+          </div>
+          <button type="button" class="px-8 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors font-medium">立即试用</button>
+        </div>
+      </div>
+    </el-drawer>
   </div>
 </template>
 
@@ -448,18 +697,21 @@ export default {
         devTools: false,
         migration: false,
         privateCloud: false
-      }
+      },
+      drawer: false,
+      direction: 'rtl',
+      currentProductName: '' // 当前选中的产品名称
     }
   },
   methods: {
     handleMenuSelect({ key, keyPath }) {
       // 根据选择的菜单项进行路由跳转
       if (key === '1') {
-        this.$router.push('/')
+        window.open('/', "_blank")
       } else if (key === '2') {
         // 产品菜单已改为下拉菜单
       } else if (key === '2-1') {
-        this.$router.push('/product')
+        window.open('/product', "_blank")
       } else if (key === '2-2') {
         // AI大模型页面路由
       } else if (key === '2-3') {
@@ -477,7 +729,18 @@ export default {
       } else if (key === '6') {
         // 关于我们页面路由
       }
-    }
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
+    },
+    toLInk(link){
+      window.open(link, "_blank")
+
+    },
   }
 }
 </script>

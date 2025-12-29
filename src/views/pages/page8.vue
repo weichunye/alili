@@ -318,7 +318,7 @@ export default {
   },
   methods: {
     toLInk(link){
-      this.$router.push(link)
+      window.open(link, "_blank")
 
     },
 

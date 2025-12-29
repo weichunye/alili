@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="aliyun-ai-platform">
     <!-- 顶部导航栏 -->
     <Header :active-index="activeIndex" />
@@ -15,32 +15,40 @@
         </div>
         <div class="hero-cards">
           <el-card class="hero-card">
-            <div class="card-title"  @click="goToCloudServer('page1')">
+            <div style="width: 100%; height: 100%" @click="goToCloudServer('page1')">
+            <div class="card-title"  >
               <i class="el-icon-tickets"></i>
               超轻 99 元云服务器，新老同享
             </div>
             <p class="card-desc"  @click="goToCloudServer('page1')">持续创新的云服务，用云更简单，活动期间新老同价，开放必抢</p>
+            </div>
           </el-card>
           <el-card class="hero-card">
+            <div style="width: 100%; height: 100%" @click="goToCloudServer('moxing1')">
             <div class="card-title">
               <i class="el-icon-document"></i>
-              《AI 应用架构白皮书》免费下载
+              Z-Image-Turbo 现已上架阿里云百炼
             </div>
-            <p class="card-desc">对 AI 应用的设计和实施的重点，进行最全面的解析</p>
+            <p class="card-desc" >仅需 8 步推理，即可轻松生成高质量图像，免费畅享 100 张</p>
+            </div>
           </el-card>
           <el-card class="hero-card">
+            <div style="width: 100%; height: 100%" @click="goToCloudServer('moxing1')">
             <div class="card-title">
               <i class="el-icon-lightbulb"></i>
               Qwen3 + MCP：一切皆有可能
             </div>
             <p class="card-desc">5 分钟构建增强型应用，购买 MCP Server 实现随想随创</p>
+            </div>
           </el-card>
           <el-card class="hero-card">
+            <div style="width: 100%; height: 100%" @click="goToCloudServer('page4')">
             <div class="card-title">
               <i class="el-icon-download"></i>
               超 160 款产品免费试用
             </div>
             <p class="card-desc">一键开服后即可按需免费。最长 12 个月使用，创始团队无忧</p>
+            </div>
           </el-card>
         </div>
       </div>
@@ -146,7 +154,7 @@
           </el-card>
           <div class="ai-cloud-image">
             <div class="image-placeholder gradient-8">
-               <video class="card-video" src="/src/static/img/video1.mp4" autoplay loop muted playsinline></video>
+              <video class="card-video" src="/src/static/img/video1.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
         </div>
@@ -162,10 +170,10 @@
             <h3>核心产品</h3>
             <ul class="product-categories">
               <li
-                v-for="(category, index) in products.categories"
-                :key="index"
-                :class="{ active: selectedCategory === category.id }"
-                @click="selectCategory(category.id)"
+                  v-for="(category, index) in products.categories"
+                  :key="index"
+                  :class="{ active: selectedCategory === category.id }"
+                  @click="selectCategory(category.id)"
               >
                 <i :class="category.icon"></i> {{ category.name }}
               </li>
@@ -175,9 +183,9 @@
           <div class="product-groups" style="background: #fff; padding: 30px 20px;">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div
-                v-for="(product, index) in selectedProducts"
-                :key="index"
-                :class="[
+                  v-for="(product, index) in selectedProducts"
+                  :key="index"
+                  :class="[
                   'border-b',
                   'border-borderColor',
                   index < 3 ? 'pb-4' : '',
@@ -192,9 +200,9 @@
                 <p class="text-textSub text-sm" :class="index < 3 ? 'mb-3' : ''">{{ product.desc }}</p>
                 <div v-if="product.actions.length > 0" class="flex gap-2">
                   <button style="padding: 10px 20px"
-                    v-for="(action, actionIndex) in product.actions"
-                    :key="actionIndex"
-                    :class="[
+                          v-for="(action, actionIndex) in product.actions"
+                          :key="actionIndex"
+                          :class="[
                       'product-btn',
                       action.type === 'primary' ? 'bg-primary' : '',
                       action.type === 'default' ? 'bg-secondary text-primary' : '',
@@ -207,146 +215,146 @@
                 </div>
               </div>
             </div>
-<!--            <el-card-->
-<!--              v-for="(product, index) in selectedProducts"-->
-<!--              :key="index"-->
-<!--              class="products-card group-card"-->
-<!--            >-->
-<!--              <div class="product-header">-->
-<!--                <h3>{{ product.title }}</h3>-->
-<!--                <p class="product-desc">{{ product.desc }}</p>-->
-<!--              </div>-->
-<!--              <div class="product-actions">-->
-<!--                <el-button-->
-<!--                  v-for="(action, actionIndex) in product.actions"-->
-<!--                  :key="actionIndex"-->
-<!--                  :type="action.type"-->
-<!--                  size="small"-->
-<!--                  :disabled="action.disabled"-->
-<!--                >-->
-<!--                  {{ action.text }}-->
-<!--                </el-button>-->
-<!--              </div>-->
-<!--            </el-card>-->
+            <!--            <el-card-->
+            <!--              v-for="(product, index) in selectedProducts"-->
+            <!--              :key="index"-->
+            <!--              class="products-card group-card"-->
+            <!--            >-->
+            <!--              <div class="product-header">-->
+            <!--                <h3>{{ product.title }}</h3>-->
+            <!--                <p class="product-desc">{{ product.desc }}</p>-->
+            <!--              </div>-->
+            <!--              <div class="product-actions">-->
+            <!--                <el-button-->
+            <!--                  v-for="(action, actionIndex) in product.actions"-->
+            <!--                  :key="actionIndex"-->
+            <!--                  :type="action.type"-->
+            <!--                  size="small"-->
+            <!--                  :disabled="action.disabled"-->
+            <!--                >-->
+            <!--                  {{ action.text }}-->
+            <!--                </el-button>-->
+            <!--              </div>-->
+            <!--            </el-card>-->
           </div>
         </div>
       </section>
     </div>
 
-      <!-- 技术解决方案区域 -->
-      <section class="solutions-section">
-        <div class="section-header">
-          <h2>卓越的技术解决方案，加速云上应用构建</h2>
-        </div>
-        <div class="solutions-grid" style="width: 100%; padding: 0 10%">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- 卡片1：小程序搭建 -->
-            <div class="border border-borderGray rounded-lg p-6 card-hover">
-              <div class="flex justify-between items-start mb-4">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-mobile-screen-button text-primary text-xl"></i>
-                  <h3 class="text-card-title font-medium">10分钟搭建微信、支付宝小程序</h3>
-                </div>
-                <span class="card-tag">小程序</span>
+    <!-- 技术解决方案区域 -->
+    <section class="solutions-section">
+      <div class="section-header">
+        <h2>卓越的技术解决方案，加速云上应用构建</h2>
+      </div>
+      <div class="solutions-grid" style="width: 100%; padding: 0 10%">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 卡片1：小程序搭建 -->
+          <div class="border border-borderGray rounded-lg p-6 card-hover">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-mobile-screen-button text-primary text-xl"></i>
+                <h3 class="text-card-title font-medium">10分钟搭建微信、支付宝小程序</h3>
               </div>
-              <p class="text-card-desc text-grayText mb-4">
-                在阿里云上快速部署博客网站，并将网站服务快速应用到微信、支付宝小程序。
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="card-label">云服务器 ECS</span>
-                <span class="card-label">云数据库 RDS</span>
-                <span class="card-label">云解析 DNS</span>
-                <span class="card-label">域名与网站</span>
-              </div>
-              <div class="flex justify-end">
-                <a href="#" class="text-primary text-sm">
-                  <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-              </div>
+              <span class="card-tag">小程序</span>
             </div>
-
-            <!-- 卡片2：企业门户网站 -->
-            <div class="border border-borderGray rounded-lg p-6 card-hover">
-              <div class="flex justify-between items-start mb-4">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-code text-primary text-xl"></i>
-                  <h3 class="text-card-title font-medium">低代码高效构建企业门户网站</h3>
-                </div>
-                <span class="card-tag">网站搭建</span>
-              </div>
-              <p class="text-card-desc text-grayText mb-4">
-                通过可视化的方式添加多种风格的门户组件，帮助企业快速高效地构建多端门户网站。
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="card-label">多端低代码开发平台魔笔</span>
-                <span class="card-label">云数据库 RDS</span>
-                <span class="card-label">云解析 DNS</span>
-                <span class="card-label">域名与网站</span>
-              </div>
-              <div class="flex justify-end">
-                <a href="#" class="text-primary text-sm">
-                  <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-              </div>
+            <p class="text-card-desc text-grayText mb-4">
+              在阿里云上快速部署博客网站，并将网站服务快速应用到微信、支付宝小程序。
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="card-label">云服务器 ECS</span>
+              <span class="card-label">云数据库 RDS</span>
+              <span class="card-label">云解析 DNS</span>
+              <span class="card-label">域名与网站</span>
             </div>
-
-            <!-- 卡片3：静态资源加速 -->
-            <div class="border border-borderGray rounded-lg p-6 card-hover">
-              <div class="flex justify-between items-start mb-4">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-globe text-primary text-xl"></i>
-                  <h3 class="text-card-title font-medium">网站静态资源访问加速</h3>
-                </div>
-                <span class="card-tag">网站加速</span>
-              </div>
-              <p class="text-card-desc text-grayText mb-4">
-                用户跨地域访问慢？用阿里云CDN分发OSS上的网站静态文件，提速降本。
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="card-label">对象存储 OSS</span>
-                <span class="card-label">CDN</span>
-              </div>
-              <div class="flex justify-end">
-                <a href="#" class="text-primary text-sm">
-                  <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- 卡片4：SSL证书部署 -->
-            <div class="border border-borderGray rounded-lg p-6 card-hover">
-              <div class="flex justify-between items-start mb-4">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-shield-halved text-primary text-xl"></i>
-                  <h3 class="text-card-title font-medium">部署SSL证书实现Web服务加密访问</h3>
-                </div>
-                <span class="card-tag">网站加速</span>
-              </div>
-              <p class="text-card-desc text-grayText mb-4">
-                HTTPS 加密防数据泄露和中间人攻击，阿里云免费 SSL 证书支持多种服务器。
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="card-label">域名与网站</span>
-                <span class="card-label">数字证书管理服务 (原SSL证书)</span>
-              </div>
-              <div class="flex justify-end">
-                <a href="#" class="text-primary text-sm">
-                  <i class="fa-solid fa-arrow-right text-xs"></i>
-                </a>
-              </div>
+            <div class="flex justify-end">
+              <a href="#" class="text-primary text-sm">
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
             </div>
           </div>
-<!--          <el-card v-for="(solution, index) in solutions" :key="index" class="solution-card">-->
-<!--            &lt;!&ndash; <div class="solution-icon">-->
-<!--              <i :class="solution.icon"></i>-->
-<!--            </div> &ndash;&gt;-->
-<!--            <h3>{{ solution.title }}</h3>-->
-<!--            <p class="solution-desc">{{ solution.desc }}</p>-->
-<!--            <el-button type="text" class="solution-more">查看详情 →</el-button>-->
-<!--          </el-card>-->
+
+          <!-- 卡片2：企业门户网站 -->
+          <div class="border border-borderGray rounded-lg p-6 card-hover">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-code text-primary text-xl"></i>
+                <h3 class="text-card-title font-medium">低代码高效构建企业门户网站</h3>
+              </div>
+              <span class="card-tag">网站搭建</span>
+            </div>
+            <p class="text-card-desc text-grayText mb-4">
+              通过可视化的方式添加多种风格的门户组件，帮助企业快速高效地构建多端门户网站。
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="card-label">多端低代码开发平台魔笔</span>
+              <span class="card-label">云数据库 RDS</span>
+              <span class="card-label">云解析 DNS</span>
+              <span class="card-label">域名与网站</span>
+            </div>
+            <div class="flex justify-end">
+              <a href="#" class="text-primary text-sm">
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 卡片3：静态资源加速 -->
+          <div class="border border-borderGray rounded-lg p-6 card-hover">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-globe text-primary text-xl"></i>
+                <h3 class="text-card-title font-medium">网站静态资源访问加速</h3>
+              </div>
+              <span class="card-tag">网站加速</span>
+            </div>
+            <p class="text-card-desc text-grayText mb-4">
+              用户跨地域访问慢？用阿里云CDN分发OSS上的网站静态文件，提速降本。
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="card-label">对象存储 OSS</span>
+              <span class="card-label">CDN</span>
+            </div>
+            <div class="flex justify-end">
+              <a href="#" class="text-primary text-sm">
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 卡片4：SSL证书部署 -->
+          <div class="border border-borderGray rounded-lg p-6 card-hover">
+            <div class="flex justify-between items-start mb-4">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-primary text-xl"></i>
+                <h3 class="text-card-title font-medium">部署SSL证书实现Web服务加密访问</h3>
+              </div>
+              <span class="card-tag">网站加速</span>
+            </div>
+            <p class="text-card-desc text-grayText mb-4">
+              HTTPS 加密防数据泄露和中间人攻击，阿里云免费 SSL 证书支持多种服务器。
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="card-label">域名与网站</span>
+              <span class="card-label">数字证书管理服务 (原SSL证书)</span>
+            </div>
+            <div class="flex justify-end">
+              <a href="#" class="text-primary text-sm">
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
-<div style="width: 100%; padding: 40px 10%">
+        <!--          <el-card v-for="(solution, index) in solutions" :key="index" class="solution-card">-->
+        <!--            &lt;!&ndash; <div class="solution-icon">-->
+        <!--              <i :class="solution.icon"></i>-->
+        <!--            </div> &ndash;&gt;-->
+        <!--            <h3>{{ solution.title }}</h3>-->
+        <!--            <p class="solution-desc">{{ solution.desc }}</p>-->
+        <!--            <el-button type="text" class="solution-more">查看详情 →</el-button>-->
+        <!--          </el-card>-->
+      </div>
+    </section>
+    <div style="width: 100%; padding: 40px 10%">
       <!-- 超值权益区域 -->
       <section class="benefits-section">
         <div class="section-header">
@@ -380,14 +388,14 @@
         <div class="customer-cases">
           <el-card >
             <div v-for="(customer, index) in customers" :key="index" class="customer-card">
-            <div class="customer-logo">
-              <img v-if="index==0" src="/src/static/img/pic_3.png" :alt="customer.name">
-<img v-if="index==1" src="/src/static/img/pic_4.png" :alt="customer.name">
-<img v-if="index==2" src="/src/static/img/pic_5.png" :alt="customer.name">
+              <div class="customer-logo">
+                <img v-if="index==0" src="/src/static/img/pic_3.png" :alt="customer.name">
+                <img v-if="index==1" src="/src/static/img/pic_4.png" :alt="customer.name">
+                <img v-if="index==2" src="/src/static/img/pic_5.png" :alt="customer.name">
 
-            </div>
-             <span style="font-size: 20px;line-height: 40px;">{{ customer.name }}</span>
-            <p class="customer-desc">{{ customer.desc }}</p>
+              </div>
+              <span style="font-size: 20px;line-height: 40px;">{{ customer.name }}</span>
+              <p class="customer-desc">{{ customer.desc }}</p>
             </div>
           </el-card>
         </div>
@@ -419,28 +427,28 @@
           <div v-for="(logo, index) in infrastructure.compliance" :key="index" class="compliance-logo">{{ logo }}</div>
         </div>
       </section> -->
-</div>
+    </div>
 
-      <!-- 数字经济时代区域 -->
-      <section class="digital-economy-section">
-        <div class="section-header">
-          <h2>数字经济时代，云计算为创新提速</h2>
-        </div>
-        <div class="economy-features"  >
+    <!-- 数字经济时代区域 -->
+    <section class="digital-economy-section">
+      <div class="section-header">
+        <h2>数字经济时代，云计算为创新提速</h2>
+      </div>
+      <div class="economy-features"  >
 
-          <el-card class="economy-card">
-            <div style="width: 100%; padding: 40px 10%">
+        <el-card class="economy-card">
+          <div style="width: 100%; padding: 40px 10%">
             <div  style="padding: 20px 1%; width: 23%;float: left; line-height: 50px;" v-for="(feature, index) in economyFeatures" :key="index" >
 
-            <h3 style="font-size: 24px;line-height: 60px; color: #1890ff; border-bottom: 1px solid #dedede;">{{ feature.title }}</h3>
-            <p class="economy-desc">{{ feature.desc }}</p>
+              <h3 style="font-size: 24px;line-height: 60px; color: #1890ff; border-bottom: 1px solid #dedede;">{{ feature.title }}</h3>
+              <p class="economy-desc">{{ feature.desc }}</p>
             </div>
-            </div>
-          </el-card>
+          </div>
+        </el-card>
 
-        </div>
-      </section>
-      <div style="width: 100%; padding: 40px 10%">
+      </div>
+    </section>
+    <div style="width: 100%; padding: 40px 10%">
       <!-- 专属服务区域 -->
       <section class="services-section">
         <div class="section-header">
@@ -448,35 +456,35 @@
         </div>
         <div class="services-grid">
           <div class="service-container">
-        <!-- 全天候高效服务 -->
-        <div class="service-card">
-            <h3 class="service-title">全天候高效服务</h3>
-            <p class="service-desc">7×24 小时为您提供专业服务</p>
-        </div>
+            <!-- 全天候高效服务 -->
+            <div class="service-card">
+              <h3 class="service-title">全天候高效服务</h3>
+              <p class="service-desc">7×24 小时为您提供专业服务</p>
+            </div>
 
-        <!-- 多渠道无忧服务（高亮） -->
-        <div class="service-card highlight">
-            <h3 class="service-title">多渠道无忧服务</h3>
-            <p class="service-desc">多种查询、诊断等服务工具，快速解决常见问题</p>
-        </div>
+            <!-- 多渠道无忧服务（高亮） -->
+            <div class="service-card highlight">
+              <h3 class="service-title">多渠道无忧服务</h3>
+              <p class="service-desc">多种查询、诊断等服务工具，快速解决常见问题</p>
+            </div>
 
-        <!-- 专属贴身服务 -->
-        <div class="service-card">
-            <h3 class="service-title">专属贴身服务</h3>
-            <p class="service-desc">1v1 极速响应、专属保障的贴身服务</p>
-        </div>
+            <!-- 专属贴身服务 -->
+            <div class="service-card">
+              <h3 class="service-title">专属贴身服务</h3>
+              <p class="service-desc">1v1 极速响应、专属保障的贴身服务</p>
+            </div>
 
-        <!-- 专业上云服务 -->
-        <div class="service-card">
-            <h3 class="service-title">专业上云服务</h3>
-            <p class="service-desc">上云全周期的技术咨询与实施服务</p>
-        </div>
-    </div>
+            <!-- 专业上云服务 -->
+            <div class="service-card">
+              <h3 class="service-title">专业上云服务</h3>
+              <p class="service-desc">上云全周期的技术咨询与实施服务</p>
+            </div>
+          </div>
 
-    <!-- 底部链接 -->
-    <div class="service-link">
-        <a href="#">了解更多支持与服务</a>
-    </div>
+          <!-- 底部链接 -->
+          <div class="service-link">
+            <a href="#">了解更多支持与服务</a>
+          </div>
         </div>
       </section>
 
@@ -489,19 +497,19 @@
         </div>
       </section> -->
       <!-- 页脚区域 -->
-        <div class="banner">
+      <div class="banner">
         <div class="banner-content">
-            <h2 class="banner-title">立即体验，在阿里云上创造未来</h2>
-            <span class="btn-trial" @click="goToCloudServer('page4')">
+          <h2 class="banner-title">立即体验，在阿里云上创造未来</h2>
+          <span class="btn-trial" @click="goToCloudServer('page4')">
                 免费试用
                 <span>→</span>
             </span>
         </div>
         <div class="banner-bg"></div>
-    </div>
+      </div>
 
     </div>
-      <Footer />
+    <Footer />
   </div>
 </template>
 
@@ -725,7 +733,7 @@ export default {
             categoryId: '1',
             title: '混合云',
             desc: '融合公有云与私有云的混合架构',
-           actions: [
+            actions: [
               { type: 'primary', text: '立即购买' },
               { type: 'default', text: '了解详情' }
             ],
@@ -735,7 +743,7 @@ export default {
             categoryId: '1',
             title: '专有云服务',
             desc: '为企业定制的私有云解决方案',
-             actions: [
+            actions: [
               { type: 'primary', text: '立即购买' },
               { type: 'default', text: '了解详情' }
             ],
@@ -748,7 +756,7 @@ export default {
             actions: [],
             items: ['海量数据存储', '数据备份与恢复', '内容分发加速']
           },
-           {
+          {
             categoryId: '8',
             title: '大模型服务平台',
             desc: '一站式大模型管理与部署平台',
@@ -768,7 +776,7 @@ export default {
             categoryId: '2',
             title: '专有云服务',
             desc: '为企业定制的私有云解决方案',
-              actions: [
+            actions: [
               { type: 'primary', text: '立即购买' },
               { type: 'default', text: '了解详情' }
             ],
@@ -781,7 +789,7 @@ export default {
             actions: [],
             items: ['海量数据存储', '数据备份与恢复', '内容分发加速']
           },
-           {
+          {
             categoryId: '4',
             title: '大模型服务平台',
             desc: '一站式大模型管理与部署平台',
@@ -794,7 +802,7 @@ export default {
             categoryId: '4',
             title: '混合云',
             desc: '融合公有云与私有云的混合架构',
-              actions: [
+            actions: [
               { type: 'primary', text: '立即购买' },
               { type: 'default', text: '了解详情' }
             ],
@@ -825,7 +833,7 @@ export default {
             categoryId: '2',
             title: '专有云服务',
             desc: '为企业定制的私有云解决方案',
-              actions: [
+            actions: [
               { type: 'primary', text: '立即购买' },
               { type: 'default', text: '了解详情' }
             ],
@@ -838,7 +846,7 @@ export default {
             actions: [],
             items: ['海量数据存储', '数据备份与恢复', '内容分发加速']
           },
-           {
+          {
             categoryId: '4',
             title: '大模型服务平台',
             desc: '一站式大模型管理与部署平台',
@@ -851,7 +859,7 @@ export default {
             categoryId: '4',
             title: '混合云',
             desc: '融合公有云与私有云的混合架构',
-              actions: [
+            actions: [
               { type: 'primary', text: '立即购买' },
               { type: 'default', text: '了解详情' }
             ],
@@ -1136,11 +1144,16 @@ export default {
   },
   methods: {
     goToCloudServer(name) {
-      this.$router.push('/pages/'+name);
+      window.open('/pages/'+name, "_blank")
     },
     toLInk(data){
-      console.log("data",data)
-        this.$router.push(data.link)
+      console.log("111")
+      const targetUrl = this.$router.resolve({ path: data.link }).href;
+
+// 在新标签页打开
+//       window.open(targetUrl, '_blank');
+      window.open(data.link, "_blank")
+
 
     },
 
@@ -1411,9 +1424,9 @@ export default {
 }
 
 
- .gradient-2 {
-   background: url("/src/static/img/pic_8.png") no-repeat center bottom;
-   background-size: auto 110px;
+.gradient-2 {
+  background: url("/src/static/img/pic_8.png") no-repeat center bottom;
+  background-size: auto 110px;
 }
 
 .gradient-3 {
@@ -1823,10 +1836,10 @@ export default {
   margin-bottom: 16px;
 
 }
-  .customer-logo  img{
-    height: 40px;
-    width: auto;
-  }
+.customer-logo  img{
+  height: 40px;
+  width: auto;
+}
 
 .customer-logo i {
   width: 40px;
@@ -1994,16 +2007,16 @@ export default {
   text-align: center;
   border-radius: 8px;
   transition: all 0.3s;
- background: linear-gradient(
-    135deg, /* 渐变角度，匹配图片的斜向渐变 */
-    rgba(230, 245, 255, 1), /* 起始色：浅蓝（更贴近图片的淡蓝色调） */
-    rgba(255, 240, 250, 1)  /* 结束色：浅粉（更贴近图片的淡粉色调） */
+  background: linear-gradient(
+      135deg, /* 渐变角度，匹配图片的斜向渐变 */
+      rgba(230, 245, 255, 1), /* 起始色：浅蓝（更贴近图片的淡蓝色调） */
+      rgba(255, 240, 250, 1)  /* 结束色：浅粉（更贴近图片的淡粉色调） */
   );
   /* 兼容旧版浏览器（可选） */
   background: -webkit-linear-gradient(
-    135deg,
-    rgba(230, 245, 255, 1),
-    rgba(255, 240, 250, 1)
+      135deg,
+      rgba(230, 245, 255, 1),
+      rgba(255, 240, 250, 1)
   );
 }
 
@@ -2227,152 +2240,152 @@ export default {
   text-decoration: none;
 }
 
-        /* 服务卡片容器 */
-        .service-container {
-            width: 100%;
-            margin: 20px auto;
-            display: flex;
-            border: 1px solid #e5e7eb; /* 浅灰色边框，贴近设计风格 */
-            border-radius: 4px;
-            overflow: hidden; /* 防止内容溢出 */
-        }
+/* 服务卡片容器 */
+.service-container {
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  border: 1px solid #e5e7eb; /* 浅灰色边框，贴近设计风格 */
+  border-radius: 4px;
+  overflow: hidden; /* 防止内容溢出 */
+}
 
-        /* 单个服务卡片样式 */
-        .service-card {
-            flex: 1;
-            padding: 50px 20px;
-            text-align: left;
-            border-right: 1px solid #e5e7eb;
-            transition: background-color 0.2s ease;
-        }
+/* 单个服务卡片样式 */
+.service-card {
+  flex: 1;
+  padding: 50px 20px;
+  text-align: left;
+  border-right: 1px solid #e5e7eb;
+  transition: background-color 0.2s ease;
+}
 
-        /* 最后一个卡片去掉右侧边框 */
-        .service-card:last-child {
-            border-right: none;
-        }
+/* 最后一个卡片去掉右侧边框 */
+.service-card:last-child {
+  border-right: none;
+}
 
-        /* 高亮卡片样式（多渠道无忧服务） */
-        .service-card.highlight {
-            background-color: #f9fafc; /* 浅蓝紫色背景，贴近设计高亮效果 */
-        }
+/* 高亮卡片样式（多渠道无忧服务） */
+.service-card.highlight {
+  background-color: #f9fafc; /* 浅蓝紫色背景，贴近设计高亮效果 */
+}
 
-        /* 服务标题样式 */
-        .service-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1f2937; /* 深灰色主标题 */
-        }
+/* 服务标题样式 */
+.service-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937; /* 深灰色主标题 */
+}
 
-        /* 高亮卡片的标题颜色 */
-        .highlight .service-title {
-            color: #2563eb; /* 蓝色，匹配设计中的高亮文字 */
-        }
+/* 高亮卡片的标题颜色 */
+.highlight .service-title {
+  color: #2563eb; /* 蓝色，匹配设计中的高亮文字 */
+}
 
-        /* 服务描述样式 */
-        .service-desc {
-            font-size: 14px;
-            color: #6b7280; /* 浅灰色描述文字 */
-            line-height: 1.5;
-        }
+/* 服务描述样式 */
+.service-desc {
+  font-size: 14px;
+  color: #6b7280; /* 浅灰色描述文字 */
+  line-height: 1.5;
+}
 
-        /* 底部链接样式 */
-        .service-link {
-          width: 100%;
-            margin-top: 30px;
-            padding-left: 20px;
-        }
+/* 底部链接样式 */
+.service-link {
+  width: 100%;
+  margin-top: 30px;
+  padding-left: 20px;
+}
 
-        .service-link a {
-            font-size: 14px;
-            color: #2563eb;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
+.service-link a {
+  font-size: 14px;
+  color: #2563eb;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
 
-        /* 链接右侧小图标（模拟设计中的蓝色圆点） */
-        .service-link a::after {
-            content: "";
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #2563eb;
-            margin-left: 4px;
-        }
-                /* 横幅容器 */
-        .banner {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-    background: #f6f6f6;
-            padding: 60px 80px;
-            position: relative;
-            overflow: hidden;
-            min-height: 200px;
-        }
+/* 链接右侧小图标（模拟设计中的蓝色圆点） */
+.service-link a::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  margin-left: 4px;
+}
+/* 横幅容器 */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f6f6f6;
+  padding: 60px 80px;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
 
-        /* 内容区域 */
-        .banner-content {
-            position: relative;
-            z-index: 2;
+/* 内容区域 */
+.banner-content {
+  position: relative;
+  z-index: 2;
 
-        }
+}
 
-        /* 标题样式 */
-        .banner-title {
-            font-size: 28px;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 24px;
-            line-height: 1.4;
-        }
+/* 标题样式 */
+.banner-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
 
-        /* 按钮样式 */
-        .btn-trial {
-            display: inline-flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 160px;
-            height: 48px;
-            background: linear-gradient(90deg, #165DFF 0%, #4080FF 100%);
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 500;
-            text-decoration: none;
-            padding: 0 24px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
+/* 按钮样式 */
+.btn-trial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+  height: 48px;
+  background: linear-gradient(90deg, #165DFF 0%, #4080FF 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
 
-        /* 按钮hover效果 */
-        .btn-trial:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(22, 93, 255, 0.3);
-        }
+/* 按钮hover效果 */
+.btn-trial:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 93, 255, 0.3);
+}
 
-        /* 右侧背景装饰（模拟设计图效果） */
-        .banner-bg {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 60%;
-            background: url("/src/static/img/pic_6.png") no-repeat right center;
-            background-size: contain;
-            opacity: 0.9;
-        }
-        .btn{
-          width: 300px;
-          background: linear-gradient( #f9fafd 0%, #d8e2fb 100%);
-          color: #764ba2 ;
-          font-size: 18px;
-          line-height: 40px;
-          text-align: center;
-          cursor: pointer;
-        }
+/* 右侧背景装饰（模拟设计图效果） */
+.banner-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60%;
+  background: url("/src/static/img/pic_6.png") no-repeat right center;
+  background-size: contain;
+  opacity: 0.9;
+}
+.btn{
+  width:90%;
+  background: linear-gradient( #f9fafd 0%, #d8e2fb 100%);
+  color: #764ba2 ;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
 .bg-primary{
   color: #fff;
 }

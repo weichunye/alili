@@ -102,7 +102,7 @@
 
     <!-- 通义大模型区域 -->
     <section class="tongyi-model-section">
-      <header class="container mx-auto px-4 py-8 text-center">
+      <header class=" mx-auto py-8 text-center">
         <h1 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold mb-4 text-darkText">通义大模型家族</h1>
         <p class="text-lightText text-lg mb-6">通义万相2.6 全系列升级，15秒长视频，一键生成专业级影视大片，您身边的艺术家。</p>
         <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors flex items-center justify-center gap-1">
@@ -111,7 +111,7 @@
     </header>
 
     <!-- 通义万相2.6 视频生成Banner区 -->
-    <section class="container mx-auto px-4 py-6 mb-8" style="width: 100%; height: 400px; padding: 0 ;background: url('/src/static/img/bg_3.png') no-repeat center center; background-size:  100%;">
+    <section class=" mx-auto px-4 py-6 mb-8" style="width: 100%; height: 400px; padding: 0 ;background: url('/src/static/img/bg_3.png') no-repeat center center; background-size:  100%;">
         <div class=" rounded-xl overflow-hidden">
             <div class="grid md:grid-cols-3 gap-4" @click="toLInk('/pages/moxing2')">
                 <!-- 左侧文字区 -->
@@ -160,7 +160,7 @@
     </section>
 
     <!-- 三大模型卡片区域 -->
-    <section class="container mx-auto px-4 pb-12">
+    <section class=" mx-auto px-4 pb-12">
         <div class="grid md:grid-cols-3 gap-6">
             <!-- 通义千问3 - VL-Flash -->
             <div class="bg-gradient-blue rounded-xl p-6 card-hover bg_2">
@@ -248,7 +248,7 @@
 
     <!-- AI解决方案区域 -->
     <section class="solutions-section">
-      <div class="advantage-container">
+      <div class="advantage-">
         <!-- 标题区域 -->
         <div class="advantage-header">
           <h1 class="advantage-title">模型优势</h1>
@@ -308,7 +308,7 @@
 
     <!-- 丰富的落地场景区域 -->
     <section class="scenarios-section" style="padding: 80px 0; background-color: #f9f9f9; width: 100%;padding: 40px 10%">
-      <div class="container" style="width: 100%; margin: 0 auto; ">
+      <div class="" style="width: 100%; margin: 0 auto; ">
         <!-- 标题区域 -->
         <div class="scenarios-header" style="text-align: center; margin-bottom: 40px;">
           <h2 style="font-size: 28px; font-weight: bold; color: #333; margin-bottom: 10px;">丰富的落地场景</h2>
@@ -378,7 +378,7 @@
     </section>
     <!-- AI选型与定价区域 -->
     <section class="scenarios-section" style="width: 100%; padding: 40px 10%; background-color: #f9f9f9;">
-      <div class="container" style="width: 100%; margin: 0 auto;">
+      <div class="" style="width: 100%; margin: 0 auto;">
         <!-- 标题区域 -->
         <div style="text-align: center; margin-bottom: 40px;">
           <h2 style="font-size: 32px; color: #333; margin-bottom: 16px;">AI选型与定价</h2>
@@ -1139,7 +1139,7 @@ export default {
   },
   methods: {
     toLInk(link){
-      this.$router.push(link)
+      window.open(link, "_blank")
 
     },
     handleClose(done) {
@@ -1152,9 +1152,9 @@ export default {
     handleMenuSelect({ key, keyPath }) {
       // 根据选择的菜单项进行路由跳转
       if (key === '1') {
-        this.$router.push('/bigmodel')
+        window.open('/bigmodel', "_blank")
       } else if (key === '2-1') {
-        this.$router.push('/product')
+        window.open('/product', "_blank")
       } else if (key === '2') {
         // 产品菜单已改为下拉菜单
       } else if (key === '3') {
@@ -1870,7 +1870,7 @@ export default {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .header-container,
+  .header-,
   .hero-content,
   .featured-ai-section,
   .tongyi-model-section,
@@ -2251,7 +2251,7 @@ export default {
   font-size: 14px;
 }
 /* 容器样式 */
-.advantage-container {
+.advantage- {
   max-width: 100%;
   margin: 50px auto;
   padding: 0 0;

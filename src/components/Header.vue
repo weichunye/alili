@@ -1403,36 +1403,36 @@ export default {
       // 根据选中的key进行路由跳转
       switch(key) {
         case '1':
-          this.$router.push('/bigmodel');
+          window.open('/bigmodel', "_blank");
           break;
         case '2':
-          this.$router.push('/product');
+          window.open('/product', "_blank");
           break;
         case '3':
-          this.$router.push('/solutions');
+          window.open('/solutions', "_blank");
           break;
         case '4':
-          this.$router.push('/documentation');
+          window.open('/documentation', "_blank");
           break;
         case '5':
-          this.$router.push('/benefits');
+          window.open('/benefits', "_blank");
           break;
         case '6':
-          this.$router.push('/price');
+          window.open('/price', "_blank");
           break;
         case '7':
-          this.$router.push('/cloudmarket');
+          window.open('/cloudmarket', "_blank");
           break;
         // 添加合作伙伴页面的路由跳转
         case '8':
-          this.$router.push('/partner');
+          window.open('/partner', "_blank");
           break;
         // 添加支持与服务页面的路由跳转
         case '9':
-          this.$router.push('/service');
+          window.open('/service', "_blank");
           break;
         case '10':
-          this.$router.push('/ljaly');
+          window.open('/ljaly', "_blank");
           break;
         // 可以添加其他菜单项的路由跳转逻辑
       }

@@ -4,8 +4,15 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import './tailwind.css'
 import router from './router'
+import { scrollToTop } from './utils/scrollToTop'
 
 Vue.use(ElementUI)
+
+// 添加路由导航守卫，确保页面在路由切换时滚动到顶部
+router.beforeEach((to, from, next) => {
+  scrollToTop()
+  next()
+})
 
 // 将Vue实例保存到变量中
 const vueInstance = new Vue({
